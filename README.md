@@ -210,8 +210,8 @@ Les tableaux seront chargés sur la pile dans l'ordre de leur taille, avec le ta
   - Afficher : Cette procédure affiche le tableau en décimal.
 
 ## Procédures de Tri et Recherche :
-  - Tri Comptage (tricomp) : Implémenter le tri comptage pour organiser les données des tableaux.
-  - Recherche Dichotomique (rech_dic) : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
+  - Tri Comptage (Tri_comp) : Implémenter le tri comptage pour organiser les données des tableaux.
+  - Recherche Dichotomique (Rech_dic) : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
 
 ## Validation :
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
