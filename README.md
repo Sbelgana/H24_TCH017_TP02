@@ -5,19 +5,19 @@
 # 1. Introduction
 
 <p align="justify">
-Dans l'ère actuelle de l'information, marquée par le traitement et l'analyse d'énormes volumes de données, l'efficacité des algorithmes est devenue un pilier central dans le domaine de l'informatique. Ce travail pratique (TP) se propose d'explorer deux techniques algorithmiques essentielles : le tri comptage et la recherche dichotomique, tout en s'immergeant dans le monde fascinant de la programmation en assembleur PEP/8. Ces méthodes, cruciales pour la gestion efficace des données, offrent également une fenêtre sur les principes fondamentaux des opérations algorithmiques.</p>
+Dans l'ère actuelle de l'information, marquée par le traitement et l'analyse d'énormes volumes de données, l'efficacité des algorithmes est devenue un pilier central dans le domaine de l'informatique. Ce projet se propose d'explorer deux techniques algorithmiques essentielles : le tri comptage et la recherche dichotomique, tout en s'immergeant dans le monde fascinant de la programmation en assembleur PEP/8. Ces méthodes, cruciales pour la gestion efficace des données, offrent également une fenêtre sur les principes fondamentaux des opérations algorithmiques.</p>
 
 <p align="justify">
 Le tri comptage, une méthode de tri non comparatif, excelle dans le classement de nombres entiers dans des plages de valeurs limitées. Sa capacité à éviter les comparaisons directes le rend idéal pour certaines situations spécifiques. De son côté, la recherche dichotomique, avec sa stratégie de "division et conquête", permet de localiser rapidement un élément dans un tableau trié, surpassant nettement la recherche linéaire en termes d'efficacité. Ces deux techniques seront explorées en détail, non seulement pour comprendre leurs mécanismes et leurs avantages mais aussi pour en discerner les limitations.</p>
 
 <p align="justify">
-Parallèlement, ce TP est conçu pour plonger profondément dans la programmation en assembleur PEP/8, un langage de bas niveau qui révèle les fondements des opérations informatiques. Vous apprendrez à manipuler des tableaux, une compétence clé pour la gestion des structures de données, en mettant l'accent sur le tri comptage et la recherche dichotomique. La gestion de la mémoire, un aspect critique de la programmation en assembleur, vous permettra de saisir comment la mémoire est allouée, utilisée et libérée. L'utilisation de la pile, indispensable pour la gestion des appels de fonctions et des variables locales, sera également abordée, tout comme l'apprentissage de la définition et de l'appel de fonctions en assembleur.</p>
+Parallèlement, ce projet est conçu pour plonger profondément dans la programmation en assembleur PEP/8, un langage de bas niveau qui révèle les fondements des opérations informatiques. Vous apprendrez à manipuler des tableaux, une compétence clé pour la gestion des structures de données, en mettant l'accent sur le tri comptage et la recherche dichotomique. La gestion de la mémoire, un aspect critique de la programmation en assembleur, vous permettra de saisir comment la mémoire est allouée, utilisée et libérée. L'utilisation de la pile, indispensable pour la gestion des appels de fonctions et des variables locales, sera également abordée, tout comme l'apprentissage de la définition et de l'appel de fonctions en assembleur.</p>
 
 <p align="justify">
-Enfin, ce TP vous offrira l'opportunité de comprendre les nuances du passage de paramètres par valeur et par adresse, des concepts fondamentaux pour une gestion efficace des données en programmation. Cette expérience éducative vous dotera des outils nécessaires pour naviguer dans des problèmes informatiques plus complexes, enrichissant votre perspective et approfondissant votre compréhension du fonctionnement interne des ordinateurs.</p>
+Enfin, ce projet vous offrira l'opportunité de comprendre les nuances du passage de paramètres par valeur et par adresse, des concepts fondamentaux pour une gestion efficace des données en programmation. Cette expérience éducative vous dotera des outils nécessaires pour naviguer dans des problèmes informatiques plus complexes, enrichissant votre perspective et approfondissant votre compréhension du fonctionnement interne des ordinateurs.</p>
 
 <p align="justify">
-En somme, ce TP allie théorie et pratique pour renforcer votre compréhension des principes fondamentaux de l'informatique et développer vos compétences en programmation en assembleur PEP/8. Il vous préparera à aborder des défis informatiques avec une perspective éclairée et une appréciation approfondie du cœur des ordinateurs.
+En somme, ce projet allie théorie et pratique pour renforcer votre compréhension des principes fondamentaux de l'informatique et développer vos compétences en programmation en assembleur PEP/8. Il vous préparera à aborder des défis informatiques avec une perspective éclairée et une appréciation approfondie du cœur des ordinateurs.
 </p>
 
 # 2. Tri Comptage (Counting Sort)
@@ -186,3 +186,34 @@ Nous démontrons la décroissance du variant comme suit :
 <p align="justify">
 En ayant démontré la décroissance du variant, nous établissons la terminaison correcte de l'algorithme de recherche dichotomique. Cela confirme la fiabilité du comportement du programme et nous permet d'analyser sa complexité algorithmique.
 </p>
+
+# 4. Description du Projet
+
+Ce projet vise à mettre en œuvre six sous-programmes en assembleur PEP/8 pour manipuler et afficher des données de manière structurée. Les données, stockées sous forme de chaînes de caractères ASCII, doivent être converties en décimales pour le traitement. Le projet implique les étapes suivantes :
+
+## Préparation de la Pile :
+
+Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux représentent les seules variables globales du projet et sont définis comme suit :
+  - Tableau 1 : [36, 86, 35, 57, 59] -> ASCII : "$V#9;"
+  - Tableau 2 : [87, 70, 61, 82, 42, 74, 91, 71, 38, 36] -> ASCII : "WF=R*J[G&$"
+  - Tableau 3 : [61, 52, 99, 60, 85, 44, 100, 66, 94, 84, 75, 54, 64, 88, 33] -> ASCII : "=4c<U,dB^TK6@X!"
+
+Vous devez réserver l'espace pour les trois tableaux sur la pile, en tenant compte de leurs adresses et tailles respectives. Par exemple, pour un tableau de 10 octets, la structure de la pile comprendra l'adresse du tableau, la taille du tableau, et les données du tableau.
+
+## Chargement des Tableaux :
+Les constantes TAILLE1, TAILLE2, TAILLE3, ADR_TAB1, ADR_TAB2, et ADR_TAB3 seront utilisées pour gérer les positions des tableaux dans la pile.
+
+Les tableaux seront chargés sur la pile dans l'ordre de leur taille, avec le tableau le plus petit au sommet.
+
+## Sous-Tâches de Base :
+  - Charger : Cette procédure convertit la chaîne ASCII en tableau de décimales.
+  - Afficher : Cette procédure affiche le tableau en décimal.
+
+## Procédures de Tri et Recherche :
+  - Tri Comptage (tricomp) : Implémenter le tri comptage pour organiser les données des tableaux.
+  - Recherche Dichotomique (rech_dic) : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
+
+## Validation :
+Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
+La fenêtre ‘Output’ vous permettra de visualiser les résultats des tableaux après leur traitement.
+Chaque tableau sera traité pour convertir les caractères ASCII en valeurs décimales, qui seront ensuite triées et recherchées selon les spécifications du projet. Les étapes de ce TP vous permettront de vous familiariser avec des concepts clés de la programmation en assembleur PEP/8 tels que la manipulation de la pile, la gestion de la mémoire, et l'implémentation de sous-programmes pour le tri et la recherche de données.
