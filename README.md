@@ -2,8 +2,22 @@
   <img src="https://www.etudesuniversitaires.ca/wp-content/uploads/2013/08/ecole-de-technologie-superieure-campus-image2.jpg" />
 </p>
 
+# Introduction
+
 <p align="justify">
-Avec l'augmentation exponentielle des données manipulées par les ordinateurs, l'efficacité des algorithmes devient primordiale, en particulier pour des tâches telles que la sélection et la récupération d'informations spécifiques. Dans ce cadre, les algorithmes de tri et de recherche jouent un rôle crucial. Le tri comptage (ou tri par dénombrement) et la recherche dichotomique sont deux techniques essentielles pour résoudre divers problèmes de manipulation de données.
+Dans l'ère actuelle de l'information, marquée par le traitement et l'analyse d'énormes volumes de données, l'efficacité des algorithmes est devenue un pilier central dans le domaine de l'informatique. Ce travail pratique (TP) se propose d'explorer deux techniques algorithmiques essentielles : le tri comptage et la recherche dichotomique, tout en s'immergeant dans le monde fascinant de la programmation en assembleur PEP/8. Ces méthodes, cruciales pour la gestion efficace des données, offrent également une fenêtre sur les principes fondamentaux des opérations algorithmiques.</p>
+
+<p align="justify">
+Le tri comptage, une méthode de tri non comparatif, excelle dans le classement de nombres entiers dans des plages de valeurs limitées. Sa capacité à éviter les comparaisons directes le rend idéal pour certaines situations spécifiques. De son côté, la recherche dichotomique, avec sa stratégie de "division et conquête", permet de localiser rapidement un élément dans un tableau trié, surpassant nettement la recherche linéaire en termes d'efficacité. Ces deux techniques seront explorées en détail, non seulement pour comprendre leurs mécanismes et leurs avantages mais aussi pour en discerner les limitations.</p>
+
+<p align="justify">
+Parallèlement, ce TP est conçu pour plonger profondément dans la programmation en assembleur PEP/8, un langage de bas niveau qui révèle les fondements des opérations informatiques. Vous apprendrez à manipuler des tableaux, une compétence clé pour la gestion des structures de données, en mettant l'accent sur le tri comptage et la recherche dichotomique. La gestion de la mémoire, un aspect critique de la programmation en assembleur, vous permettra de saisir comment la mémoire est allouée, utilisée et libérée. L'utilisation de la pile, indispensable pour la gestion des appels de fonctions et des variables locales, sera également abordée, tout comme l'apprentissage de la définition et de l'appel de fonctions en assembleur.</p>
+
+<p align="justify">
+Enfin, ce TP vous offrira l'opportunité de comprendre les nuances du passage de paramètres par valeur et par adresse, des concepts fondamentaux pour une gestion efficace des données en programmation. Cette expérience éducative vous dotera des outils nécessaires pour naviguer dans des problèmes informatiques plus complexes, enrichissant votre perspective et approfondissant votre compréhension du fonctionnement interne des ordinateurs.</p>
+
+<p align="justify">
+En somme, ce TP allie théorie et pratique pour renforcer votre compréhension des principes fondamentaux de l'informatique et développer vos compétences en programmation en assembleur PEP/8. Il vous préparera à aborder des défis informatiques avec une perspective éclairée et une appréciation approfondie du cœur des ordinateurs.
 </p>
 
 # Tri Comptage (Counting Sort)
@@ -54,8 +68,8 @@ Ce tableau montre comment le tri comptage organise les entiers en fonction de le
 L'algorithme de tri comptage se déroule en plusieurs étapes :
 </p>
 
-1. **Détermination de la borne maximale** : 
-   <p align="justify">Avant de commencer le tri, il faut déterminer la valeur maximale présente dans le tableau à trier. Cela permet de créer un tableau de comptage de la taille appropriée.</p>
+1. **Détermination de la borne maximale et minimale** : 
+   <p align="justify">Avant de commencer le tri, il faut déterminer la valeur maximale et minimale présente dans le tableau à trier. Cela permet de créer un tableau de comptage de la taille appropriée.</p>
 
 2. **Initialisation du tableau de comptage** : 
    <p align="justify">Un tableau de comptage est créé, avec une entrée pour chaque valeur possible entre la borne minimale et la borne maximale. Toutes les entrées du tableau de comptage sont initialement mises à zéro.</p>
