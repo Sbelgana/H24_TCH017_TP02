@@ -28,39 +28,44 @@ Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement a
 
 ## Exemple Détaillé de Tri Comptage
 
-<p align="justify">
-Imaginons un tableau <code>tab</code> comprenant 100 entiers allant de 0 à 20. Le processus du tri comptage se déroule comme suit :
-</p>
+Voici un exemple avec la plage de nombres 0–9 (c'est-à-dire, le tableau à trier contient uniquement des nombres de 0 à 9).
 
-1. **Comptage des Occurrences** :
-   <p align="justify">On compte combien de fois chaque entier (de 0 à 20) apparaît dans <code>tab</code>.</p>
+Le tableau suivant doit être trié :
 
-2. **Reconstruction du Tableau** :
-   <p align="justify">On reconstruit <code>tab</code> en ajoutant les entiers selon leur fréquence croissante.</p>
+**Algorithme de Tri Comptage - tableau à trier**  
+Nous créons un tableau supplémentaire de longueur 10, initialisé à zéro. Dans le diagramme, l'indice du tableau est affiché sous la ligne :
 
-<p align="justify">
-Prenons l'exemple d'un tableau de 5 entiers : <code>[1, 17, 3, 1, 3</code>. La fréquence de chaque entier est :
-- 1 apparaît 2 fois
-- 17 apparaît 1 fois
-- 3 apparaît 2 fois
+**Algorithme de Tri Comptage - tableau des compteurs**  
+Nous itérons maintenant sur le tableau à trier. Le premier élément est un 3 – en conséquence, nous augmentons la valeur dans le tableau auxiliaire à la position 3 de un :
 
-Le tableau trié est donc : <code>[1, 1, 3, 3, 17]</code>.
-</p>
+**Algorithme de Tri Comptage - Comptage, Étape 1**  
+Le deuxième élément est un 7. Nous incrémentons le champ à la position 7 dans le tableau auxiliaire :
 
-## Tableau Avant et Après Triage
+**Algorithme de Tri Comptage - Comptage, Étape 2**  
+Les éléments 4 et 6 suivent – ainsi, nous augmentons les valeurs aux positions 4 et 6 de un chacun :
 
-| x       | 1 | 2  | 3 | 4 | 5 |
-|---------|---|----|---|---|---|
-| tab[x]  | 1 | 17 | 3 | 1 | 3 |
-| tab[x] trié | 1 | 1 | 3 | 3 | 17 |
+**Algorithme de Tri Comptage - Comptage, Étapes 3 et 4**  
+Les deux éléments suivants – le 6 et le 3 – sont deux éléments qui sont déjà apparus auparavant. En conséquence, les champs correspondants dans le tableau auxiliaire sont augmentés de 1 à 2 :
 
-## Tableau de Comptage
+**Algorithme de Tri Comptage - Comptage, Étapes 5 et 6**  
+Le principe devrait être clair maintenant. Après avoir également augmenté les valeurs du tableau auxiliaire pour les éléments restants, le tableau auxiliaire ressemble finalement à ceci :
 
-| x                | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
-|------------------|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|----|
-| tabComptage[x]   | 0 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |  0 | 0  |  0 |  0 |  0 |  0 |  0 |  1 |
+**Algorithme de Tri Comptage - Comptage, Étapes 7 à 15**  
+Ce soi-disant histogramme nous indique ce qui suit :
 
-Ce tableau montre comment le tri comptage organise les entiers en fonction de leur fréquence d'apparition, permettant ainsi un tri efficace et rapide.
+Les éléments à trier contiennent :
+- 1 fois le 0,
+- 0 fois le 1,
+- 1 fois le 2,
+- 3 fois le 3,
+- 1 fois le 4,
+- 0 fois le 5,
+- 5 fois le 6,
+- 1 fois le 7,
+- 2 fois le 8 et
+- 1 fois le 9.
+
+Nous utiliserons ces informations dans la phase 2 pour réorganiser le tableau à trier.
 
 ## Algorithme du Tri Comptage
 
@@ -85,8 +90,42 @@ L'algorithme de tri comptage se déroule en plusieurs étapes :
 
 
 <p align="justify">
-Voici une implémentation en Python :
+Voici une implémentation en pseudo-code :
 </p>
+
+
+```pseudo
+fonction Tri_comp(tab):
+   // Détermination de "borneSuperieure" la valeur entière maximale présente dans tab
+   borneSuperieure = 0
+   Pour tout k de tab
+         si k > borneSuperieure 
+             borneSuperieure = k
+         finSi
+   finPour
+
+   // Initialisation du tableau de comptage à 0
+   pour i = 0 à borneSuperieure
+      tabComptage[i] = 0
+   finPour  
+
+   // Création du tableau de comptage
+   Pour tout k de tab
+          tabComptage[k] = tabComptage[k] + 1       
+   finPour
+
+   // Création du tableau trié
+   N = taille de tabComptage
+   cpt = 0
+   pour i = 0 à N
+      pour j = 0 à tabComptage[i]
+           tab[cpt] = i
+           cpt = cpt + 1
+      finPour
+   finPour
+
+   retourne tab
+```
 
 ```python
 def TriComptage(tab):
