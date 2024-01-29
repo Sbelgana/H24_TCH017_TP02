@@ -116,8 +116,28 @@ def recherche_dichotomique(tab, val):
             gauche = milieu + 1
     return -1
 ```
-Pour garantir la fiabilité de la recherche dichotomique, il est essentiel de répondre à deux questions clés : Premièrement, est-ce que le programme fournit systématiquement un résultat, en évitant une boucle infinie ? Deuxièmement, est-ce que la réponse donnée par le programme est précise ? Cela implique de vérifier si la valeur retournée (-1 ou l'indice de l'élément trouvé) correspond bien à l'absence ou la présence de l'élément recherché dans le tableau. Ces aspects sont cruciaux pour confirmer la validité et l'efficacité de l'algorithme, et seront examinés en détail pour assurer la justesse du comportement du programme et pour analyser sa complexité algorithmique.
+### Vérification de la Fiabilité de la Recherche Dichotomique
 
-La fonction `recherche_dichotomique` dans votre programme utilise une boucle `while`, qui est potentiellement non bornée. Pour assurer que cette boucle se termine toujours, il est important de démontrer que le programme ne s'enlise pas indéfiniment. Cette démonstration se fait par l'emploi d'un variant de boucle. Un variant de boucle est une quantité qui reste positive ou nulle tant qu'on est dans la boucle et qui décroît strictement à chaque itération. Si on parvient à identifier un tel variant, on peut alors être sûr que la boucle se terminera après un nombre fini d'itérations, car un entier positif ne peut pas diminuer indéfiniment.
+La fiabilité de l'algorithme de recherche dichotomique repose sur deux questions fondamentales : 
 
-Pour garantir la terminaison de la fonction `recherche_dichotomique`, nous considérons la différence entre les indices `droite` et `gauche` comme variant de boucle. Ce variant est toujours positif ou nul tant que la condition de la boucle (`gauche <= droite`) est vraie. À chaque itération, ce variant se réduit, soit par la diminution de `droite`, soit par l'augmentation de `gauche`, en fonction de la comparaison entre la valeur du milieu et la valeur recherchée. Si la valeur du milieu est égale à la valeur recherchée, la boucle se termine par un `return`. Sinon, on réduit l'espace de recherche en ajustant `gauche` ou `droite`, garantissant ainsi que le variant diminue strictement et que la boucle se termine. Ce mécanisme assure que le nombre d'itérations ne dépasse pas la taille initiale du tableau, ce qui est une caractéristique clé de la complexité de l'algorithme.
+1. **Terminaison de la Boucle** : Il est essentiel de garantir que l'algorithme ne génère pas une boucle infinie. En d'autres termes, nous devons nous assurer que l'exécution se termine après un nombre fini d'itérations. Pour cela, nous utilisons un concept appelé le "variant de boucle". Ce variant est une mesure qui reste positive ou nulle tout en décroissant strictement à chaque itération. Lorsque nous pouvons identifier un tel variant, nous avons la certitude que la boucle se terminera.
+
+2. **Précision de la Réponse** : La deuxième question cruciale est de savoir si la réponse fournie par l'algorithme est précise. En d'autres termes, nous devons nous assurer que la valeur renvoyée (soit -1 ou l'indice de l'élément trouvé) correspond correctement à la présence ou à l'absence de l'élément recherché dans le tableau. Cette précision est essentielle pour valider la validité et l'efficacité de l'algorithme.
+
+Pour aborder la première question, notre fonction `recherche_dichotomique` utilise une boucle `while`, qui peut potentiellement ne pas se terminer. Afin de garantir la terminaison, nous recourons à un "variant de boucle", une mesure qui demeure positive ou nulle à l'intérieur de la boucle tout en diminuant strictement à chaque itération. La décroissance du variant garantit que la boucle finira après un nombre fini d'itérations, car une valeur positive ne peut pas diminuer indéfiniment.
+
+Nous démontrons la décroissance du variant comme suit :
+
+1. Tout d'abord, nous calculons le point médian "milieu" comme suit : `milieu = (gauche + droite) // 2`, ce qui garantit que `gauche <= milieu <= droite`.
+
+2. Ensuite, trois cas sont possibles :
+   - Si `tab[milieu]` est égal à `val`, nous quittons immédiatement la boucle avec un `return`. Dans ce cas, la terminaison est assurée.
+   - Si `tab[milieu]` est supérieur à `val`, nous mettons à jour la valeur de "droite". En appelant cette nouvelle valeur "droite2", nous avons : `droite2 - gauche < milieu - gauche <= droite - gauche`, car "droite2 = milieu - 1", et "milieu - 1" est strictement inférieur à "milieu". Par conséquent, le variant décroît strictement.
+   - Enfin, si `tab[milieu]` est inférieur à `val`, nous mettons à jour la valeur de "gauche", et nous avons de manière similaire : `droite - gauche2 < droite - milieu <= droite - gauche`. Une fois de plus, le variant décroît strictement.
+
+En ayant démontré la décroissance du variant, nous établissons la terminaison correcte de l'algorithme de recherche dichotomique. Cela confirme la fiabilité du comportement du programme et nous permet d'analyser sa complexité algorithmique.
+
+
+
+
+
