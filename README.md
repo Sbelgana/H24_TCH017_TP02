@@ -2,10 +2,14 @@
   <img src="https://www.etudesuniversitaires.ca/wp-content/uploads/2013/08/ecole-de-technologie-superieure-campus-image2.jpg" />
 </p>
 
+<p align="justify">
+Avec l'augmentation exponentielle des données manipulées par les ordinateurs, l'efficacité des algorithmes devient primordiale, en particulier pour des tâches telles que la sélection et la récupération d'informations spécifiques. Dans ce cadre, les algorithmes de trie et de recherche jouent un rôle crucial. Le tri comptage (ou tri par dénombrement) et la recherche dichotomique sont deux techniques essentielles pour résoudre divers problèmes de manipulation de données.
+</p>
+
 # Tri Comptage (Counting Sort)
 
-
-Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement adapté au tri de données constituées de nombres entiers dans une plage définie. Ce tri fonctionne en calculant l'histogramme des valeurs puis en reconstruisant les données triées à partir de cet histogramme. Cela implique que plusieurs éléments identiques sont représentés par un unique élément quantifié dans l'histogramme. Il est donc optimal pour des données avec des valeurs proches et une grande quantité d'éléments.
+<p align="justify">
+Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement adapté au tri de données constituées de nombres entiers dans une plage définie. Ce tri fonctionne en calculant l'histogramme des valeurs puis en reconstruisant les données triées à partir de cet histogramme. Cela implique que plusieurs éléments identiques sont représentés par un unique élément quantifié dans l'histogramme. Il est donc optimal pour des données avec des valeurs proches et une grande quantité d'éléments.</p>
 
 # Exemple Détaillé de Tri Comptage
 
@@ -44,14 +48,22 @@ Ce tableau montre comment le tri comptage organise les entiers en fonction de le
 
 ## Algorithme
 L'algorithme de tri comptage se déroule comme suit :
-
+<p align="justify">
+  
 1. **Détermination de la borne maximale** : Avant de commencer le tri, il faut déterminer la valeur maximale présente dans le tableau à trier. Cela permet de créer un tableau de comptage de la taille appropriée.
+</p>
 
-2. **Initialisation du tableau de comptage** : Un tableau de comptage est créé, avec une entrée pour chaque valeur possible entre la borne minimale et la borne maximale. Toutes les entrées du tableau de comptage sont initialement mises à zéro.
+<p align="justify">
+  
+2. **Initialisation du tableau de comptage** : Un tableau de comptage est créé, avec une entrée pour chaque valeur possible entre la borne minimale et la borne maximale. Toutes les entrées du tableau de comptage sont initialement mises à zéro.</p>
 
-3. **Remplissage du tableau de comptage** : Pour chaque élément du tableau à trier, on incrémente la valeur correspondante dans le tableau de comptage. Ainsi, le tableau de comptage contient le nombre d'occurrences de chaque valeur.
+<p align="justify">
+  
+3. **Remplissage du tableau de comptage** : Pour chaque élément du tableau à trier, on incrémente la valeur correspondante dans le tableau de comptage. Ainsi, le tableau de comptage contient le nombre d'occurrences de chaque valeur.</p>
 
-4. **Reconstruction du tableau trié** : En parcourant le tableau de comptage, on peut reconstruire le tableau trié en plaçant chaque valeur dans l'ordre croissant en fonction de leur fréquence. Plus précisément, on examine chaque valeur possible de la borne minimale à la borne maximale, et pour chaque valeur, on la place autant de fois que spécifié par le tableau de comptage.
+<p align="justify">
+  
+4. **Reconstruction du tableau trié** : En parcourant le tableau de comptage, on peut reconstruire le tableau trié en plaçant chaque valeur dans l'ordre croissant en fonction de leur fréquence. Plus précisément, on examine chaque valeur possible de la borne minimale à la borne maximale, et pour chaque valeur, on la place autant de fois que spécifié par le tableau de comptage.</p>
 
 5. **Tableau trié obtenu** : Une fois ces étapes terminées, le tableau initial est transformé en un tableau trié par le tri comptage.
 
@@ -84,7 +96,7 @@ def TriComptage(tab):
 
 # Recherche Dichotomique
 ## Introduction
-Avec l'augmentation exponentielle des données manipulées par les ordinateurs, l'efficacité des algorithmes devient primordiale, en particulier pour des tâches telles que la sélection et la récupération d'informations spécifiques. Dans ce cadre, les algorithmes de recherche jouent un rôle crucial. Ils sont conçus pour vérifier la présence d'une donnée dans un ensemble et, si elle est trouvée, pour en indiquer précisément la position. Cela est analogue à la recherche d'une personne dans un annuaire pour en obtenir l'adresse. Dans le domaine plus large des bases de données, cette méthode est souvent employée pour retrouver des données associées à un identifiant spécifique. Parmi ces techniques, la recherche dichotomique est particulièrement efficace pour traiter des données structurées de manière séquentielle dans un tableau.
+Les algorithmes de recherche sont conçus pour vérifier la présence d'une donnée dans un ensemble et, si elle est trouvée, pour en indiquer précisément la position. Cela est analogue à la recherche d'une personne dans un annuaire pour en obtenir l'adresse. Dans le domaine plus large des bases de données, cette méthode est souvent employée pour retrouver des données associées à un identifiant spécifique. Parmi ces techniques, la recherche dichotomique est particulièrement efficace pour traiter des données structurées de manière séquentielle dans un tableau.
 
 ## Approche Naïve vs Approche Dichotomique
 ### Recherche Naïve
