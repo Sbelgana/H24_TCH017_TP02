@@ -33,9 +33,9 @@ Le tableau trié est donc : `[1, 1, 3, 3, 27]`.
 
 ## Tableau de Comptage
 
-| x                | 0 | 1 | 2 | 3 | ... | 27 |
-|------------------|---|---|---|---|-----|----|
-| tabComptage[x]   | 0 | 2 | 0 | 2 | ... | 1  |
+| x                | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 |  27 |
+|------------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|----|           ---|
+| tabComptage[x]   | 0 | 2 | 0 | 2 | 0 | 0  |  0 | 0  |  0 | 0  |  0 |  0 |  0 | 0  |  0 | 0  | 0  |  0 | 0  |  0 |  0 | 0  | 0  | 0  | 0  | 0  | 0  |       1       | 
 
 Ce tableau montre comment le tri comptage organise les entiers en fonction de leur fréquence d'apparition, permettant ainsi un tri efficace et rapide.
 
