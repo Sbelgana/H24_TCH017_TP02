@@ -13,33 +13,33 @@ Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement a
 
 # Exemple Détaillé de Tri Comptage
 
-Imaginons un tableau `tab` comprenant 100 entiers allant de 0 à 30. Le processus du tri comptage se déroule comme suit :
+Imaginons un tableau `tab` comprenant 100 entiers allant de 0 à 20. Le processus du tri comptage se déroule comme suit :
 
 1. **Comptage des Occurrences** :
-   On compte combien de fois chaque entier (de 0 à 30) apparaît dans `tab`.
+   On compte combien de fois chaque entier (de 0 à 20) apparaît dans `tab`.
 
 2. **Reconstruction du Tableau** :
    On reconstruit `tab` en ajoutant les entiers selon leur fréquence croissante.
 
-Prenons l'exemple d'un tableau de 5 entiers : `[1, 27, 3, 1, 3]`. La fréquence de chaque entier est :
+Prenons l'exemple d'un tableau de 5 entiers : `[1, 17, 3, 1, 3]`. La fréquence de chaque entier est :
 - 1 apparaît 2 fois
-- 27 apparaît 1 fois
+- 17 apparaît 1 fois
 - 3 apparaît 2 fois
 
-Le tableau trié est donc : `[1, 1, 3, 3, 27]`.
+Le tableau trié est donc : `[1, 1, 3, 3, 17]`.
 
 ## Tableau Avant et Après Triage
 
 | x       | 1 | 2  | 3 | 4 | 5 |
 |---------|---|----|---|---|---|
-| tab[x]  | 1 | 27 | 3 | 1 | 3 |
-| tab[x] trié | 1 | 1 | 3 | 3 | 27 |
+| tab[x]  | 1 | 17 | 3 | 1 | 3 |
+| tab[x] trié | 1 | 1 | 3 | 3 | 17 |
 
 ## Tableau de Comptage
 
-| x                | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 |  27 |
-|------------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|----|           ---|
-| tabComptage[x]   | 0 | 2 | 0 | 2 | 0 | 0  |  0 | 0  |  0 | 0  |  0 |  0 |  0 | 0  |  0 | 0  | 0  |  0 | 0  |  0 |  0 | 0  | 0  | 0  | 0  | 0  | 0  |       1       | 
+| x                | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
+|------------------|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|----|
+| tabComptage[x]   | 0 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |  0 | 0  |  0 |  0 |  0 |  0 |  0 |  1 |
 
 Ce tableau montre comment le tri comptage organise les entiers en fonction de leur fréquence d'apparition, permettant ainsi un tri efficace et rapide.
 
