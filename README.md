@@ -1,4 +1,4 @@
-<p align="center">
+><p align="center">
   <img src="https://www.etudesuniversitaires.ca/wp-content/uploads/2013/08/ecole-de-technologie-superieure-campus-image2.jpg" />
 </p>
 
@@ -15,22 +15,22 @@ Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement a
 ## Exemple Détaillé de Tri Comptage
 
 <p align="justify">
-Imaginons un tableau `tab` comprenant 100 entiers allant de 0 à 20. Le processus du tri comptage se déroule comme suit :
+Imaginons un tableau <code>tab</code> comprenant 100 entiers allant de 0 à 20. Le processus du tri comptage se déroule comme suit :
 </p>
 
 1. **Comptage des Occurrences** :
-   <p align="justify">On compte combien de fois chaque entier (de 0 à 20) apparaît dans `tab`.</p>
+   <p align="justify">On compte combien de fois chaque entier (de 0 à 20) apparaît dans <code>tab</code>.</p>
 
 2. **Reconstruction du Tableau** :
-   <p align="justify">On reconstruit `tab` en ajoutant les entiers selon leur fréquence croissante.</p>
+   <p align="justify">On reconstruit <code>tab</code> en ajoutant les entiers selon leur fréquence croissante.</p>
 
 <p align="justify">
-Prenons l'exemple d'un tableau de 5 entiers : `[1, 17, 3, 1, 3]`. La fréquence de chaque entier est :
+Prenons l'exemple d'un tableau de 5 entiers : <code>[1, 17, 3, 1, 3</code>. La fréquence de chaque entier est :
 - 1 apparaît 2 fois
 - 17 apparaît 1 fois
 - 3 apparaît 2 fois
 
-Le tableau trié est donc : `[1, 1, 3, 3, 17]`.
+Le tableau trié est donc : <code>[1, 1, 3, 3, 17]</code>.
 </p>
 
 ## Tableau Avant et Après Triage
@@ -151,25 +151,25 @@ La fiabilité de l'algorithme de recherche dichotomique repose sur deux question
 </p>
 
 1. **Terminaison de la Boucle** : 
-   <p align="justify">Il est essentiel de garantir que l'algorithme ne génère pas une boucle infinie. En d'autres termes, nous devons nous assurer que l'exécution se termine après un nombre fini d'itérations. Pour cela, nous utilisons un concept appelé le `variant de boucle`. Ce variant est une mesure qui reste positive ou nulle tout en décroissant strictement à chaque itération. Lorsque nous pouvons identifier un tel variant, nous avons la certitude que la boucle se terminera.</p>
+   <p align="justify">Il est essentiel de garantir que l'algorithme ne génère pas une boucle infinie. En d'autres termes, nous devons nous assurer que l'exécution se termine après un nombre fini d'itérations. Pour cela, nous utilisons un concept appelé le <code>variant de boucle</code>. Ce variant est une mesure qui reste positive ou nulle tout en décroissant strictement à chaque itération. Lorsque nous pouvons identifier un tel variant, nous avons la certitude que la boucle se terminera.</p>
 
 2. **Précision de la Réponse** : 
    <p align="justify">La deuxième question cruciale est de savoir si la réponse fournie par l'algorithme est précise. En d'autres termes, nous devons nous assurer que la valeur renvoyée (soit -1 ou l'indice de l'élément trouvé) correspond correctement à la présence ou à l'absence de l'élément recherché dans le tableau. Cette précision est essentielle pour valider la validité et l'efficacité de l'algorithme.</p>
 
 <p align="justify">
-Pour aborder la première question, notre fonction `recherche_dichotomique` utilise une boucle `while`, qui peut potentiellement ne pas se terminer. Afin de garantir la terminaison, nous recourons à un `variant de boucle`, une mesure qui demeure positive ou nulle à l'intérieur de la boucle tout en diminuant strictement à chaque itération. La décroissance du variant garantit que la boucle finira après un nombre fini d'itérations, car une valeur positive ne peut pas diminuer indéfiniment.
+Pour aborder la première question, notre fonction <code>recherche_dichotomique</code> utilise une boucle <code>while</code>, qui peut potentiellement ne pas se terminer. Afin de garantir la terminaison, nous recourons à un <code>variant de boucle</code>, une mesure qui demeure positive ou nulle à l'intérieur de la boucle tout en diminuant strictement à chaque itération. La décroissance du variant garantit que la boucle finira après un nombre fini d'itérations, car une valeur positive ne peut pas diminuer indéfiniment.
 </p>
 
 <p align="justify">
 Nous démontrons la décroissance du variant comme suit :
 </p>
 
-1. Tout d'abord, nous calculons le point médian `milieu` comme suit : `milieu = (gauche + droite) // 2`, ce qui garantit que `gauche <= milieu <= droite`.
+1. Tout d'abord, nous calculons le point médian <code>milieu</code> comme suit : <code>milieu = (gauche + droite) // 2</code>, ce qui garantit que <code>gauche <= milieu <= droite</code>.
 
 2. Ensuite, trois cas sont possibles :
-   - Si `tab[milieu]` est égal à `val`, nous quittons immédiatement la boucle avec un `return`. Dans ce cas, la terminaison est assurée.
-   - Si `tab[milieu]` est supérieur à `val`, nous mettons à jour la valeur de `droite`. En appelant cette nouvelle valeur `droite2`, nous avons : `droite2 - gauche < milieu - gauche <= droite - gauche`, car `droite2 = milieu - 1`, et `milieu - 1` est strictement inférieur à `milieu`. Par conséquent, le variant décroît strictement.
-   - Enfin, si `tab[milieu]` est inférieur à `val`, nous mettons à jour la valeur de `gauche`, et nous avons de manière similaire : `droite - gauche2 < droite - milieu <= droite - gauche`. Une fois de plus, le variant décroît strictement.
+   - <p align="justify">Si <code>tab[milieu] = val</code>, nous quittons immédiatement la boucle avec un return. Dans ce cas, la terminaison est assurée.</p>
+   - <p align="justify">Si <code>tab[milieu] > val</code>, nous mettons à jour la valeur de droite. En appelant cette nouvelle valeur <code>droite2</code>, nous avons: <code>droite2 - gauche < milieu - gauche <= droite - gauche</code>, car <code>droite2 = milieu - 1</code>, et <code>milieu - 1</code> est strictement inférieur à <code>milieu</code>. Par conséquent, le variant décroît strictement.</p>
+   - <p align="justify">Enfin, si <code>tab[milieu] < val</code>, nous mettons à jour la valeur de <code>gauche</code>, et nous avons de manière similaire: <code>droite - gauche2 < droite - milieu <= droite - gauche</code>. Une fois de plus, le variant décroît strictement.</p>
 
 <p align="justify">
 En ayant démontré la décroissance du variant, nous établissons la terminaison correcte de l'algorithme de recherche dichotomique. Cela confirme la fiabilité du comportement du programme et nous permet d'analyser sa complexité algorithmique.
