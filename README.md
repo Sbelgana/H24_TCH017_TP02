@@ -288,9 +288,11 @@ Ce projet vise à mettre en œuvre six sous-programmes en assembleur PEP/8 pour 
 ## 4.1. Préparation de la Pile :
 
 Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux représentent les seules variables globales du projet et sont définis comme suit :
-  - Tableau 1 : [36, 86, 35, 57, 59] -> ASCII : "$V#9;"
-  - Tableau 2 : [87, 70, 61, 82, 42, 74, 91, 71, 38, 36] -> ASCII : "WF=R*J[G&$"
-  - Tableau 3 : [61, 52, 99, 60, 85, 44, 100, 66, 94, 84, 75, 54, 64, 88, 33] -> ASCII : "=4c<U,dB^TK6@X!"
+```asm
+dat1:   .ASCII      "$V#9;"           ; Tableau 1 : [36, 86, 35, 57, 59]
+dat2:   .ASCII      "WF=R*J[G&$"      ; Tableau 2 : [87, 70, 61, 82, 42, 74, 91, 71, 38, 36]
+dat3:   .ASCII      "=4c<U,dB^TK6@X!" ; Tableau 3 : [61, 52, 99, 60, 85, 44, 100, 66, 94, 84, 75, 54, 64, 88, 33]
+```
 
 Vous devez réserver l'espace pour les trois tableaux sur la pile, en tenant compte de leurs adresses et tailles respectives. Par exemple, pour un tableau de 10 octets, la structure de la pile comprendra l'adresse du tableau, la taille du tableau, et les données du tableau.
 
@@ -307,17 +309,17 @@ Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dan
 
 La déclaration des constantes est importante pour connaître la position de l’adresse du tableau dans la pile.  On s’assurera que le dessus de la pile pointe sur l’adresse d’un tableau.  En connaissant sa taille, on peut compter à quel octet est l’adresse d’un tableau qui se trouverait en dessous.  Prenons un exemple avec les 2 plus petits tableaux s’ils sont empilés en ordre de taille.
 
-TAILLE1 : .EQUATE 10  ; Taille en octets des tableaux
 
-TAILLE2 : .EQUATE 20  
+```asm
+TAILLE1  : .EQUATE 10    ; Taille en octets des tableaux
+TAILLE2  : .EQUATE 20  
+TAILLE3  : .EQUATE 30
 
-TAILLE3 : .EQUATE 30 
-
-ADR_TAB1 : .EQUATE 0  ; Inclus l’adresse et la taille de chacun
-
-ADR_TAB2 : .EQUATE 14     
-
+ADR_TAB1 : .EQUATE 0     ; Inclus l’adresse et la taille de chacun
+ADR_TAB2 : .EQUATE 14      
 ADR_TAB3 : .EQUATE ?
+```
+
 
 
 
