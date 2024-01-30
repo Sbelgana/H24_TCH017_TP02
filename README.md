@@ -323,7 +323,8 @@ ADR_TAB3 : .EQUATE ?
 ## 4.3. Sous-Tâches de Base :
 Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous- tâches simple en premier. 
 1. <ins>  **Charger** </ins> 
-    Cette procédure charge le tableau de caractere et le place dans la memeoire, il faut prendre en compte qu'il faut convertir la chaîne ASCII en tableau de décimales.
+
+   Cette procédure charge le tableau de caractere et le place dans la memeoire, il faut prendre en compte qu'il faut convertir la chaîne ASCII en tableau de décimales.
    
    **Paramètres :**
    - `adr_tab`  : l’adresse du tableau.
@@ -333,7 +334,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    Pas de valeur de retour.
    
-2. <ins>  **Afficher** </ins> 
+3. <ins>  **Afficher** </ins> 
    
     Cette procédure affiche le tableau en décimal le contenue du tableau recu en parametre.
      
@@ -344,7 +345,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    Pas de valeur de retour.
 
-3. <ins>  **Valeur_min** </ins> 
+4. <ins>  **Valeur_min** </ins> 
    
     Cette fonction trouve la valeur minimale du tableau en décimal.
      
@@ -355,7 +356,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    La valeur minimale du tableau.
 
-4. <ins>  **Valeur_max** </ins> 
+5. <ins>  **Valeur_max** </ins> 
    
     Cette fonction trouve la valeur maximal du tableau en décimal.
      
