@@ -168,39 +168,9 @@ L'algorithme de tri comptage se déroule en plusieurs étapes :
 Voici une implémentation en pseudo-code :
 </p>
 
-
-```pseudo
-fonction Tri_comp(tab):
-   // Détermination de "borneSuperieure" la valeur entière maximale présente dans tab
-   borneSuperieure = 0
-   Pour tout k de tab
-         si k > borneSuperieure 
-             borneSuperieure = k
-         finSi
-   finPour
-
-   // Initialisation du tableau de comptage à 0
-   pour i = 0 à borneSuperieure
-      tabComptage[i] = 0
-   finPour  
-
-   // Création du tableau de comptage
-   Pour tout k de tab
-          tabComptage[k] = tabComptage[k] + 1       
-   finPour
-
-   // Création du tableau trié
-   N = taille de tabComptage
-   cpt = 0
-   pour i = 0 à N
-      pour j = 0 à tabComptage[i]
-           tab[cpt] = i
-           cpt = cpt + 1
-      finPour
-   finPour
-
-   retourne tab
-```
+<p align="center">
+    <img src="./Images/tri.svg">
+</p>
 
 <p align="justify">
 Le tri comptage est optimal pour des données avec des valeurs proches et une grande quantité d'éléments.
@@ -238,20 +208,10 @@ Dans cette approche, le résultat de la recherche est représenté par un entier
 La recherche dichotomique repose sur un principe simple mais puissant : diviser l'espace de recherche en deux à chaque itération. On commence par examiner l'élément central du tableau. Si cet élément n'est pas celui recherché, on détermine ensuite dans quelle moitié du tableau la recherche doit continuer, en fonction de l'ordre des éléments. Si l'élément central est plus grand que la cible, on poursuit la recherche dans la moitié inférieure ; sinon, dans la moitié supérieure. Cette méthode continue jusqu'à trouver l'élément recherché ou jusqu'à ce que l'intervalle de recherche soit réduit à néant, indiquant que l'élément n'est pas présent dans le tableau. Cette approche, connue sous le nom de dichotomie, tire son efficacité de la division constante de l'espace de recherche, exploitant ainsi pleinement le caractère ordonné du tableau.
 </p>
 
-```python
-def recherche_dichotomique(tab, val):
-    gauche = 0
-    droite = len(tab) - 1
-    while gauche <= droite:
-        milieu = (gauche + droite) // 2
-        if tab[milieu] == val:
-            return milieu
-        elif tab[milieu] > val:
-            droite = milieu - 1
-        else:
-            gauche = milieu + 1
-    return -1
-```
+
+<p align="center">
+    <img src="./Images/dicho.svg">
+</p>
 
 ### Vérification de la Fiabilité de la Recherche Dichotomique
 
