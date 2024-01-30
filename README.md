@@ -26,7 +26,7 @@ En somme, ce projet allie théorie et pratique pour renforcer votre compréhensi
 Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement adapté au tri de données constituées de nombres entiers dans une plage définie. Ce tri fonctionne en calculant l'histogramme des valeurs puis en reconstruisant les données triées à partir de cet histogramme. Cela implique que plusieurs éléments identiques sont représentés par un unique élément quantifié dans l'histogramme. Il est donc optimal pour des données avec des valeurs proches et une grande quantité d'éléments.
 </p>
 
-## Exemple Détaillé de Tri Comptage
+## 2.1. Exemple Détaillé de Tri Comptage
 
 Voici un exemple avec la plage de nombres 0–9 (c'est-à-dire, le tableau à trier contient uniquement des nombres de 0 à 9).
 
@@ -35,55 +35,45 @@ Le tableau suivant doit être trié :
   <img src="./Images/image_01.png">
 </p>
 
-### Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
-**Algorithme de Tri Comptage - tableau à trier** 
+### 2.1.1. Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
 <p align="justify">
 Nous créons un tableau supplémentaire de longueur 10, initialisé à zéro. Dans le diagramme, l'indice du tableau est affiché sous la ligne :</p>
 <p align="center">
   <img src="./Images/image_02.png">
 </p>
 
-**Algorithme de Tri Comptage - tableau des compteurs**  
 <p align="justify">
 Nous itérons maintenant sur le tableau à trier. Le premier élément est un 3 – en conséquence, nous augmentons la valeur dans le tableau auxiliaire à la position 3 de un :</p>
-<p align="center">
-  <img src="./Images/image_02.png">
-</p>
-
-**Algorithme de Tri Comptage - Comptage, Étape 1**  
-<p align="justify">
-Le deuxième élément est un 7. Nous incrémentons le champ à la position 7 dans le tableau auxiliaire :</p>
 <p align="center">
   <img src="./Images/image_03.png">
 </p>
 
-**Algorithme de Tri Comptage - Comptage, Étape 2** 
 <p align="justify">
-Les éléments 4 et 6 suivent – ainsi, nous augmentons les valeurs aux positions 4 et 6 de un chacun :</p>
+Le deuxième élément est un 7. Nous incrémentons le champ à la position 7 dans le tableau auxiliaire :</p>
 <p align="center">
   <img src="./Images/image_04.png">
 </p>
 
-**Algorithme de Tri Comptage - Comptage, Étapes 3 et 4**  
 <p align="justify">
-Les deux éléments suivants – le 6 et le 3 – sont deux éléments qui sont déjà apparus auparavant. En conséquence, les champs correspondants dans le tableau auxiliaire sont augmentés de 1 à 2 :</p>
+Les éléments 4 et 6 suivent – ainsi, nous augmentons les valeurs aux positions 4 et 6 de un chacun :</p>
 <p align="center">
   <img src="./Images/image_05.png">
 </p>
 
-**Algorithme de Tri Comptage - Comptage, Étapes 5 et 6**  
 <p align="justify">
-Le principe devrait être clair maintenant. Après avoir également augmenté les valeurs du tableau auxiliaire pour les éléments restants, le tableau auxiliaire ressemble finalement à ceci :</p>
+Les deux éléments suivants – le 6 et le 3 – sont deux éléments qui sont déjà apparus auparavant. En conséquence, les champs correspondants dans le tableau auxiliaire sont augmentés de 1 à 2 :</p>
 <p align="center">
   <img src="./Images/image_06.png">
 </p>
 
-**Algorithme de Tri Comptage - Comptage, Étapes 7 à 15**  
 <p align="justify">
-Ce soi-disant histogramme nous indique ce qui suit :</p>
+Le principe devrait être clair maintenant. Après avoir également augmenté les valeurs du tableau auxiliaire pour les éléments restants, le tableau auxiliaire ressemble finalement à ceci :</p>
 <p align="center">
   <img src="./Images/image_07.png">
 </p>
+
+<p align="justify">
+Ce soi-disant histogramme nous indique ce qui suit :</p>
 
 Les éléments à trier contiennent :
 - 1 fois le 0,
@@ -100,7 +90,7 @@ Les éléments à trier contiennent :
 Nous utiliserons ces informations dans la phase 2 pour réorganiser le tableau à trier.
 
 
-### Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
+### 2.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
 <p align="justify">
 Dans la deuxième phase, nous itérons une fois sur le tableau histogramme. Nous écrivons l'indice de tableau correspondant dans le tableau à trier aussi souvent que l'histogramme l'indique à la position correspondante.</p>
 
@@ -110,28 +100,24 @@ Dans l'exemple, nous commençons à la position 0 dans le tableau auxiliaire. Ce
   <img src="./Images/image_08.png">
 </p>
 
-**Algorithme de Tri Comptage - Réorganisation, Étape 1**
 <p align="justify">
 À la position 1 dans l'histogramme, il y a un 0, ce qui signifie que nous sautons ce champ – aucun 1 n'est écrit dans le tableau à trier.</p>
 <p align="center">
   <img src="./Images/image_09.png">
 </p>
 
-**Algorithme de Tri Comptage - Réorganisation, Étape 2**
 <p align="justify">
 La position 2 de l'histogramme contient à nouveau un 1, donc nous écrivons un 2 dans le tableau à trier :</p>
 <p align="center">
   <img src="./Images/image_10.png">
 </p>
 
-**Algorithme de Tri Comptage - Réorganisation, Étape 3**
 <p align="justify">
 Nous arrivons à la position 3, qui contient un 3 ; donc nous écrivons trois fois un 3 dans le tableau :</p>
 <p align="center">
   <img src="./Images/image_11.png">
 </p>
 
-**Algorithme de Tri Comptage - Réorganisation, Étape 4**
 <p align="justify">
 Et ainsi de suite. Nous écrivons une fois le 4, cinq fois le 6, une fois le 7, deux fois le 8 et enfin une fois le 9 dans le tableau à trier :</p>
 <p align="center">
@@ -142,7 +128,7 @@ Les nombres sont triés; l'algorithme est terminé.
 
 
 
-## Algorithme du Tri Comptage
+## 2.2. Algorithme du Tri Comptage
 
 <p align="justify">
 L'algorithme de tri comptage se déroule en plusieurs étapes :
@@ -190,12 +176,14 @@ Les algorithmes de recherche sont conçus pour vérifier la présence d'une donn
 L'approche initiale pour trouver une valeur dans un tableau est souvent celle de la recherche naïve. Cette méthode consiste à passer en revue chaque élément du tableau séquentiellement jusqu'à trouver la valeur cible. En termes de programmation, on implémente cela en parcourant le tableau élément par élément, en vérifiant à chaque étape si l'élément courant correspond à la valeur recherchée. Si la valeur est trouvée, l'indice de cet élément est renvoyé ; sinon, la fonction renvoie une indication que la valeur n'est pas présente dans le tableau.
 </p>
 
-```python
-def recherche_naive(tab, val):
-    for i in range(len(tab)):
-        if tab[i] == val:
-            return i
-    return -1
+```c++
+int Rech_nai(int tab[], int taille, int val) {
+    for (int i = 0; i < taille; i++) 
+        if (tab[i] == val) 
+            return i;
+            
+    return -1;
+}
 ```
 
 <p align="justify">
@@ -248,7 +236,7 @@ En ayant démontré la décroissance du variant, nous établissons la terminaiso
 
 Ce projet vise à mettre en œuvre six sous-programmes en assembleur PEP/8 pour manipuler et afficher des données de manière structurée. Les données, stockées sous forme de chaînes de caractères ASCII, doivent être converties en décimales pour le traitement. Le projet implique les étapes suivantes :
 
-## Préparation de la Pile :
+## 4.1. Préparation de la Pile :
 
 Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux représentent les seules variables globales du projet et sont définis comme suit :
   - Tableau 1 : [36, 86, 35, 57, 59] -> ASCII : "$V#9;"
@@ -257,20 +245,20 @@ Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux r
 
 Vous devez réserver l'espace pour les trois tableaux sur la pile, en tenant compte de leurs adresses et tailles respectives. Par exemple, pour un tableau de 10 octets, la structure de la pile comprendra l'adresse du tableau, la taille du tableau, et les données du tableau.
 
-## Chargement des Tableaux :
+## 4.2. Chargement des Tableaux :
 Les constantes TAILLE1, TAILLE2, TAILLE3, ADR_TAB1, ADR_TAB2, et ADR_TAB3 seront utilisées pour gérer les positions des tableaux dans la pile.
 
 Les tableaux seront chargés sur la pile dans l'ordre de leur taille, avec le tableau le plus petit au sommet.
 
-## Sous-Tâches de Base :
+## 4.3. Sous-Tâches de Base :
   - Charger : Cette procédure convertit la chaîne ASCII en tableau de décimales.
   - Afficher : Cette procédure affiche le tableau en décimal.
 
-## Procédures de Tri et Recherche :
+## 4.4. Procédures de Tri et Recherche :
   - Tri Comptage (Tri_comp) : Implémenter le tri comptage pour organiser les données des tableaux.
   - Recherche Dichotomique (Rech_dic) : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
 
-## Validation :
+## 4.5. Validation :
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
 La fenêtre ‘Output’ vous permettra de visualiser les résultats des tableaux après leur traitement.
 Chaque tableau sera traité pour convertir les caractères ASCII en valeurs décimales, qui seront ensuite triées et recherchées selon les spécifications du projet. Les étapes de ce TP vous permettront de vous familiariser avec des concepts clés de la programmation en assembleur PEP/8 tels que la manipulation de la pile, la gestion de la mémoire, et l'implémentation de sous-programmes pour le tri et la recherche de données.
