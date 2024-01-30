@@ -308,11 +308,15 @@ Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dan
 La déclaration des constantes est importante pour connaître la position de l’adresse du tableau dans la pile.  On s’assurera que le dessus de la pile pointe sur l’adresse d’un tableau.  En connaissant sa taille, on peut compter à quel octet est l’adresse d’un tableau qui se trouverait en dessous.  Prenons un exemple avec les 2 plus petits tableaux s’ils sont empilés en ordre de taille.
 
 TAILLE1 : .EQUATE 10  ; Taille en octets des tableaux
+
 TAILLE2 : .EQUATE 20  
+
 TAILLE3 : .EQUATE 30 
 
 ADR_TAB1 : .EQUATE 0  ; Inclus l’adresse et la taille de chacun
-ADR_TAB2 : .EQUATE 14      
+
+ADR_TAB2 : .EQUATE 14     
+
 ADR_TAB3 : .EQUATE ?
 
 
