@@ -219,6 +219,26 @@ Dans cette approche, le résultat de la recherche est représenté par un entier
 La recherche dichotomique repose sur un principe simple mais puissant : diviser l'espace de recherche en deux à chaque itération. On commence par examiner l'élément central du tableau. Si cet élément n'est pas celui recherché, on détermine ensuite dans quelle moitié du tableau la recherche doit continuer, en fonction de l'ordre des éléments. Si l'élément central est plus grand que la cible, on poursuit la recherche dans la moitié inférieure ; sinon, dans la moitié supérieure. Cette méthode continue jusqu'à trouver l'élément recherché ou jusqu'à ce que l'intervalle de recherche soit réduit à néant, indiquant que l'élément n'est pas présent dans le tableau. Cette approche, connue sous le nom de dichotomie, tire son efficacité de la division constante de l'espace de recherche, exploitant ainsi pleinement le caractère ordonné du tableau.
 </p>
 
+<p align="center">
+  <img src="./Images/image_14.svg">
+</p>
+
+
+<p align="center">
+  <img src="./Images/image_15.svg">
+</p>
+
+<p align="center">
+  <img src="./Images/image_16.svg">
+</p>
+
+<p align="center">
+  <img src="./Images/image_17.svg">
+</p>
+
+
+
+
 
 <p align="center">
     <img src="./Images/dicho.svg">
