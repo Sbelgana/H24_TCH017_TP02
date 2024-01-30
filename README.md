@@ -297,7 +297,25 @@ Vous devez réserver l'espace pour les trois tableaux sur la pile, en tenant com
 ## 4.2. Chargement des Tableaux :
 Les constantes TAILLE1, TAILLE2, TAILLE3, ADR_TAB1, ADR_TAB2, et ADR_TAB3 seront utilisées pour gérer les positions des tableaux dans la pile.
 
-Les tableaux seront chargés sur la pile dans l'ordre de leur taille, avec le tableau le plus petit au sommet.
+Réserver l’espace pour les 3 tableaux, leur adresse et leur taille respective.  La première chaîne demande une taille de 10 octets, la deuxième 20 et 30 pour la troisième.  Il s’agira de reculer le pointeur de pile de la taille d’un tableau, mettre le pointeur de pile dans A, reculer le pointeur de pile de 4 et stocker l’adresse et la taille par-dessus les cases du tableau.  Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :                           
+
+(image illustration:)
+
+Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dans ce format.
+
+(image illustration:)
+
+La déclaration des constantes est importante pour connaître la position de l’adresse du tableau dans la pile.  On s’assurera que le dessus de la pile pointe sur l’adresse d’un tableau.  En connaissant sa taille, on peut compter à quel octet est l’adresse d’un tableau qui se trouverait en dessous.  Prenons un exemple avec les 2 plus petits tableaux s’ils sont empilés en ordre de taille.
+
+TAILLE1 : .EQUATE 10  ; Taille en octets des tableaux
+TAILLE2 : .EQUATE 20  
+TAILLE3 : .EQUATE 30 
+
+ADR_TAB1 : .EQUATE 0  ; Inclus l’adresse et la taille de chacun
+ADR_TAB2 : .EQUATE 14      
+ADR_TAB3 : .EQUATE ?
+
+
 
 ## 4.3. Sous-Tâches de Base :
   - Charger : Cette procédure convertit la chaîne ASCII en tableau de décimales.
