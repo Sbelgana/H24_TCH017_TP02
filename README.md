@@ -192,23 +192,6 @@ fonction Tri_comp(tab):
    retourne tab
 ```
 
-```python
-def TriComptage(tab):
-    borneSuperieure = max(tab)
-    tabComptage = [0] * (borneSuperieure + 1)
-    
-    for k in tab:
-        tabComptage[k] += 1
-        
-    tab_sorted = [] 
-    N = len(tabComptage)
-    for i in range(N):
-        for j in range(tabComptage[i]):
-            tab_sorted.append(i)
-    
-    return tab_sorted
-```
-
 <p align="justify">
 Le tri comptage est optimal pour des données avec des valeurs proches et une grande quantité d'éléments.
 </p>
