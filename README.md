@@ -220,27 +220,6 @@ La recherche dichotomique repose sur un principe simple mais puissant : diviser 
 </p>
 
 <p align="center">
-  <img src="./Images/image_14.svg">
-</p>
-
-
-<p align="center">
-  <img src="./Images/image_15.svg">
-</p>
-
-<p align="center">
-  <img src="./Images/image_16.svg">
-</p>
-
-<p align="center">
-  <img src="./Images/image_17.svg">
-</p>
-
-
-
-
-
-<p align="center">
     <img src="./Images/dicho.svg">
 </p>
 
@@ -274,6 +253,33 @@ Nous démontrons la décroissance du variant comme suit :
 <p align="justify">
 En ayant démontré la décroissance du variant, nous établissons la terminaison correcte de l'algorithme de recherche dichotomique. Cela confirme la fiabilité du comportement du programme et nous permet d'analyser sa complexité algorithmique.
 </p>
+
+### 2.2.3. Exemple Détaillé de la Recherche Dichotomique
+
+Voici un exemple illustrant la recherche du nombre 56 dans le tableau trié suivant :
+
+<p align="center">
+  <img src="./Images/image_14.svg">
+</p>
+
+À la première étape, on regarde le nombre au milieu, qui est 45 dans notre cas. Comme le nombre recherché est supérieur à 45, on va s'intéresser à la partie droite du tableau. La zone de recherche sera un sous-tableau contenant les valeurs 48, 56, 60, 79 et 86.
+
+<p align="center">
+  <img src="./Images/image_15.svg">
+</p>
+
+À la deuxième étape, on regarde le nombre au milieu du sous-tableau (48, 56, 60, 79, 86), qui est 60. Puisque 60 est supérieur à la valeur recherchée, on va s'intéresser à la moitié gauche du sous-tableau, ici 48 et 56.
+
+<p align="center">
+  <img src="./Images/image_16.svg">
+</p>
+
+À la dernière étape, il reste deux valeurs, 48 et 56. La valeur au milieu est 48, qui est inférieure à la valeur recherchée. Il reste donc la seconde valeur, 56, qui est la valeur recherchée. L'algorithme s'arrête à ce point.
+<p align="center">
+  <img src="./Images/image_17.svg">
+</p>
+
+Cet exemple démontre l'efficacité de la recherche dichotomique, une méthode qui permet de localiser rapidement une valeur dans un tableau trié en réduisant de moitié la zone de recherche à chaque étape.
 
 # 4. Sous-programmes à implémenter <a name="Fonction"></a>
 
