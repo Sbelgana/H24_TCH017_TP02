@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="612.95498pt" height="275.09126pt" viewBox="0 0 612.95498 275.09126">
+  <style>
+    svg  { background-color:#ffffff }
+</style>
 <path transform="matrix(1,0,0,-1,.47750093,1.4442749)" stroke-width=".797" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H612"/>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-989.634" x="122.417 131.0745 134.25257 139.98107 145.70957 150.43184 153.60991 158.06319 164.42929 173.97347 183.03943 192.59357">Algorithme1:</tspan></text>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="9.9626" font-family="CMR10"><tspan y="-989.634" x="199.108 206.57996 209.34957 214.33086 219.31215 223.21749 225.98709 229.86255 235.40175 243.70059 251.44155 256.98075 264.73167 268.60713 272.51246 278.59959 283.02299 288.00428 296.30314 301.84236 305.7178 310.6991 315.6804">Algorithmedetricomptage</tspan></text>
