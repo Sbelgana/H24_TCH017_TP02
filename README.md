@@ -320,16 +320,56 @@ ADR_TAB2 : .EQUATE 14
 ADR_TAB3 : .EQUATE ?
 ```
 
-
-
-
 ## 4.3. Sous-Tâches de Base :
-  - Charger : Cette procédure convertit la chaîne ASCII en tableau de décimales.
-  - Afficher : Cette procédure affiche le tableau en décimal.
+Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous- tâches simple en premier. 
+1. <ins>  **Charger** </ins> 
+    Cette procédure charge le tableau de caractere et le place dans la memeoire, il faut prendre en compte qu'il faut convertir la chaîne ASCII en tableau de décimales.
+   
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   - `tab_car`  : l’adresse du tableau de caractères.
+  
+   **Retour :**
+   Pas de valeur de retour.
+   
+2. <ins>  **Afficher** </ins> 
+   
+    Cette procédure affiche le tableau en décimal le contenue du tableau recu en parametre.
+     
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   
+   **Retour :**
+   Pas de valeur de retour.
+
+3. <ins>  **Valeur_min** </ins> 
+   
+    Cette fonction trouve la valeur minimale du tableau en décimal.
+     
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   
+   **Retour :**
+   La valeur minimale du tableau.
+
+4. <ins>  **Valeur_max** </ins> 
+   
+    Cette fonction trouve la valeur maximal du tableau en décimal.
+     
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   
+   **Retour :**
+   La valeur maximale du tableau.
 
 ## 4.4. Procédures de Tri et Recherche :
-  - Tri Comptage (Tri_comp) : Implémenter le tri comptage pour organiser les données des tableaux.
-  - Recherche Dichotomique (Rech_dic) : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
+Une fois les sous-tâches de base sont implementer sous dever implementer les procédures de tri et de recherche selon l'ordre suivant: 
+  - Tri_comp : Implémenter le tri comptage pour organiser les données des tableaux.
+  - Rech_dic : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
 
 ## 4.5. Validation :
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
