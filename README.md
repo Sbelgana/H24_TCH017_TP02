@@ -275,6 +275,7 @@ Voici un exemple illustrant la recherche du nombre 56 dans le tableau trié suiv
 </p>
 
 À la dernière étape, il reste deux valeurs, 48 et 56. La valeur au milieu est 48, qui est inférieure à la valeur recherchée. Il reste donc la seconde valeur, 56, qui est la valeur recherchée. L'algorithme s'arrête à ce point.
+
 <p align="center">
   <img src="./Images/image_17.svg">
 </p>
@@ -283,7 +284,7 @@ Cet exemple démontre l'efficacité de la recherche dichotomique, une méthode q
 
 # 4. Sous-programmes à implémenter <a name="Fonction"></a>
 
-Ce projet vise à mettre en œuvre six sous-programmes en assembleur PEP/8 pour manipuler et afficher des données de manière structurée. Les données, stockées sous forme de chaînes de caractères ASCII, doivent être converties en décimales pour le traitement. Le projet implique les étapes suivantes :
+Le projet nécessite la création de trois tableaux de caractères ASCII dans la pile. Ces tableaux, les seuls variables globales du projet, sont définis comme suit :
 
 ## 4.1. Préparation de la Pile :
 
@@ -294,18 +295,22 @@ dat2:   .ASCII      "WF=R*J[G&$"      ; Tableau 2 : [87, 70, 61, 82, 42, 74, 91,
 dat3:   .ASCII      "=4c<U,dB^TK6@X!" ; Tableau 3 : [61, 52, 99, 60, 85, 44, 100, 66, 94, 84, 75, 54, 64, 88, 33]
 ```
 
-Vous devez réserver l'espace pour les trois tableaux sur la pile, en tenant compte de leurs adresses et tailles respectives. Par exemple, pour un tableau de 10 octets, la structure de la pile comprendra l'adresse du tableau, la taille du tableau, et les données du tableau.
+Pour chaque tableau, vous devrez allouer de l'espace dans la pile pour stocker l'adresse, la taille et les données du tableau.
 
 ## 4.2. Chargement des Tableaux :
 Les constantes TAILLE1, TAILLE2, TAILLE3, ADR_TAB1, ADR_TAB2, et ADR_TAB3 seront utilisées pour gérer les positions des tableaux dans la pile.
 
 Réserver l’espace pour les 3 tableaux, leur adresse et leur taille respective.  La première chaîne demande une taille de 10 octets, la deuxième 20 et 30 pour la troisième.  Il s’agira de reculer le pointeur de pile de la taille d’un tableau, mettre le pointeur de pile dans A, reculer le pointeur de pile de 4 et stocker l’adresse et la taille par-dessus les cases du tableau.  Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :                           
 
-(image illustration:)
+<p align="center">
+  <img src="./Images/image_18.svg">
+</p>
 
 Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dans ce format.
 
-(image illustration:)
+<p align="center">
+  <img src="./Images/image_19.svg">
+</p>
 
 La déclaration des constantes est importante pour connaître la position de l’adresse du tableau dans la pile.  On s’assurera que le dessus de la pile pointe sur l’adresse d’un tableau.  En connaissant sa taille, on peut compter à quel octet est l’adresse d’un tableau qui se trouverait en dessous.  Prenons un exemple avec les 2 plus petits tableaux s’ils sont empilés en ordre de taille.
 
@@ -322,9 +327,10 @@ ADR_TAB3 : .EQUATE ?
 
 ## 4.3. Sous-Tâches de Base :
 Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous- tâches simple en premier. 
+
 1. <ins>  **Charger** </ins> 
 
-   Cette procédure charge le tableau de caractere et le place dans la memeoire, il faut prendre en compte qu'il faut convertir la chaîne ASCII en tableau de décimales.
+   Chargez un tableau ASCII et convertissez-le en tableau décimal.
    
    **Paramètres :**
    - `adr_tab`  : l’adresse du tableau.
@@ -332,22 +338,22 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    - `tab_car`  : l’adresse du tableau de caractères.
   
    **Retour :**
-   Pas de valeur de retour.
+   Aucune valeur de retour.
    
-3. <ins>  **Afficher** </ins> 
+2. <ins>  **Afficher** </ins> 
    
-    Cette procédure affiche le tableau en décimal le contenue du tableau recu en parametre.
+    Affichez le contenu du tableau en décimal.
      
    **Paramètres :**
    - `adr_tab`  : l’adresse du tableau.
    - `tail_tab` : la taille du tableau.
    
    **Retour :**
-   Pas de valeur de retour.
+   Aucune valeur de retour.
 
-4. <ins>  **Valeur_min** </ins> 
+3. <ins>  **Valeur_min** </ins> 
    
-    Cette fonction trouve la valeur minimale du tableau en décimal.
+    Trouvez la valeur minimale dans le tableau.
      
    **Paramètres :**
    - `adr_tab`  : l’adresse du tableau.
@@ -356,9 +362,9 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    La valeur minimale du tableau.
 
-5. <ins>  **Valeur_max** </ins> 
+4. <ins>  **Valeur_max** </ins> 
    
-    Cette fonction trouve la valeur maximal du tableau en décimal.
+    Trouvez la valeur maximale dans le tableau.
      
    **Paramètres :**
    - `adr_tab`  : l’adresse du tableau.
@@ -368,9 +374,31 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    La valeur maximale du tableau.
 
 ## 4.4. Procédures de Tri et Recherche :
-Une fois les sous-tâches de base sont implementer sous dever implementer les procédures de tri et de recherche selon l'ordre suivant: 
-  - Tri_comp : Implémenter le tri comptage pour organiser les données des tableaux.
-  - Rech_dic : Mettre en place la recherche dichotomique pour localiser des éléments dans les tableaux triés.
+Après avoir implémenté les sous-tâches de base, vous devez mettre en œuvre les procédures de tri et de recherche :
+
+1. <ins>  **Tri_comp** </ins> 
+
+   Implémentez le tri par comptage pour organiser les données des tableaux.
+   
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+  
+   **Retour :**
+   Aucune valeur de retour.
+   
+2. <ins>  **Rech_dic** </ins> 
+   
+    Utilisez la recherche dichotomique pour localiser des éléments dans les tableaux triés.
+     
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   
+   **Retour :**
+   Résultat de la recherche.
+   
+
 
 ## 4.5. Validation :
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
