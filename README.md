@@ -52,44 +52,44 @@ Voici un exemple avec la plage de nombres 0–9 (c'est-à-dire, le tableau à tr
 
 Le tableau suivant doit être trié :
 <p align="center">
-  <img src="./Images/image_01.png">
+  <img src="./Images/image_01.svg">
 </p>
 
 #### 2.1.1.1. Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
 <p align="justify">
 Nous créons un tableau supplémentaire de longueur 10, initialisé à zéro. Dans le diagramme, l'indice du tableau est affiché sous la ligne :</p>
 <p align="center">
-  <img src="./Images/image_02.png">
+  <img src="./Images/image_02.svg">
 </p>
 
 <p align="justify">
 Nous itérons maintenant sur le tableau à trier. Le premier élément est un 3 – en conséquence, nous augmentons la valeur dans le tableau auxiliaire à la position 3 de un :</p>
 <p align="center">
-  <img src="./Images/image_03.png">
+  <img src="./Images/image_03.svg">
 </p>
 
 <p align="justify">
 Le deuxième élément est un 7. Nous incrémentons le champ à la position 7 dans le tableau auxiliaire :</p>
 <p align="center">
-  <img src="./Images/image_04.png">
+  <img src="./Images/image_04.svg">
 </p>
 
 <p align="justify">
 Les éléments 4 et 6 suivent – ainsi, nous augmentons les valeurs aux positions 4 et 6 de un chacun :</p>
 <p align="center">
-  <img src="./Images/image_05.png">
+  <img src="./Images/image_05.svg">
 </p>
 
 <p align="justify">
 Les deux éléments suivants – le 6 et le 3 – sont deux éléments qui sont déjà apparus auparavant. En conséquence, les champs correspondants dans le tableau auxiliaire sont augmentés de 1 à 2 :</p>
 <p align="center">
-  <img src="./Images/image_06.png">
+  <img src="./Images/image_06.svg">
 </p>
 
 <p align="justify">
 Le principe devrait être clair maintenant. Après avoir également augmenté les valeurs du tableau auxiliaire pour les éléments restants, le tableau auxiliaire ressemble finalement à ceci :</p>
 <p align="center">
-  <img src="./Images/image_07.png">
+  <img src="./Images/image_07.svg">
 </p>
 
 <p align="justify">
@@ -117,31 +117,31 @@ Dans la deuxième phase, nous itérons une fois sur le tableau histogramme. Nous
 <p align="justify">
 Dans l'exemple, nous commençons à la position 0 dans le tableau auxiliaire. Ce champ contient un 1, donc nous écrivons le 0 exactement une fois dans le tableau à trier.</p>
 <p align="center">
-  <img src="./Images/image_08.png">
+  <img src="./Images/image_08.svg">
 </p>
 
 <p align="justify">
 À la position 1 dans l'histogramme, il y a un 0, ce qui signifie que nous sautons ce champ – aucun 1 n'est écrit dans le tableau à trier.</p>
 <p align="center">
-  <img src="./Images/image_09.png">
+  <img src="./Images/image_09.svg">
 </p>
 
 <p align="justify">
 La position 2 de l'histogramme contient à nouveau un 1, donc nous écrivons un 2 dans le tableau à trier :</p>
 <p align="center">
-  <img src="./Images/image_10.png">
+  <img src="./Images/image_10.svg">
 </p>
 
 <p align="justify">
 Nous arrivons à la position 3, qui contient un 3 ; donc nous écrivons trois fois un 3 dans le tableau :</p>
 <p align="center">
-  <img src="./Images/image_11.png">
+  <img src="./Images/image_11.svg">
 </p>
 
 <p align="justify">
 Et ainsi de suite. Nous écrivons une fois le 4, cinq fois le 6, une fois le 7, deux fois le 8 et enfin une fois le 9 dans le tableau à trier :</p>
 <p align="center">
-  <img src="./Images/image_12.png">
+  <img src="./Images/image_12.svg">
 </p>
 
 Les nombres sont triés; l'algorithme est terminé.
