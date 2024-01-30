@@ -113,35 +113,38 @@ Nous utiliserons ces informations dans la phase 2 pour réorganiser le tableau �
 #### 2.1.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
 <p align="justify">
 Dans la deuxième phase, nous itérons une fois sur le tableau histogramme. Nous écrivons l'indice de tableau correspondant dans le tableau à trier aussi souvent que l'histogramme l'indique à la position correspondante.</p>
-
-<p align="justify">
-Dans l'exemple, nous commençons à la position 0 dans le tableau auxiliaire. Ce champ contient un 1, donc nous écrivons le 0 exactement une fois dans le tableau à trier.</p>
 <p align="center">
   <img src="./Images/image_08.svg">
 </p>
 
 <p align="justify">
-À la position 1 dans l'histogramme, il y a un 0, ce qui signifie que nous sautons ce champ – aucun 1 n'est écrit dans le tableau à trier.</p>
+Dans l'exemple, nous commençons à la position 0 dans le tableau auxiliaire. Ce champ contient un 1, donc nous écrivons le 0 exactement une fois dans le tableau à trier.</p>
 <p align="center">
   <img src="./Images/image_09.svg">
 </p>
 
 <p align="justify">
-La position 2 de l'histogramme contient à nouveau un 1, donc nous écrivons un 2 dans le tableau à trier :</p>
+À la position 1 dans l'histogramme, il y a un 0, ce qui signifie que nous sautons ce champ – aucun 1 n'est écrit dans le tableau à trier.</p>
 <p align="center">
   <img src="./Images/image_10.svg">
 </p>
 
 <p align="justify">
-Nous arrivons à la position 3, qui contient un 3 ; donc nous écrivons trois fois un 3 dans le tableau :</p>
+La position 2 de l'histogramme contient à nouveau un 1, donc nous écrivons un 2 dans le tableau à trier :</p>
 <p align="center">
   <img src="./Images/image_11.svg">
 </p>
 
 <p align="justify">
-Et ainsi de suite. Nous écrivons une fois le 4, cinq fois le 6, une fois le 7, deux fois le 8 et enfin une fois le 9 dans le tableau à trier :</p>
+Nous arrivons à la position 3, qui contient un 3 ; donc nous écrivons trois fois un 3 dans le tableau :</p>
 <p align="center">
   <img src="./Images/image_12.svg">
+</p>
+
+<p align="justify">
+Et ainsi de suite. Nous écrivons une fois le 4, cinq fois le 6, une fois le 7, deux fois le 8 et enfin une fois le 9 dans le tableau à trier :</p>
+<p align="center">
+  <img src="./Images/image_13.svg">
 </p>
 
 Les nombres sont triés; l'algorithme est terminé.
