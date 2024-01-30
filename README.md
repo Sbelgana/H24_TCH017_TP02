@@ -2,7 +2,25 @@
   <img src="https://www.etudesuniversitaires.ca/wp-content/uploads/2013/08/ecole-de-technologie-superieure-campus-image2.jpg" />
 </p>
 
-# 1. Introduction
+
+# PR02: Manipulation de tableaux de caractères et algorithme avancés
+- [Directives particulières](#directives)
+- [Introduction](#Introduction)
+- [Énoncé de travail](#enonce)
+  - [Tri Comptage](#Comptage)
+  - [Recherche Dichotomique](#Dichotomique)
+- [Sous-programmes à implémenter](#Fonction)
+- [Barème](#bareme)
+
+:alarm_clock: [Date de remise le dimanche 14 avril à 23h59](https://www.timeanddate.com/countdown/generic?iso=20240414T235959&p0=165&font=cursive)
+
+# Directives particulières <a name="directives"></a>
+* Respecter [guide de codage](https://ena.etsmtl.ca/pluginfile.php/1933883/mod_resource/content/0/INF145%20-%20Normes%20de%20programmations.pdf)
+* Noms de variables et fonctions adéquats (concis, compréhensibles);
+* Documentation du code
+
+  
+# 1. Introduction <a name="Introduction"></a>
 
 <p align="justify">
 Dans l'ère actuelle de l'information, marquée par le traitement et l'analyse d'énormes volumes de données, l'efficacité des algorithmes est devenue un pilier central dans le domaine de l'informatique. Ce projet se propose d'explorer deux techniques algorithmiques essentielles : le tri comptage et la recherche dichotomique, tout en s'immergeant dans le monde fascinant de la programmation en assembleur PEP/8. Ces méthodes, cruciales pour la gestion efficace des données, offrent également une fenêtre sur les principes fondamentaux des opérations algorithmiques.</p>
@@ -20,13 +38,15 @@ Enfin, ce projet vous offrira l'opportunité de comprendre les nuances du passag
 En somme, ce projet allie théorie et pratique pour renforcer votre compréhension des principes fondamentaux de l'informatique et développer vos compétences en programmation en assembleur PEP/8. Il vous préparera à aborder des défis informatiques avec une perspective éclairée et une appréciation approfondie du cœur des ordinateurs.
 </p>
 
-# 2. Tri Comptage (Counting Sort)
+# 2. Énoncé de travail<a name="enonce"></a>
+
+## 2.1. Tri Comptage (Counting Sort) <a name="Comptage"></a>
 
 <p align="justify">
 Le tri comptage, ou tri par dénombrement, est un algorithme particulièrement adapté au tri de données constituées de nombres entiers dans une plage définie. Ce tri fonctionne en calculant l'histogramme des valeurs puis en reconstruisant les données triées à partir de cet histogramme. Cela implique que plusieurs éléments identiques sont représentés par un unique élément quantifié dans l'histogramme. Il est donc optimal pour des données avec des valeurs proches et une grande quantité d'éléments.
 </p>
 
-## 2.1. Exemple Détaillé de Tri Comptage
+### 2.1.1. Exemple Détaillé de Tri Comptage
 
 Voici un exemple avec la plage de nombres 0–9 (c'est-à-dire, le tableau à trier contient uniquement des nombres de 0 à 9).
 
@@ -35,7 +55,7 @@ Le tableau suivant doit être trié :
   <img src="./Images/image_01.png">
 </p>
 
-### 2.1.1. Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
+#### 2.1.1.1. Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
 <p align="justify">
 Nous créons un tableau supplémentaire de longueur 10, initialisé à zéro. Dans le diagramme, l'indice du tableau est affiché sous la ligne :</p>
 <p align="center">
@@ -90,7 +110,7 @@ Les éléments à trier contiennent :
 Nous utiliserons ces informations dans la phase 2 pour réorganiser le tableau à trier.
 
 
-### 2.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
+#### 2.1.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
 <p align="justify">
 Dans la deuxième phase, nous itérons une fois sur le tableau histogramme. Nous écrivons l'indice de tableau correspondant dans le tableau à trier aussi souvent que l'histogramme l'indique à la position correspondante.</p>
 
@@ -128,7 +148,7 @@ Les nombres sont triés; l'algorithme est terminé.
 
 
 
-## 2.2. Algorithme du Tri Comptage
+### 2.1.2. Algorithme du Tri Comptage
 
 <p align="justify">
 L'algorithme de tri comptage se déroule en plusieurs étapes :
@@ -162,15 +182,15 @@ Voici une implémentation en pseudo-code :
 Le tri comptage est optimal pour des données avec des valeurs proches et une grande quantité d'éléments.
 </p>
 
-# 3. Recherche Dichotomique
+## 2.2. Recherche Dichotomique <a name="Dichotomique"></a>
 
 <p align="justify">
 Les algorithmes de recherche sont conçus pour vérifier la présence d'une donnée dans un ensemble et, si elle est trouvée, pour en indiquer précisément la position. Cela est analogue à la recherche d'une personne dans un annuaire pour en obtenir l'adresse. Dans le domaine plus large des bases de données, cette méthode est souvent employée pour retrouver des données associées à un identifiant spécifique. Parmi ces techniques, la recherche dichotomique est particulièrement efficace pour traiter des données structurées de manière séquentielle dans un tableau.
 </p>
 
-## Approche Naïve vs Approche Dichotomique
+### 2.2.1. Approche Naïve vs Approche Dichotomique
 
-### Recherche Naïve
+#### 2.2.1.1. Recherche Naïve
 
 <p align="justify">
 L'approche initiale pour trouver une valeur dans un tableau est souvent celle de la recherche naïve. Cette méthode consiste à passer en revue chaque élément du tableau séquentiellement jusqu'à trouver la valeur cible. En termes de programmation, on implémente cela en parcourant le tableau élément par élément, en vérifiant à chaque étape si l'élément courant correspond à la valeur recherchée. Si la valeur est trouvée, l'indice de cet élément est renvoyé ; sinon, la fonction renvoie une indication que la valeur n'est pas présente dans le tableau.
@@ -190,7 +210,7 @@ int Rech_nai(int tab[], int taille, int val) {
 Dans cette approche, le résultat de la recherche est représenté par un entier : une position positive ou zéro indique le succès, c'est-à-dire la localisation de la valeur cible dans le tableau. Si la valeur n'est pas trouvée, la fonction renvoie -1, signalant ainsi l'échec de la recherche. Cette méthode, caractérisée par sa simplicité, a une complexité linéaire, signifiant que le temps nécessaire pour la recherche augmente proportionnellement avec la taille du tableau. Cependant, elle ne tire pas parti du fait que le tableau est trié, car l'absence de la valeur à une position donnée ne fournit aucune information sur les emplacements des autres valeurs.
 </p>
 
-### Recherche Dichotomique
+#### 2.2.1.2. Recherche Dichotomique
 
 <p align="justify">
 La recherche dichotomique repose sur un principe simple mais puissant : diviser l'espace de recherche en deux à chaque itération. On commence par examiner l'élément central du tableau. Si cet élément n'est pas celui recherché, on détermine ensuite dans quelle moitié du tableau la recherche doit continuer, en fonction de l'ordre des éléments. Si l'élément central est plus grand que la cible, on poursuit la recherche dans la moitié inférieure ; sinon, dans la moitié supérieure. Cette méthode continue jusqu'à trouver l'élément recherché ou jusqu'à ce que l'intervalle de recherche soit réduit à néant, indiquant que l'élément n'est pas présent dans le tableau. Cette approche, connue sous le nom de dichotomie, tire son efficacité de la division constante de l'espace de recherche, exploitant ainsi pleinement le caractère ordonné du tableau.
@@ -201,7 +221,7 @@ La recherche dichotomique repose sur un principe simple mais puissant : diviser 
     <img src="./Images/dicho.svg">
 </p>
 
-### Vérification de la Fiabilité de la Recherche Dichotomique
+### 2.2.2. Vérification de la Fiabilité de la Recherche Dichotomique
 
 <p align="justify">
 La fiabilité de l'algorithme de recherche dichotomique repose sur deux questions fondamentales :
@@ -232,7 +252,7 @@ Nous démontrons la décroissance du variant comme suit :
 En ayant démontré la décroissance du variant, nous établissons la terminaison correcte de l'algorithme de recherche dichotomique. Cela confirme la fiabilité du comportement du programme et nous permet d'analyser sa complexité algorithmique.
 </p>
 
-# 4. Description du Projet
+# 4. Sous-programmes à implémenter <a name="Fonction"></a>
 
 Ce projet vise à mettre en œuvre six sous-programmes en assembleur PEP/8 pour manipuler et afficher des données de manière structurée. Les données, stockées sous forme de chaînes de caractères ASCII, doivent être converties en décimales pour le traitement. Le projet implique les étapes suivantes :
 
@@ -262,3 +282,8 @@ Les tableaux seront chargés sur la pile dans l'ordre de leur taille, avec le ta
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
 La fenêtre ‘Output’ vous permettra de visualiser les résultats des tableaux après leur traitement.
 Chaque tableau sera traité pour convertir les caractères ASCII en valeurs décimales, qui seront ensuite triées et recherchées selon les spécifications du projet. Les étapes de ce TP vous permettront de vous familiariser avec des concepts clés de la programmation en assembleur PEP/8 tels que la manipulation de la pile, la gestion de la mémoire, et l'implémentation de sous-programmes pour le tri et la recherche de données.
+
+
+# 5. Barème /100 <a name="bareme"></a>
+|**Nom des fonctions**|**Nombre de points attribuer**|
+| :- | :- |
