@@ -327,7 +327,7 @@ ADR_TAB3 : .EQUATE ?
 ```
 
 ## 4.3. Sous-Tâches de Base :
-Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous- tâches simple en premier. 
+Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous-tâches simple en premier. 
 
 1. <ins>  **Charger** </ins> 
 
@@ -373,6 +373,32 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    
    **Retour :**
    La valeur maximale du tableau.
+   
+5. <ins>  **Comp_tab** </ins> 
+   
+   Compte la fréquence des éléments dans un tableau à trier (phase 1 du tri comptage).
+     
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   
+   **Retour :**
+   Un tableau auxiliaire représentant la fréquence des éléments dans le tableau à trier.
+
+
+   
+6. <ins>  **Reag_tab** </ins> 
+   
+   Réorganise les éléments dans un tableau en utilisant un histogramme (phase 2 du tri comptage).
+     
+   **Paramètres :**
+   - `adr_tab`  : l’adresse du tableau.
+   - `tail_tab` : la taille du tableau.
+   - `histo` : Le tableau auxiliaire représentant l'histogramme des fréquences des éléments.
+   - `tai_hist` : La taille du tableau histogramme.
+   
+   **Retour :**
+   Aucune valeur de retour.
 
 ## 4.4. Procédures de Tri et Recherche :
 Après avoir implémenté les sous-tâches de base, vous devez mettre en œuvre les procédures de tri et de recherche :
