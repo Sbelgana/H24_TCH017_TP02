@@ -10,6 +10,7 @@
   - [Tri Comptage](#Comptage)
   - [Recherche Dichotomique](#Dichotomique)
 - [Sous-programmes à implémenter](#Fonction)
+- [Conclusion](#Conclusion)
 - [Barème](#bareme)
 
 :alarm_clock: [Date de remise le dimanche 14 avril à 23h59](https://www.timeanddate.com/countdown/generic?iso=20240414T235959&p0=165&font=cursive)
@@ -405,7 +406,12 @@ Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs so
 La fenêtre ‘Output’ vous permettra de visualiser les résultats des tableaux après leur traitement.
 Chaque tableau sera traité pour convertir les caractères ASCII en valeurs décimales, qui seront ensuite triées et recherchées selon les spécifications du projet. Les étapes de ce TP vous permettront de vous familiariser avec des concepts clés de la programmation en assembleur PEP/8 tels que la manipulation de la pile, la gestion de la mémoire, et l'implémentation de sous-programmes pour le tri et la recherche de données.
 
+# 5. Conclusion <a name="Conclusion"></a>
 
-# 5. Barème /100 <a name="bareme"></a>
+Une fois que tout fonctionne correctement. Sauvegardez une copie de votre code en suivant le format suivant : equipe_xx.pep
+
+Bon travail!
+
+# 6. Barème /100 <a name="bareme"></a>
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
