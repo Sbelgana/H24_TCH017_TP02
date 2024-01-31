@@ -99,7 +99,7 @@ Ce soi-disant histogramme nous indique ce qui suit :</p>
 Les éléments à trier contiennent :
 - 1 fois le 0,
 - 0 fois le 1,
-- 1 fois le 2,
+- 2 fois le 2,
 - 3 fois le 3,
 - 1 fois le 4,
 - 0 fois le 5,
