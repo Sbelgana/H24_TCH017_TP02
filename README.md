@@ -418,6 +418,103 @@ Après avoir implémenté les sous-tâches de base, vous devez mettre en œuvre 
    
 ## 4.5. Resultats attendue :
 
+### 4.5.1. Lecture et Trie du tableau 1 :
+La première étape consiste à lire les données du tableau 1 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.
+
+
+<p align="center">
+  <img src="./Images/Resultat_02.png">
+</p>
+
+La création de l'histogramme des fréquences d'apparition de chaque nombre dans le tableau est la prochaine étape. Cela implique de compter combien de fois chaque élément apparaît dans le tableau et de stocker ces compteurs dans un tableau d'histogramme préalablement défini. Voici un aperçu du contenu de la mémoire à ce stade.
+
+<p align="center">
+  <img src="./Images/Resultat_03.png">
+</p>
+
+La dernière étape est de trier le tableau en utilisant le tri par comptage, une méthode qui utilise l'histogramme des fréquences pour organiser les éléments du tableau en ordre croissant. Voici un aperçu du contenu de la mémoire à ce stade.
+
+<p align="center">
+  <img src="./Images/Resultat_04.png">
+</p>
+
+Finalement, il est nécessaire d'afficher le contenu du tableau sur la console avant et après l'utilisation du tri par comptage. Cela permet de vérifier visuellement l'efficacité du tri. L'image suivante donne un exemple de ce à quoi devrait ressembler l'affichage final sur la console.
+<p align="center">
+  <img src="./Images/Resultat_01.png">
+</p>
+
+
+
+<p align="center">
+  <img src="./Images/Resultat_05.png">
+</p>
+
+Finalement sur votre consolle, il faut affichier le contenu du tableau avant et apres l'utilisation du tri comptage.
+<p align="center">
+  <img src="./Images/Resultat_06.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_07.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_08.png">
+</p>
+
+
+
+<p align="center">
+  <img src="./Images/Resultat_09.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_10.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_11.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_12.png">
+</p>
+
+
+
+<p align="center">
+  <img src="./Images/Resultat_13.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_14.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_15.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_16.png">
+</p>
+
+
+<p align="center">
+  <img src="./Images/Resultat_17.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_18.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_19.png">
+</p>
+
+<p align="center">
+  <img src="./Images/Resultat_20.png">
+</p>
+
 ## 4.6. Validation :
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
 La fenêtre ‘Output’ vous permettra de visualiser les résultats des tableaux après leur traitement.
