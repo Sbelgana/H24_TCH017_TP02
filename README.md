@@ -591,3 +591,10 @@ Bon travail!
 # 6. Barème /100 <a name="bareme"></a>
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
+|A_LECTUR | 15 |
+|A_AFFICH | 10 |
+|A_MINIM | 5 |
+|A_MAXIM | 5 |
+|A_HISTO | 25 |
+|A_TRICOM | 20 |
+|A_RECHDI | 20 |
