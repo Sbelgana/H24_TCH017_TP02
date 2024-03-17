@@ -572,9 +572,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
 </p>
 
 ## 3.6. Validation :
-<div align="justify">Pour garantir l'exactitude de votre travail dans le cadre de ce TP, vous utiliserez divers outils de visualisation fournis par l'environnement de développement PEP/8.</div>
-
-<div align="justify">
+<div align="justify">Pour garantir l'exactitude de votre travail dans le cadre de ce TP, vous utiliserez divers outils de visualisation fournis par l'environnement de développement PEP/8.
   
 - **Vue Memory Dump** : Cet outil est indispensable pour inspecter directement le contenu de la mémoire et vérifier que les valeurs sont correctement attribuées aux tableaux. Cela vous permet de valider manuellement l'exactitude des données insérées.
 
