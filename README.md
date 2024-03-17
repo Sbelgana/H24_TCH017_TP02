@@ -21,7 +21,7 @@
 * Noms de variables et fonctions adéquats (concis, compréhensibles);
 * Documentation du code
 * Liens utiles:
-  * Tri Comptage¸(https://fr.wikipedia.org/wiki/Tri_comptage)
+  * [Tri Comptage](https://fr.wikipedia.org/wiki/Tri_comptage)
   * [Recherche dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique#:~:text=La%20recherche%20dichotomique%2C%20ou%20recherche,%C3%A9l%C3%A9ment%20dans%20un%20tableau%20tri%C3%A9.)
 
   
