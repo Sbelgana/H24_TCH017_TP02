@@ -323,25 +323,28 @@ Pour chaque tableau, vous devrez allouer de l'espace dans la pile pour stocker l
 
 ## 4.2. Chargement des Tableaux :
 <p align="justify">
-Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 seront utilisées pour gérer les positions des tableaux dans la pile.</p>
+Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 sont définies pour gérer les emplacements et les tailles des tableaux dans la pile. Ces constantes permettent de manipuler les adresses et les longueurs des tableaux de manière dynamique lors du chargement.</p>
 
 <p align="justify">
-Réserver l’espace pour les 3 tableaux, leur adresse et leur taille respective.  La première chaîne demande une taille de 10 octets, la deuxième 20 et 30 pour la troisième.  Il s’agira de reculer le pointeur de pile de la taille d’un tableau, mettre le pointeur de pile dans A, reculer le pointeur de pile de 4 et stocker l’adresse et la taille par-dessus les cases du tableau.  Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :  </p>                         
+Le processus de chargement des tableaux implique de réserver l'espace nécessaire dans la pile pour chacun des tableaux.  Cela est réalisé en reculant le pointeur de pile de la taille totale des tableaux et en sauvegardant ensuite les adresses de départ et les tailles de chaque tableau au-dessus de leursemplacements respectifs dans la pile.</p>   
 
+**Exemple de chargement pour le tableau 1 :**
+<p align="justify">Reculer le pointeur de pile de 10 octets pour le tableau 1, sauvegarder l'adresse de départ et la taille du tableau.</p>
+
+<p align="justify">Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :  </p>     
 <p align="center">
   <img src="./Images/image_18.svg">
 </p>
 
 <p align="justify">
-Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dans ce format.</p>
+Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dans ce format. L'image suivante illustre l'état de la pile après le chargement des tableaux, montrant clairement leur agencement l'un par rapport à l'autre. </p>
 
 <p align="center">
   <img src="./Images/image_19.svg">
 </p>
 
 <p align="justify">
-La déclaration des constantes est importante pour connaître la position de l’adresse du tableau dans la pile.  On s’assurera que le dessus de la pile pointe sur l’adresse d’un tableau.  En connaissant sa taille, on peut compter à quel octet est l’adresse d’un tableau qui se trouverait en dessous.  Prenons un exemple avec les 2 plus petits tableaux s’ils sont empilés en ordre de taille.</p>
-
+L'organisation de la pile et la déclaration des constantes permettent une manipulation flexible des tableaux, facilitant l'accès aux données et la gestion de la mémoire dans des opérations ultérieures telles que le tri ou la recherche.</p>
 
 ```asm
 a_tai1:  .EQUATE 10     ; Taille en octets du tableau 1.
