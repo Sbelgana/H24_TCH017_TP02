@@ -28,16 +28,16 @@
 # 1. Introduction <a name="Introduction"></a>
 
 <div align="justify">
-Nous vivons dans une époque définie par le déluge de données, où le traitement et l'analyse de volumes massifs d'informations jouent un rôle pivot dans de nombreux domaines de la science et de la technologie. Au cœur de ces processus se trouvent les algorithmes, dont l'efficacité détermine la rapidité et la précision avec lesquelles nous pouvons tirer des conclusions et prendre des décisions. Ce projet vise à vous familiariser avec deux techniques algorithmiques fondamentales: le tri comptage et la recherche dichotomique. Ces techniques ne sont pas seulement vitales pour le traitement des données mais constituent également une porte d'entrée vers la compréhension des principes opérationnels au cœur de l'informatique.</div>
+Nous vivons dans une époque définie par le déluge de données, où le traitement et l'analyse de volumes massifs d'informations jouent un rôle pivot dans de nombreux domaines de la science et de la technologie. Au cœur de ces processus se trouvent les algorithmes, dont l'efficacité détermine la rapidité et la précision avec lesquelles nous pouvons tirer des conclusions et prendre des décisions. Ce projet vise à vous familiariser avec deux techniques algorithmiques fondamentales: le tri comptage et la recherche dichotomique. Ces techniques ne sont pas seulement vitales pour le traitement des données mais constituent également une porte d'entrée vers la compréhension des principes opérationnels au cœur de l'informatique.<br><br></div>
 
 <div align="justify">
-Le tri comptage se distingue en tant que méthode de tri non comparatif, optimisée pour organiser des nombres entiers au sein de plages de valeurs définies. Sa spécificité réside dans sa capacité à classifier les données sans nécessiter de comparaisons directes entre elles, ce qui le rend particulièrement efficace pour trier de grands ensembles de données où les valeurs se trouvent à proximité les unes des autres. D'autre part, la recherche dichotomique adopte une stratégie de "division et conquête", permettant de localiser avec rapidité un élément spécifique dans un tableau trié. Cette méthode s'avère significativement plus rapide que la recherche séquentielle, offrant une efficience accrue pour les opérations de recherche dans de grandes bases de données. À travers ce projet, nous explorerons en profondeur ces techniques pour révéler non seulement leur fonctionnement interne et leurs avantages mais également leurs limites.</div>
+Le tri comptage se distingue en tant que méthode de tri non comparatif, optimisée pour organiser des nombres entiers au sein de plages de valeurs définies. Sa spécificité réside dans sa capacité à classifier les données sans nécessiter de comparaisons directes entre elles, ce qui le rend particulièrement efficace pour trier de grands ensembles de données où les valeurs se trouvent à proximité les unes des autres. D'autre part, la recherche dichotomique adopte une stratégie de "division et conquête", permettant de localiser avec rapidité un élément spécifique dans un tableau trié. Cette méthode s'avère significativement plus rapide que la recherche séquentielle, offrant une efficience accrue pour les opérations de recherche dans de grandes bases de données. À travers ce projet, nous explorerons en profondeur ces techniques pour révéler non seulement leur fonctionnement interne et leurs avantages mais également leurs limites.<br><br></div>
 
 <div align="justify">
-En parallèle, nous plongerons dans le monde de la programmation en assembleur PEP/8, un langage de bas niveau qui dévoile les mécanismes sous-jacents des opérations informatiques. Ce cadre vous apprendra à manipuler des tableaux un élément fondamental dans la gestion des structures de données avec une attention particulière portée au tri comptage et à la recherche dichotomique. Vous aborderez également la gestion de la mémoire, une composante crucial de la programmation en assembleur, qui vous éclairera sur la façon dont la mémoire est allouée, employée, et libérée dans le cadre d'un programme. L'utilisation de la pile, essentielle pour la gestion des appels de fonction et la déclaration des variables locales, ainsi que les techniques pour définir et appeler des fonctions en langage assembleur, seront examinées en détail.</div>
+En parallèle, nous plongerons dans le monde de la programmation en assembleur PEP/8, un langage de bas niveau qui dévoile les mécanismes sous-jacents des opérations informatiques. Ce cadre vous apprendra à manipuler des tableaux un élément fondamental dans la gestion des structures de données avec une attention particulière portée au tri comptage et à la recherche dichotomique. Vous aborderez également la gestion de la mémoire, une composante crucial de la programmation en assembleur, qui vous éclairera sur la façon dont la mémoire est allouée, employée, et libérée dans le cadre d'un programme. L'utilisation de la pile, essentielle pour la gestion des appels de fonction et la déclaration des variables locales, ainsi que les techniques pour définir et appeler des fonctions en langage assembleur, seront examinées en détail.<br><br></div>
 
 <div align="justify">
-Ce projet vous offre également l'occasion d'appréhender les subtilités du passage de paramètres par valeur et par adresse deux concepts clés pour une gestion optimale des données en programmation. Cette expérience enrichissante vous munira des compétences et connaissances nécessaires pour naviguer à travers des problématiques informatiques plus sophistiquées, élargissant ainsi votre horizon et approfondissant votre compréhension des processus internes qui animent les ordinateurs.</div>
+Ce projet vous offre également l'occasion d'appréhender les subtilités du passage de paramètres par valeur et par adresse deux concepts clés pour une gestion optimale des données en programmation. Cette expérience enrichissante vous munira des compétences et connaissances nécessaires pour naviguer à travers des problématiques informatiques plus sophistiquées, élargissant ainsi votre horizon et approfondissant votre compréhension des processus internes qui animent les ordinateurs.<br><br></div>
 
 <div align="justify">
 Au final, ce projet est conçu pour tisser ensemble la théorie et la pratique, dans le but d'affermir votre compréhension des principes essentiels de l'informatique tout en affûtant vos compétences en programmation en assembleur PEP/8. Il vous équipera pour relever avec confiance des défis informatiques variés, armé d'une perspective éclairée et d'une appréciation profonde pour l'essence même de la technologie informatique.</div>
@@ -50,8 +50,8 @@ Au final, ce projet est conçu pour tisser ensemble la théorie et la pratique, 
 Le tri comptage, également connu sous le nom de tri par dénombrement, est une technique algorithmique conçue spécifiquement pour trier des ensembles de nombres entiers situés dans un intervalle précis. Cette méthode se distingue par son approche unique : elle établit d'abord un "histogramme" des données, identifiant le nombre d'occurrences de chaque valeur, puis elle utilise cette distribution pour reconstruire l'ensemble trié. L'avantage principal du tri comptage réside dans sa capacité à trier les données sans avoir besoin de comparer les éléments entre eux, ce qui le rend particulièrement efficace pour les ensembles de données où les valeurs sont nombreuses mais étroitement groupées.</div>
 
 ### 2.1.1. Exemple Détaillé de Tri Comptage
-
-Imaginons un ensemble de données contenant des nombres allant de 0 à 9. Notre objectif est de trier cet ensemble selon le principe du tri comptage.
+<div align="justify">
+Imaginons un ensemble de données contenant des nombres allant de 0 à 9. Notre objectif est de trier cet ensemble selon le principe du tri comptage.<br><br></div>
 
 Le tableau suivant doit être trié :
 <p align="center">
@@ -102,7 +102,7 @@ Le principe devrait être clair maintenant. Après avoir également augmenté le
 </p>
 
 <div align="justify">
-Cet histogramme nous fournit une représentation claire de la distribution des valeurs dans notre ensemble de données, indiquant exactement combien de fois chaque valeur apparaît.</div>
+Cet histogramme nous fournit une représentation claire de la distribution des valeurs dans notre ensemble de données, indiquant exactement combien de fois chaque valeur apparaît.<br><br></div>
 
 Les éléments à trier contiennent :
 - 1 fois le 0,
@@ -173,17 +173,19 @@ Et ainsi de suite. Nous écrivons une fois le 4, cinq fois le 6, une fois le 7, 
 L'application du tri comptage suit une séquence d'étapes méthodiques :
 </div>
 
-1. **Détermination de la borne maximale et minimale :** : 
-  <div align="justify">Identifier les valeurs extrêmes dans l'ensemble de données permet de dimensionner correctement le tableau auxiliaire utilisé pour le comptage.</div>
+ <div align="justify">
+   
+1. **Détermination de la borne maximale et minimale :** 
+ Identifier les valeurs extrêmes dans l'ensemble de données permet de dimensionner correctement le tableau auxiliaire utilisé pour le comptage.
 
-2. **Initialisation du tableau de comptage :** : 
-  <div align="justify">Un tableau auxiliaire est initialisé pour couvrir toutes les valeurs possibles entre les bornes identifiées, avec chaque cellule démarrant à zéro.</div>
+2. **Initialisation du tableau de comptage :**  
+  Un tableau auxiliaire est initialisé pour couvrir toutes les valeurs possibles entre les bornes identifiées, avec chaque cellule démarrant à zéro.
 
-3. **Remplissage du tableau de comptage :** : 
-  <div align="justify">Chaque élément de l'ensemble de données est parcouru, et le comptage correspondant dans le tableau auxiliaire est incrémenté, construisant l'histogramme des valeurs.</div>
+3. **Remplissage du tableau de comptage :** 
+  Chaque élément de l'ensemble de données est parcouru, et le comptage correspondant dans le tableau auxiliaire est incrémenté, construisant l'histogramme des valeurs.
   
-4. **Reconstruction du tableau trié :** : 
-   <div align="justify">Enfin, l'ensemble de données est reconstitué en ordre croissant en se basant sur les informations contenues dans l'histogramme, complétant ainsi le processus de tri.</div>
+4. **Reconstruction du tableau trié :** 
+  Enfin, l'ensemble de données est reconstitué en ordre croissant en se basant sur les informations contenues dans l'histogramme, complétant ainsi le processus de tri.</div>
 
 <div align="justify">
 Voici une implémentation en pseudo-code du tri comptage:
@@ -235,22 +237,23 @@ La recherche dichotomique adopte une stratégie de division efficace, commençan
 ### 2.2.2. Vérification de la Fiabilité de la Recherche Dichotomique
 
 <div align="justify">La recherche dichotomique est reconnue pour son efficacité dans la localisation rapide d'éléments au sein de données structurées. Pour garantir cette efficacité, deux aspects cruciaux doivent être systématiquement vérifiés : la terminaison de l'algorithme et la précision des résultats obtenus.</div>
-
+<div align="justify">
+  
 1. **Terminaison de la Boucle** : 
-<div align="justify">La terminaison de l'algorithme est assurée par l'application d'un "variant de boucle", un principe qui impose une décroissance stricte et systématique de l'espace de recherche à chaque itération. Cette mesure, restant toujours positive ou nulle, garantit que l'algorithme parvienne à une conclusion en un nombre fini d'étapes, évitant ainsi tout risque de boucle infinie.</div>
+La terminaison de l'algorithme est assurée par l'application d'un "variant de boucle", un principe qui impose une décroissance stricte et systématique de l'espace de recherche à chaque itération. Cette mesure, restant toujours positive ou nulle, garantit que l'algorithme parvienne à une conclusion en un nombre fini d'étapes, évitant ainsi tout risque de boucle infinie.
 
 2. **Précision de la Réponse** : 
-<div align="justify">Quant à la précision, elle est primordiale pour confirmer que l'indice renvoyé par l'algorithme correspond bien à l'élément recherché, ou indique correctement son absence. Cette exactitude des résultats assure la fiabilité de la recherche dichotomique comme méthode de recherche dans des ensembles de données ordonnés.</div>
+Quant à la précision, elle est primordiale pour confirmer que l'indice renvoyé par l'algorithme correspond bien à l'élément recherché, ou indique correctement son absence. Cette exactitude des résultats assure la fiabilité de la recherche dichotomique comme méthode de recherche dans des ensembles de données ordonnés.<br><br></div>
 
-<div align="justify">La mise en œuvre d'un système de vérification rigoureux confirme la capacité de la recherche dichotomique à fournir des résultats fiables et précis. Cette méthode exploite une stratégie de recherche optimisée, divisant de manière exponentielle l'espace de recherche à chaque étape, ce qui permet d'affiner rapidement la zone de recherche jusqu'à localiser précisément l'élément désiré ou conclure à son absence.</div>
+<div align="justify">La mise en œuvre d'un système de vérification rigoureux confirme la capacité de la recherche dichotomique à fournir des résultats fiables et précis. Cette méthode exploite une stratégie de recherche optimisée, divisant de manière exponentielle l'espace de recherche à chaque étape, ce qui permet d'affiner rapidement la zone de recherche jusqu'à localiser précisément l'élément désiré ou conclure à son absence.<br><br></div>
 
-<div align="justify">Pour illustrer le processus garantissant la terminaison et la précision :</div>
+<div align="justify">Pour illustrer le processus garantissant la terminaison et la précision :
 
 1. Le point médian est calculé par `milieu = (gauche + droite) // 2`, assurant que `gauche <= milieu <= droite`.
 2. Trois scénarios sont alors envisageables :
    - Si `tab[milieu] = val`, l'élément est trouvé et la recherche se termine.
    - Si `tab[milieu] > val`, la recherche se poursuit dans la moitié inférieure, déplaçant la borne `droite` à `milieu - 1`, réduisant ainsi l'espace de recherche.
-   - Si `tab[milieu] < val`, la recherche continue dans la moitié supérieure, ajustant la borne `gauche` à `milieu + 1`.
+   - Si `tab[milieu] < val`, la recherche continue dans la moitié supérieure, ajustant la borne `gauche` à `milieu + 1`.<br><br></div>
 
 <div align="justify">Ces étapes garantissent la réduction continue de l'espace de recherche, assurant la terminaison de l'algorithme tout en maintenant une précision optimale des résultats.</div>
 
@@ -309,13 +312,13 @@ Pour chaque tableau, vous devrez allouer de l'espace dans la pile pour stocker l
 
 ## 3.2. Chargement des Tableaux :
 <div align="justify">
-Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 sont définies pour gérer les emplacements et les tailles des tableaux dans la pile. Ces constantes permettent de manipuler les adresses et les longueurs des tableaux de manière dynamique lors du chargement.</div>
+Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 sont définies pour gérer les emplacements et les tailles des tableaux dans la pile. Ces constantes permettent de manipuler les adresses et les longueurs des tableaux de manière dynamique lors du chargement.<br><br></div>
 
 <div align="justify">
 Le processus de chargement des tableaux implique de réserver l'espace nécessaire dans la pile pour chacun des tableaux.  Cela est réalisé en reculant le pointeur de pile de la taille totale des tableaux et en sauvegardant ensuite les adresses de départ et les tailles de chaque tableau au-dessus de leursemplacements respectifs dans la pile.</div>   
 
 **Exemple de chargement pour le tableau 1 :**
-<div align="justify">Reculer le pointeur de pile de 10 octets pour le tableau 1, sauvegarder l'adresse de départ et la taille du tableau.</div>
+<div align="justify">Reculer le pointeur de pile de 10 octets pour le tableau 1, sauvegarder l'adresse de départ et la taille du tableau.<br><br></div>
 
 <div align="justify">Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :  </div>     
 <p align="center">
