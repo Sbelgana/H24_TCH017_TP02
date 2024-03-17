@@ -291,15 +291,15 @@ Le projet nécessite la création de trois tableaux de caractères ASCII dans la
 
 Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux représentent les seules variables globales du projet et sont définis comme suit :
 ```asm
-dat1:   .ASCII      "$V#9;"           ; Tableau 1 : [36, 86, 35, 57, 59]
-dat2:   .ASCII      "WF=R*J[G&$"      ; Tableau 2 : [87, 70, 61, 82, 42, 74, 91, 71, 38, 36]
-dat3:   .ASCII      "=4c<U,dB^TK6@X!" ; Tableau 3 : [61, 52, 99, 60, 85, 44, 100, 66, 94, 84, 75, 54, 64, 88, 33]
+a_tab1:  .ASCII  "Allo!"           ; Tableau 1 : [65 108 108 111 33]
+a_tab2:  .ASCII  "Message!!!"      ; Tableau 2 : [77 101 115 115 97 103 101 33 33 33]
+a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
 ```
 
 Pour chaque tableau, vous devrez allouer de l'espace dans la pile pour stocker l'adresse, la taille et les données du tableau.
 
 ## 4.2. Chargement des Tableaux :
-Les constantes TAILLE1, TAILLE2, TAILLE3, ADR_TAB1, ADR_TAB2, et ADR_TAB3 seront utilisées pour gérer les positions des tableaux dans la pile.
+Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 seront utilisées pour gérer les positions des tableaux dans la pile.
 
 Réserver l’espace pour les 3 tableaux, leur adresse et leur taille respective.  La première chaîne demande une taille de 10 octets, la deuxième 20 et 30 pour la troisième.  Il s’agira de reculer le pointeur de pile de la taille d’un tableau, mettre le pointeur de pile dans A, reculer le pointeur de pile de 4 et stocker l’adresse et la taille par-dessus les cases du tableau.  Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :                           
 
@@ -317,117 +317,108 @@ La déclaration des constantes est importante pour connaître la position de l�
 
 
 ```asm
-TAILLE1  : .EQUATE 10    ; Taille en octets des tableaux
-TAILLE2  : .EQUATE 20  
-TAILLE3  : .EQUATE 30
+a_tai1:  .EQUATE 10     ; Taille en octets du tableau 1.
+a_tai2:  .EQUATE 20     ; Taille en octets du tableau 2.
+a_tai3:  .EQUATE 30     ; Taille en octets du tableau 3.
+a_tai4:  .EQUATE 256    ; Taille en octets de l'histogramme.
 
-ADR_TAB1 : .EQUATE 0     ; Inclus l’adresse et la taille de chacun
-ADR_TAB2 : .EQUATE 14      
-ADR_TAB3 : .EQUATE ?
+a_ad_t1: .EQUATE 0      ; Adresse du premier élément du tableau 1 dans la pile, incluant ca taille.
+a_ad_t2: .EQUATE 14     ; Adresse du premier élément du tableau 2 dans la pile.
+a_ad_t3: .EQUATE ?      ; Adresse du premier élément du tableau 3 dans la pile.
+a_ad_his:.EQUATE ?      ; Adresse du premier élément de l'histogramme dans la pile.
 ```
 
 ## 4.3. Sous-Tâches de Base :
 Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous-tâches simple en premier. 
 
-1. <ins>  **Charger** </ins> 
+1. <ins>  **A_LECTUR** </ins> 
 
-   Chargez un tableau ASCII et convertissez-le en tableau décimal.
+  Fonction pour charger un tableau de caractères ASCII, le convertir en valeurs décimales, et placer les éléments convertis à l'emplacement approprié dans la pile.
    
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
-   - `tab_car`  : l’adresse du tableau de caractères.
+   - `a_tab`  : Adresse du début du tableau ASCII en mémoire.
+   - `a_tai`  : Taille du tableau, indiquant le nombre de caractères ASCII à convertir.
+   - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimal doivent être stockés.
   
    **Retour :**
-   Aucune valeur de retour.
+   Ne retourne pas de valeur directement. Les éléments convertis en décimal sont placés à l'emplacement spécifié dans la pile.
    
-2. <ins>  **Afficher** </ins> 
+2. <ins>  **A_AFFICH** </ins> 
    
-    Affichez le contenu du tableau en décimal.
+    Fonction pour afficher le contenu d'un tableau en format décimal.
      
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
+   - `a_ad_t`: Adresse dans la pile du premier élément du tableau à afficher.
+   - `a_tai` : Taille du tableau, indiquant le nombre d'éléments à afficher.
    
    **Retour :**
-   Aucune valeur de retour.
+   Ne retourne pas de valeur. Les éléments du tableau sont affichés en décimal. 
 
-3. <ins>  **Valeur_min** </ins> 
+3. <ins>  **A_MINIM** </ins> 
    
-    Trouvez la valeur minimale dans le tableau.
+    Fonction pour trouver la valeur minimale dans un tableau.
      
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
+   - `a_ad_t`: Adresse dans la pile du premier élément du tableau à examiner.
+   - `a_tai` : Taille du tableau, spécifiant le nombre d'éléments à considérer.
    
    **Retour :**
-   La valeur minimale du tableau.
+   - `a_min` : Stocke la valeur minimale trouvée dans le tableau.
 
-4. <ins>  **Valeur_max** </ins> 
+4. <ins>  **A_MAXIM** </ins> 
    
-    Trouvez la valeur maximale dans le tableau.
+    Fonction pour trouver la valeur maximale dans un tableau.
      
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
+   - `a_ad_t`: Adresse dans la pile du premier élément du tableau à examiner.
+   - `a_tai` : Taille du tableau, spécifiant le nombre d'éléments à considérer.
    
    **Retour :**
-   La valeur maximale du tableau.
+   - `a_max` : Stocke la valeur maximale trouvée dans le tableau.
    
-5. <ins>  **Comp_tab** </ins> 
+  
+5. <ins>  **A_HISTO** </ins> 
    
-   Compte la fréquence des éléments dans un tableau à trier (phase 1 du tri comptage).
+   Fonction pour calculer la fréquence des éléments d'un tableau et réorganiser ces éléments en utilisant un histogramme.
      
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
+   - `a_ad_t`  : Adresse dans la pile du premier élément du tableau à analyser.
+   - `a_tai`   : Taille du tableau, indiquant le nombre d'éléments à traiter.
+   - `a_ad_his`: Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
    
    **Retour :**
-   Un tableau auxiliaire représentant la fréquence des éléments dans le tableau à trier.
-
-
-   
-6. <ins>  **Reag_tab** </ins> 
-   
-   Réorganise les éléments dans un tableau en utilisant un histogramme (phase 2 du tri comptage).
-     
-   **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
-   - `histo` : Le tableau auxiliaire représentant l'histogramme des fréquences des éléments.
-   - `tai_hist` : La taille du tableau histogramme.
-   
-   **Retour :**
-   Aucune valeur de retour.
+    Ne retourne pas de valeur directement. Le tableau est réorganisé selon l'histogramme et les éléments sont replacés à leur emplacement spécifié dans la pile.     
 
 ## 4.4. Procédures de Tri et Recherche :
 Après avoir implémenté les sous-tâches de base, vous devez mettre en œuvre les procédures de tri et de recherche :
 
-1. <ins>  **Tri_comp** </ins> 
+1. <ins>  **A_TRICOM** </ins> 
 
-   Implémentez le tri par comptage pour organiser les données des tableaux.
+   Fonction pour implémenter le tri par comptage, une méthode efficace pour trier un tableau.
    
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
+   - `a_ad_t`   : Adresse dans la pile du premier élément du tableau à trier.
+   - `a_tai`    : Taille du tableau, spécifiant le nombre d'éléments à trier.
+   - `a_ad_his` : Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
   
    **Retour :**
-   Aucune valeur de retour.
+   Ne retourne pas de valeur directement. Les éléments du tableau sont triés et mis à jour directement dans leur emplacement sur la pile.
    
-2. <ins>  **Rech_dic** </ins> 
+2. <ins>  **A_RECHDI** </ins> 
    
-    Utilisez la recherche dichotomique pour localiser des éléments dans les tableaux triés.
+    Fonction pour effectuer une recherche dichotomique afin de localiser une valeur cible dans un tableau préalablement trié. Cette méthode divise l'intervalle de recherche en deux à chaque étape, réduisant ainsi le nombre de comparaisons nécessaires pour trouver l'élément.
      
    **Paramètres :**
-   - `adr_tab`  : l’adresse du tableau.
-   - `tail_tab` : la taille du tableau.
+   - `a_ad_t`  : Adresse dans la pile du premier élément du tableau trié.
+   - `a_tai`   : Taille du tableau, indiquant le nombre d'éléments à considérer dans la recherche.
+   - `a_cible` : La valeur cible à rechercher dans le tableau.
    
    **Retour :**
-   Résultat de la recherche.
+   - `a_indice` : la taille du tableau.
    
+## 4.5. Resultats attendue :
 
-
-## 4.5. Validation :
+## 4.6. Validation :
 Utilisez la vue ‘Memory Dump’ pour vérifier manuellement que les valeurs sont correctement insérées dans les tableaux.
 La fenêtre ‘Output’ vous permettra de visualiser les résultats des tableaux après leur traitement.
 Chaque tableau sera traité pour convertir les caractères ASCII en valeurs décimales, qui seront ensuite triées et recherchées selon les spécifications du projet. Les étapes de ce TP vous permettront de vous familiariser avec des concepts clés de la programmation en assembleur PEP/8 tels que la manipulation de la pile, la gestion de la mémoire, et l'implémentation de sous-programmes pour le tri et la recherche de données.
