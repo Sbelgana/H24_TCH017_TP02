@@ -495,38 +495,56 @@ Finalement, il est nécessaire d'afficher le contenu du tableau 3 sur la console
 </p>
 
 
-### 4.5.4. Lecture du tableau 1-3, Trie des tableaux 1-3 et recherche dichotomique dans le tableau 1:
-<p align="center">
-  <img src="./Images/Resultat_13.png">
-</p>
+### 4.5.4. Recherche dichotomique dans le tableau trier:
 
+#### 4.5.4.1. cas 1: Recherche d'une valeur inexistante dans le tableau 1
+Ce cas démontre la recherche d'une valeur qui n'existe pas dans le tableau 1.
 <p align="center">
   <img src="./Images/Resultat_14.png">
 </p>
 
-### 4.5.5. Lecture du tableau 1-3, Trie des tableaux 1-3 et recherche dichotomique dans le tableau 2:
+#### 4.5.4.2. cas 1: Recherche d'une valeur présente dans le tableau 1
+Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 1.
+
+<p align="center">
+  <img src="./Images/Resultat_13.png">
+</p>
+
+#### 4.5.4.3. cas 3: Recherche d'une valeur inexistante dans le tableau 2
+Ce cas démontre la recherche d'une valeur qui n'existe pas dans le tableau 2.
 <p align="center">
   <img src="./Images/Resultat_15.png">
 </p>
+
+#### 4.5.4.4. cas 4: Recherche d'une valeur présente dans le tableau 2
+Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 2.
 
 <p align="center">
   <img src="./Images/Resultat_16.png">
 </p>
 
-### 4.5.6. Lecture du tableau 1-3, Trie des tableaux 1-3 et recherche dichotomique dans le tableau 3:
-<p align="center">
-  <img src="./Images/Resultat_17.png">
-</p>
-
+#### 4.5.4.5. cas 5: Recherche d'une valeur inexistante dans le tableau 3
+Ce cas démontre la recherche d'une valeur qui n'existe pas dans le tableau 3.
 <p align="center">
   <img src="./Images/Resultat_18.png">
 </p>
 
-### 4.5.4. Lecture du tableau 1-3, Trie des tableaux 1-3 et recherche dichotomique dans le tableau qui n'existe pas:
+#### 4.5.4.6. cas 6: Recherche d'une valeur présente dans le tableau 3
+Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 3.
+
+<p align="center">
+  <img src="./Images/Resultat_17.png">
+</p>
+
+#### 4.5.4.7. cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
+Ce cas démontre la procédure de recherche pour une valeur absente du tableau 1, après que l'utilisateur a effectué plusieurs tentatives avec des numéros de tableau invalides. Ce scénario souligne comment le programme est conçu pour naviguer à travers les erreurs de saisie de l'utilisateur, guidant efficacement vers la saisie correcte avant de procéder à la recherche. L'image associée montre le résultat attendu de cette séquence, illustrant l'absence de la valeur recherchée même après correction des saisies du numéro de tableau.
 
 <p align="center">
   <img src="./Images/Resultat_19.png">
 </p>
+
+#### 4.5.4.8. cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
+Ce cas illustre la recherche d'une valeur existante dans le tableau 1, qui survient après que l'utilisateur a introduit plusieurs numéros de tableau invalides. Cette situation met en avant la capacité du système à orienter l'utilisateur à travers des erreurs de saisie, vers la réussite de la recherche de la valeur correcte. L'image correspondante présente le résultat de cette recherche, confirmant la présence de la valeur dans le tableau 1 après les ajustements nécessaires des entrées de l'utilisateur.
 
 <p align="center">
   <img src="./Images/Resultat_20.png">
