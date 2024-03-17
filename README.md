@@ -16,9 +16,13 @@
 :alarm_clock: [Date de remise le dimanche 14 avril à 23h59](https://www.timeanddate.com/countdown/generic?iso=20240414T235959&p0=165&font=cursive)
 
 # Directives particulières <a name="directives"></a>
+* Le travail doit être effectué en équipe de 2 à 4 personnes.
 * Respecter [guide de codage](https://ena.etsmtl.ca/pluginfile.php/1984632/mod_resource/content/1/TCH017%20-%20Normes%20de%20programmation.docx.pdf)
 * Noms de variables et fonctions adéquats (concis, compréhensibles);
 * Documentation du code
+* Liens utiles:
+  * Tri Comptage¸(https://fr.wikipedia.org/wiki/Tri_comptage)
+  * [Recherche dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique#:~:text=La%20recherche%20dichotomique%2C%20ou%20recherche,%C3%A9l%C3%A9ment%20dans%20un%20tableau%20tri%C3%A9.)
 
   
 # 1. Introduction <a name="Introduction"></a>
