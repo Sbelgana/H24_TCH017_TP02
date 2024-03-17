@@ -322,8 +322,8 @@ a_tai2:  .EQUATE 20     ; Taille en octets du tableau 2.
 a_tai3:  .EQUATE 30     ; Taille en octets du tableau 3.
 a_tai4:  .EQUATE 256    ; Taille en octets de l'histogramme.
 
-a_ad_t1: .EQUATE 0      ; Adresse du premier élément du tableau 1 dans la pile, incluant ca taille.
-a_ad_t2: .EQUATE 14     ; Adresse du premier élément du tableau 2 dans la pile.
+a_ad_t1: .EQUATE 0      ; Adresse du premier élément du tableau 1 dans la pile.
+a_ad_t2: .EQUATE 10     ; Adresse du premier élément du tableau 2 dans la pile.
 a_ad_t3: .EQUATE ?      ; Adresse du premier élément du tableau 3 dans la pile.
 a_ad_his:.EQUATE ?      ; Adresse du premier élément de l'histogramme dans la pile.
 ```
