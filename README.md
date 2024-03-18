@@ -314,6 +314,11 @@ Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable 
 
 # 3. Gestion de la pile <a name="Pile"></a>
 
+
+<div align="justify">
+La gestion efficace de la mémoire est essentielle en programmation PEP/8, en particulier pour la manipulation de données structurées comme les tableaux. À titre d'exemple, la gestion d'une pile, un espace de stockage temporaire utilisé pour traiter des données. L'accent est mis sur la manipulation de trois tableaux de caractères ASCII, nécessitant chacun une quantité spécifique d'octets pour leur stockage.</div>
+
+## 3.1. Préparation de la pile :
 <div align="justify">
 Un espace sera réservé dans la pile pour trois tableaux de caractères ASCII, nécessitant respectivement 10, 20 et 30 octets pour leur stockage.</div>
   
@@ -323,8 +328,9 @@ a_tab2:  .ASCII  "Message!!!"      ; Tableau 2 : [77 101 115 115 97 103 101 33 3
 a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
 ```
 
+## 3.2. Chargement des tableaux dans la pile:
 <div align="justify">
-Pour gérer les emplacements et les tailles des tableaux dans la pile, les constantes `a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3` sont établies. Ces définitions facilitent la manipulation des adresses et des dimensions des tableaux de façon dynamique pendant leur chargement.</div>
+Pour faciliter la gestion des emplacements et des dimensions des tableaux dans la pile, nous définissons des constantes telles que `a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3`. Ces définitions permettent de manipuler de manière dynamique les adresses et les tailles des tableaux pendant leur chargement, assurant ainsi une gestion mémoire flexible et efficace.</div>
 
 ```asm
 a_tai1:  .EQUATE 10     ; Taille en octets du tableau 1.
@@ -339,23 +345,27 @@ a_ad_his:.EQUATE ?      ; Adresse du premier élément de l'histogramme dans la 
 ```
 
 <div align="justify">
-Le chargement des tableaux dans la pile exige la réservation de l'espace nécessaire pour chaque tableau. Cela se fait en ajustant le pointeur de pile selon la taille totale du tableau, puis en enregistrant l'adresse de début et la taille du tableau au-dessus de leur position respective dans la pile.</div>   
+Le processus de chargement des tableaux dans la pile est une étape clé qui implique la réservation de l'espace nécessaire pour chaque tableau. Cette opération s'effectue en ajustant le pointeur de pile selon la taille totale requise pour les données, puis en consignant l'adresse de départ et la taille de chaque tableau à un emplacement spécifique dans la pile. Cette méthode assure une utilisation optimale de l'espace de pile disponible et permet un accès rapide et efficace aux données stockées.</div>   
 
 **Exemple de chargement pour le tableau 1 :**
-<div align="justify">Ajuster le pointeur de pile de 10 octets pour le tableau 1, et noter l'adresse de départ ainsi que la taille du tableau.<br><br></div>
+
+<div align="justify">L'ajustement du pointeur de pile est une étape préliminaire cruciale, ici illustrée par l'extension de 10 octets pour accommoder le tableau 1. Cette manipulation est essentielle pour réserver l'espace nécessaire dans la pile, permettant ainsi de noter avec précision l'adresse de départ et la taille du tableau. Cette procédure garantit que les données soient organisées de manière cohérente et accessible.</div>
 
 <p align="center">
   <img src="./Images/image_18.svg">
 </p>
 
-<div align="justify">Une fois cette opération effectuée pour un tableau, les autres tableaux seront ajoutés successivement de la même manière.</div>     
+<div align="justify">En suivant cette méthode pour chaque tableau, nous assurons une addition structurée des données dans la pile. Cette approche systématique favorise une organisation logique et efficace, facilitant l'accès et la manipulation des données stockées.<br><br></div>     
 
 <div align="justify">
-Après le chargement de tous les tableaux, ils seront disposés les uns sur les autres dans la pile, comme le montre l'image suivante qui illustre la configuration de la pile une fois les tableaux chargés.</div>
+La finalisation du chargement de tous les tableaux résulte en une configuration ordonnée de la pile, où chaque tableau est empilé successivement. L'illustration ci-après offre une vue d'ensemble de la disposition des tableaux dans la pile après le processus de chargement, mettant en évidence l'agencement méthodique et l'utilisation optimale de l'espace de stockage temporaire.</div>
 
 <p align="center">
   <img src="./Images/image_19.svg">
 </p>
+
+<div align="justify">
+Cette démarche méthodologique souligne l'importance d'une gestion précise et réfléchie de la pile, essentielle pour le traitement efficace des structures de données complexes dans des environnements où l'optimisation de l'espace mémoire est primordiale.</div>
 
 # 4. Sous-programmes à implémenter <a name="Fonction"></a>
 
