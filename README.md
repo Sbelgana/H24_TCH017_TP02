@@ -12,7 +12,7 @@
 - [Gestion de la pile](#pile)
 - [Sous-programmes à implémenter](#fonction)
 - [Resultats attendus](#resultat)
-- [Outils de validation](#uutil)
+- [Outils de validation](#outil)
 - [Remise](#remise)
 - [Barème](#bareme)
 
