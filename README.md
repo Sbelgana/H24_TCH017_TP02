@@ -9,7 +9,10 @@
 - [Énoncé de travail](#enonce)
   - [Tri Par Comptage](#Comptage)
   - [Recherche dichotomique](#Dichotomique)
+- [Gestion de la pile](#Pile)<a name="Outil"></a> <a name="Resultat"></a>
 - [Sous-programmes à implémenter](#Fonction)
+- [Resultats attendus](#Resultat)
+- [Outils de validation](#Outil)
 - [Remise](#Remise)
 - [Barème](#bareme)
 
@@ -481,7 +484,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    **Retour :**
    - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
 
-## 5. Resultats attendus :
+## 5. Resultats attendus :<a name="Resultat"></a>
 
 <div align="justify">
 Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
@@ -646,7 +649,7 @@ Cette sous-section détaille les différentes instances de recherche dichotomiqu
   <img src="./Images/Resultat_20.png">
 </p>
 
-## 6 Outils de validation :
+## 6 Outils de validation : <a name="Outil"></a>
 <div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce TP, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
   
 - **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
