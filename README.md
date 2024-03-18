@@ -31,17 +31,16 @@
 # 1. Introduction <a name="introduction"></a>
 
 <div align="justify">
-Dans le contexte actuel, marqué par une prolifération des données numériques, le traitement et l'analyse rigoureux de ces données se révèle crucial pour le progrès scientifique et technologique. <br><br>La performance et la précision des analyses dépendent largement des algorithmes, qui jouent un rôle déterminant dans la prise de décisions et l'élaboration de conclusions pertinentes. Face à l'augmentation de la complexité et du volume des données, l'amélioration continue de ces algorithmes s'impose comme une nécessité pour en renforcer l'efficacité et la fiabilité.<br><br></div>
+Dans une ère caractérisée par l'expansion rapide des données numériques, leur traitement et analyse minutieux deviennent indispensables à l'avancement scientifique et technologique. La capacité à extraire des informations significatives et à prendre des décisions éclairées repose largement sur l'efficacité des algorithmes, qui sont au cœur des processus d'analyse de données. Avec l'augmentation constante de la complexité et du volume des données, il est impératif d'améliorer continuellement ces algorithmes pour garantir leur précision et leur fiabilité.<br><br></div>
 
 <div align="justify">
-  
-Le présent projet vise à explorer deux techniques algorithmiques clés pour le traitement des données : </div>
+Ce projet se concentre sur l'étude de deux méthodologies algorithmiques fondamentales dans le domaine du traitement des données :
 
-- **Le tri par comptage :** adapté aux données réparties dans un intervalle spécifique, cette méthode de tri se distingue par son efficacité.
-- **La recherche dichotomique :** elle représente une approche rapide et efficace pour la recherche dans des ensembles ordonnés de données.
+- **Le tri par comptage :** Une méthode de tri extrêmement efficace pour les données dont la distribution se situe dans un intervalle bien défini, offrant des performances remarquables en termes de vitesse et d'efficacité.
+- **La recherche dichotomique :** Cette technique fournit une méthode de recherche rapide et précise au sein d'ensembles de données triés, optimisant le temps de recherche et minimisant les ressources nécessaires.</div>
 
 <div align="justify">
-Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la compréhension de la manipulation des fonctions en langage assembleur PEP/8, mettant en lumière l'importance du  passage de paramètres par valeur et par adresse, ainsi qu'à la gestion de la pile et au retour des résultats après traitement. Ces aspects sont cruciaux pour toute personne visant à acquérir une maîtrise approfondie des systèmes informatiques et à améliorer sa compétence en programmation PEP/8.</div>
+En plus de ces approches, le projet permet d'explorer en profondeur la manipulation des fonctions en langage assembleur PEP/8. Cela inclut une compréhension approfondie du passage de paramètres, que ce soit par valeur ou par adresse, ainsi que de la gestion de la pile et du traitement des résultats. Ces compétences sont essentielles pour quiconque cherche à approfondir sa connaissance des systèmes informatiques et à perfectionner ses aptitudes en programmation PEP/8.</div>
 
 # 2. Énoncé de travail <a name="enonce"></a>
 
@@ -54,7 +53,44 @@ Le tri par comptage, ou tri par dénombrement, est mis en avant comme une techni
 </div>
 
 
-### 2.1.1. Exemple détaillé de Tri Par Comptage
+# 2. Énoncé de travail <a name="enonce"></a>
+
+C projet s'articule autour de l'implémentation et de l'analyse de deux techniques algorithmiques fondamentales : le tri par comptage et la recherche dichotomique. L'objectif est double : d'une part, démontrer l'efficacité de ces méthodes dans le traitement des données numériques, et d'autre part, explorer leur mise en œuvre dans un langage de bas niveau, tel que l'assembleur PEP/8. Cette démarche permet non seulement d'appréhender les principes sous-jacents à ces techniques mais aussi de comprendre les défis liés à leur application directe sur des structures de données en mémoire.
+
+## 2.1. Tri Par Comptage (Counting Sort) <a name="comptage"></a>
+
+<div align="justify">
+  
+Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter une comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
+
+</div>
+
+### 2.1.1. Algorithme du Tri Par Comptage
+
+<div align="justify">
+Le déroulement du tri par comptage s'effectue selon des étapes systématiques :
+</div>
+
+ <div align="justify">
+
+
+1. **Détermination de la borne maximale et minimale :** Identifie les valeurs extrêmes dans l'ensemble de données pour ajuster la taille du tableau auxiliaire pour le comptage.
+2. **Initialisation du tableau de comptage :** Prépare un tableau auxiliaire couvrant toutes les valeurs potentielles entre les bornes extrêmes, initialisé à zéro.
+3. **Complétion du tableau de comptage :** En parcourant l'ensemble de données, chaque observation augmente le compteur correspondant dans le tableau auxiliaire, créant un `histogramme` des fréquences.
+4. **Assemblage du tableau trié :** Reconstruit l'ensemble de données en ordre croissant, basé sur les informations de l'`histogramme`.
+
+</div>
+
+<div align="justify">
+Une implémentation en pseudo-code du tri par comptage est présentée ci-après :
+</div>
+
+<p align="center">
+    <img src="./Images/tri.svg">
+</p>
+
+
+### 2.1.2. Exemple détaillé de Tri Par Comptage
 <div align="justify">
 Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec l'intention de le trier en utilisant la méthode du tri par comptage.
 <br><br></div>
@@ -63,7 +99,7 @@ Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec 
   <img src="./Images/image_01.svg">
 </p>
 
-#### 2.1.1.1. Algorithme de Tri Par Comptage – Phase 1 : Comptage des Éléments
+**Algorithme de Tri Par Comptage – Phase 1 : Comptage des Éléments**<br>
 
 <div align="justify">
   
@@ -135,7 +171,7 @@ Les occurrences dans l'ensemble à trier se présentent comme suit :
 
 Ces données seront exploitées dans la phase 2 pour réarranger le tableau à trier.
 
-#### 2.1.1.2. Algorithme de Tri Par Comptage – Phase 2 : Réorganisation des Éléments
+**Algorithme de Tri Par Comptage – Phase 2 : Réorganisation des Éléments** <br>
 <div align="justify">
 
 La deuxième phase utilise l'`histogramme` pour assembler l'ensemble trié. En parcourant le tableau auxiliaire, on place chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`. Ce processus aboutit à un ensemble de données méthodiquement organisé.
@@ -188,6 +224,108 @@ Ce processus continue avec chaque indice de l'`histogramme`, ajoutant les nombre
 <p align="center">
   <img src="./Images/image_13.svg">
 </p>
+
+
+
+
+## 2.2. Recherche dichotomique <a name="dichotomique"></a>
+
+<div align="justify">
+La recherche dichotomique représente une avancée importante dans les méthodes de recherche algorithmique, visant à identifier rapidement un élément donné au sein d'un ensemble trié. Cette approche est similaire à la méthode utilisée pour trouver un nom dans un annuaire téléphonique, ciblant des informations spécifiques liées à un identifiant prédéfini.<br><br>
+
+Grâce à sa stratégie de réduction progressive de l'espace de recherche, la recherche dichotomique excelle dans l'examen d'ensembles de données agencés de manière séquentielle, offrant une efficacité notable en termes de rapidité et de précision comparée aux techniques conventionnelles.
+</div>
+
+
+### 2.2.1. Approche Naïve vs Approche Dichotomique
+
+#### 2.2.1.1. Recherche Naïve
+
+<div align="justify">
+L'approche naïve, basée sur le parcours séquentiel de chaque élément d'un tableau pour trouver une valeur déterminée, est intuitivement simple mais devient inefficace avec l'augmentation de la taille de l'ensemble de données. Elle repose sur une recherche linéaire, comparant successivement chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou conclure à son absence. Facile à comprendre, cette méthode présente cependant une complex
+
+ité linéaire, rendant le temps de recherche proportionnel à la taille de l'ensemble.
+</div>
+
+```c++
+int Rech_nai(int tab[], int taille, int val) {
+    for (int i = 0; i < taille; i++) 
+        if (tab[i] == val) 
+            return i;
+    return -1;
+}
+```
+
+#### 2.2.1.2. Recherche dichotomique
+
+<div align="justify">
+La recherche dichotomique applique une stratégie de division successive en deux de l'espace de recherche, commençant son opération par l'évaluation de l'élément situé au centre du tableau. Si cet élément central ne correspond pas à la valeur recherchée, la recherche se poursuit dans la moitié du tableau appropriée, choisie en fonction du résultat de la comparaison entre cet élément et la valeur cible. Cette approche itérative, qui diminue de moitié la taille de l'espace de recherche à chaque tour, permet de localiser rapidement la valeur recherchée ou de confirmer son absence, exploitant l'organisation préalable des données pour optimiser la vitesse de la recherche.
+</div>
+
+<p align="center">
+    <img src="./Images/dicho.svg">
+</p>
+
+
+### 2.2.2. Vérification de l'Applicabilité de la Recherche dichotomique
+
+<div align="justify">La recherche dichotomique est appréciée pour sa capacité à identifier rapidement des éléments dans des ensembles de données structurés. Afin d'assurer cette efficience, il est impératif de valider deux critères fondamentaux : la garantie de terminaison de l'algorithme et la fiabilité des résultats.</div>
+<div align="justify">
+  
+1. **Terminaison de la Boucle** : 
+La terminaison repose sur l'utilisation d'un `variant de boucle`, assurant une réduction constante de l'espace de recherche après chaque itération. Ce mécanisme garantit une décroissance systématique et évite un fonctionnement infini de l'algorithme, promettant ainsi une issue en un nombre fini d'étapes.
+
+2. **Exactitude des Résultats** : 
+L'exactitude garantit que l'indice renvoyé, le cas échéant, correspond réellement à l'élément recherché ou indique correctement son absence. Cette assurance de précision établit la fiabilité de la recherche dichotomique dans l'examen d'ensembles préalablement triés.<br><br></div>
+
+<div align="justify">Le respect rigoureux de ces critères confirme l'efficacité de la recherche dichotomique pour fournir des résultats justes et fiables. La stratégie de division efficace de l'espace de recherche accélère la convergence vers l'élément cible ou confirme son absence, grâce à une réduction exponentielle de la zone d'examen à chaque étape.<br><br></div>
+
+<div align="justify">Le processus de vérification se base sur :
+
+1. La détermination du milieu par `milieu = (gauche + droite) // 2`, en s'assurant que `gauche <= milieu <= droite`.
+2. Trois possibilités émergent :
+   - Si `tab[milieu] = val`, l'élément est trouvé, concluant la recherche.
+   - Si `tab[milieu] > val`, la recherche se concentre sur la moitié inférieure, réajustant `droite` à `milieu - 1` pour réduire l'espace de recherche.
+   - Si `tab[milieu] < val`, l'investigation se poursuit dans la moitié supérieure, avec `gauche` ajusté à `milieu + 1`.<br><br></div>
+
+<div align="justify">Ces étapes facilitent une diminution méthodique de l'espace de recherche, assurant ainsi la finitude de l'algorithme et l'exactitude des conclusions.</div>
+
+
+
+### 2.2.3. Exemple détaillé de la recherche dichotomique
+
+<div align="justify">
+Considérons la recherche du chiffre 56 dans un tableau ordonné pour illustrer la recherche dichotomique. Cette méthode démarre par l'évaluation de l'élément au milieu du tableau. Si la valeur recherchée est supérieure à cet élément central, l'analyse se recentre sur la moitié supérieure du tableau, et vice versa. Ce procédé est répété, réduisant progressivement l'espace de recherche jusqu'à ce que la valeur désirée soit trouvée ou que l'on conclue à son absence.
+</div>
+
+<p align="center">
+  <img src="./Images/image_14.svg">
+</p>
+
+<div align="justify">
+Initialement, l'élément médian, ici 45, est examiné. La valeur cible étant plus élevée que 45, la recherche se focalise sur la partie droite du tableau, limitant ainsi l'espace de recherche aux valeurs 48, 56, 60, 79, et 86.</div>
+
+<p align="center">
+  <img src="./Images/image_15.svg">
+</p>
+
+<div align="justify">
+Lors de la deuxième étape, l'élément au centre du sous-ensemble (48, 56, 60, 79, 86) est 60. Puisque 60 est plus grand que le chiffre recherché, l'attention se déplace vers la moitié gauche du sous-ensemble, comprenant 48 et 56.</div>
+
+<p align="center">
+  <img src="./Images/image_16.svg">
+</p>
+
+<div align="justify">
+Dans l'étape finale, avec seulement 48 et 56 restants, et l'élément médian étant 48, qui est inférieur à la valeur cherchée, la logique conduit à la conclusion que le chiffre suivant, 56, est l'élément recherché. L'algorithme s'achève ainsi avec succès.</div>
+
+<p align="center">
+  <img src="./Images/image_17.svg">
+</p>
+
+<div align="justify">
+Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable de localiser rapidement un élément dans un tableau ordonné par la diminution méthodique de l'espace de recherche, illustrant la puissance de l'approche diviser pour mieux régner propre aux algorithmes de recherche.
+</div>
 
 
 
