@@ -67,7 +67,9 @@ La première étape consiste à préparer un tableau auxiliaire de longueur 10 (
 </p>
 
 <div align="justify">
-L'étape suivante consiste à parcourir l'ensemble de données, en incrémentant la valeur dans le tableau auxiliaire pour chaque élément rencontré. Ce procédé est répété pour chaque élément, aboutissant progressivement à un `histogramme` représentant la totalité des valeurs.</div>
+  
+L'étape suivante consiste à parcourir l'ensemble de données, en incrémentant la valeur dans le tableau auxiliaire pour chaque élément rencontré. Ce procédé est répété pour chaque élément, aboutissant progressivement à un `histogramme` représentant la totalité des valeurs.
+</div>
 
 <p align="center">
   <img src="./Images/image_03.svg">
@@ -102,7 +104,9 @@ Ce principe étant établi, après traitement de tous les éléments, le tableau
 </p>
 
 <div align="justify">
-Cet `histogramme` offre une vue d'ensemble précise de la distribution des valeurs au sein de l'ensemble de données, indiquant le nombre exact de fois que chaque valeur est présente.<br><br></div>
+  
+Cet `histogramme` offre une vue d'ensemble précise de la distribution des valeurs au sein de l'ensemble de données, indiquant le nombre exact de fois que chaque valeur est présente.<br><br>
+</div>
 
 Les occurrences dans l'ensemble à trier se présentent comme suit :
 - 1 fois le 0,
@@ -120,7 +124,9 @@ Ces données seront exploitées dans la phase 2 pour réarranger le tableau à t
 
 #### 2.1.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
 <div align="justify">
-La seconde phase du tri comptage se sert de l'`histogramme` pour reconstituer l'ensemble trié. Cette étape consiste à parcourir le tableau auxiliaire et à insérer chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`, ce qui résulte en un ensemble de données méticuleusement ordonné.</div>
+  
+La seconde phase du tri comptage se sert de l'`histogramme` pour reconstituer l'ensemble trié. Cette étape consiste à parcourir le tableau auxiliaire et à insérer chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`, ce qui résulte en un ensemble de données méticuleusement ordonné.
+</div>
 
 <p align="center">
   <img src="./Images/image_08.svg">
@@ -134,14 +140,18 @@ Pour illustrer, le processus débute à l'indice 0 du tableau auxiliaire, où se
 </p>
 
 <div align="justify">
-À l'indice 1 de l'`histogramme`, aucun élément n'est présent (valeur 0), indiquant qu'aucun 1 n'est ajouté à l'ensemble à trier.</div>
+  
+À l'indice 1 de l'`histogramme`, aucun élément n'est présent (valeur 0), indiquant qu'aucun 1 n'est ajouté à l'ensemble à trier.
+</div>
 
 <p align="center">
   <img src="./Images/image_10.svg">
 </p>
 
 <div align="justify">
-L'indice 2 de l'`histogramme` affiche à nouveau un 1, menant à l'ajout d'un 2 dans l'ensemble à trier :</div>
+  
+L'indice 2 de l'`histogramme` affiche à nouveau un 1, menant à l'ajout d'un 2 dans l'ensemble à trier :
+</div>
 
 <p align="center">
   <img src="./Images/image_11.svg">
@@ -401,7 +411,10 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
  
 5. **A_HISTO** 
    
-   <div align="justify">Fonction permettant de calculer la fréquence des éléments d'un tableau et de réorganiser ces derniers à l'aide d'un `histogramme`.</div>
+   <div align="justify">
+     
+     Fonction permettant de calculer la fréquence des éléments d'un tableau et de réorganiser ces derniers à l'aide d'un `histogramme`.
+   </div>
      
    **Paramètres :**
    - `a_ad_t`  : Adresse dans la pile du premier élément du tableau à analyser.
@@ -451,13 +464,20 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
   <img src="./Images/Resultat_02.png">
 </p>
 
-<div align="justify">L'étape suivante est la création de l'`histogramme`, qui consiste à comptabiliser la fréquence de chaque nombre dans le tableau et à enregistrer ces compteurs dans un tableau d'`histogramme` préalablement défini. Un aperçu de l'état de la mémoire à cette phase est présenté ci-dessous.</div>
+<div align="justify">
+  
+  L'étape suivante est la création de l'`histogramme`, qui consiste à comptabiliser la fréquence de chaque nombre dans le tableau et à enregistrer ces compteurs dans un tableau d'`histogramme` préalablement défini. Un aperçu de l'état de la mémoire à cette phase est présenté ci-dessous.
+  </div>
 
 <p align="center">
   <img src="./Images/Resultat_03.png">
 </p>
 
-<div align="justify">Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploitant l'`histogramme` pour ordonner les éléments de manière croissante. Un aperçu de l'état de la mémoire suite à cette opération est donné ci-après.</div>
+<div align="justify">
+  
+  Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploitant l'`histogramme` pour ordonner les éléments de manière croissante. Un aperçu de l'état de la mémoire suite à cette opération est donné ci-après.
+  
+  </div>
 
 <p align="center">
   <img src="./Images/Resultat_04.png">
@@ -476,13 +496,21 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
   <img src="./Images/Resultat_06.png">
 </p>
 
-<div align="justify">La construction de l'`histogramme` pour le tableau 2 s'ensuit, avec le comptage des occurrences de chaque élément et leur enregistrement dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce moment est présenté ensuite.</div>
+<div align="justify">
+  
+  La construction de l'`histogramme` pour le tableau 2 s'ensuit, avec le comptage des occurrences de chaque élément et leur enregistrement dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce moment est présenté ensuite.
+  
+  </div>
 
 <p align="center">
   <img src="./Images/Resultat_07.png">
 </p>
 
-<div align="justify">Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.</div>
+<div align="justify">
+  
+  Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.
+  
+  </div>
 
 <p align="center">
   <img src="./Images/Resultat_08.png">
@@ -502,13 +530,21 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
   <img src="./Images/Resultat_10.png">
 </p>
 
-<div align="justify">La création de l'`histogramme` pour le tableau 3 suit, nécessitant le comptage des fréquences de chaque élément et leur stockage dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce stade est illustré ci-dessous.</div>
+<div align="justify">
+  
+  La création de l'`histogramme` pour le tableau 3 suit, nécessitant le comptage des fréquences de chaque élément et leur stockage dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce stade est illustré ci-dessous.
+  
+  </div>
 
 <p align="center">
   <img src="./Images/Resultat_11.png">
 </p>
 
-<div align="justify">Le tri du tableau 3 constitue l'étape finale, avec l'application du tri par comptage basé sur l'`histogramme`. Un aperçu de la mémoire après cette opération est présenté ci-dessous.</div>
+<div align="justify">
+  
+  Le tri du tableau 3 constitue l'étape finale, avec l'application du tri par comptage basé sur l'`histogramme`. Un aperçu de la mémoire après cette opération est présenté ci-dessous.
+  
+  </div>
 
 <p align="center">
   <img src="./Images/Resultat_12.png">
