@@ -1,8 +1,6 @@
 ; Code fourni dans le cadre du TP02 TCH017 H24
 ; Auteur : Saad Belgana
 
-; Écrivez votre code avant STOP
-
 ; Lecture, trie et affichage du tableau 1
 
 
