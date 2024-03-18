@@ -10,7 +10,7 @@
   - [Tri Comptage](#Comptage)
   - [Recherche Dichotomique](#Dichotomique)
 - [Sous-programmes à implémenter](#Fonction)
-- [Conclusion](#Conclusion)
+- [Remise](#Remise)
 - [Barème](#bareme)
 
 :alarm_clock: [Date de remise le dimanche 14 avril à 23h59](https://www.timeanddate.com/countdown/generic?iso=20240414T235959&p0=165&font=cursive)
@@ -577,9 +577,15 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
 
 - **Fenêtre Output** : Utilisez cette interface pour examiner les résultats finaux des tableaux après traitement. Elle offre une visualisation claire des modifications apportées aux données, suite aux opérations de tri et de recherche.</div>
 
-# 4. Conclusion <a name="Conclusion"></a>
+# 4. Remise <a name="Remise"></a>
+<div align="justify">
+Le projet est organisé en trois phases étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à implémenter et à tester pour assurer leur fonctionnement correct.</div>
 
-<div align="justify">Une fois que tout fonctionne correctement. Sauvegardez une copie de votre code en suivant le format suivant : equipe_xx.pep</div>
+  - Semaine 1: `A_LECTUR` et  `A_AFFICH`
+  - Semaine 2: `A_MINIM`, `A_MAXIM` et , `A_HISTO`
+  - Semaine 3: `A_TRICOM` et , `A_RECHDI`
+  
+<div align="justify"> Une fois toutes les fonctions correctement implémentées et testées, il est crucial de sauvegarder le travail. Le code doit être enregistré avec le format de nom de fichier suivant : equipe_xx.pep, où xx représente le numéro d'équipe.</div>
 
 Bon travail!
 
