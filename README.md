@@ -6,6 +6,7 @@
 # TP02: Manipulation de tableaux de caractères et algorithme avancés
 - [Directives particulières](#directives)
 - [Introduction](#introduction)
+- [Objectifs](#objectif) 
 - [Énoncé de travail](#enonce)
   - [Tri Par Comptage](#comptage)
   - [Recherche dichotomique](#dichotomique)
@@ -42,9 +43,29 @@ Ce projet se concentre sur l'étude de deux méthodologies algorithmiques fondam
 <div align="justify">
 En plus de ces approches, le projet permet d'explorer en profondeur la manipulation des fonctions en langage assembleur PEP/8. Cela inclut une compréhension approfondie du passage de paramètres, que ce soit par valeur ou par adresse, ainsi que de la gestion de la pile et du traitement des résultats. Ces compétences sont essentielles pour quiconque cherche à approfondir sa connaissance des systèmes informatiques et à perfectionner ses aptitudes en programmation PEP/8.</div>
 
-# 2. Énoncé de travail <a name="enonce"></a>
 
-## 2.1. Tri Par Comptage (Counting Sort) <a name="comptage"></a>
+# 2. Objectifs du Projet <a name="objectif"></a>
+
+Ce projet vise à atteindre les objectifs suivants :
+
+- **Explorer la manipulation des fonctions en langage assembleur PEP/8**, incluant une compréhension approfondie du passage de paramètres par valeur et par adresse, ainsi que de la gestion de la pile et du traitement des résultats.
+- **Adhésion aux standards de programmation** : Encourager l'adoption des meilleures pratiques de programmation, y compris le respect des conventions de codage et la production d'un code clair, maintenable, et efficace.
+- **Développer des compétences en manipulation de données** en utilisant des techniques avancées de programmation pour gérer et analyser efficacement les données numériques.
+- **Appliquer des connaissances théoriques à des scénarios pratiques**, permettant aux étudiants de consolider leur compréhension des systèmes informatiques et d'affiner leurs compétences en programmation PEP/8.
+- **Maîtriser l'algorithme du tri par comptage** pour traiter efficacement des ensembles de nombres entiers, en appliquant une méthode originale basée sur la création et l'utilisation d'un histogramme.
+- **Implémenter la recherche dichotomique** afin de fournir une méthode rapide et précise pour la recherche dans des ensembles de données triés, optimisant ainsi le temps de recherche et minimisant les ressources nécessaires.
+</div>
+
+# 3. Énoncé de travail <a name="enonce"></a>
+
+<div align="justify">
+  
+Dans ce contexte, notre travail s'articule autour de l'implémentation et de l'analyse de deux techniques algorithmiques fondamentales : le tri par comptage et la recherche dichotomique. L'objectif est double : d'une part, démontrer l'efficacité de ces méthodes dans le traitement des données numériques, et d'autre part, explorer leur mise en œuvre dans un langage de bas niveau, tel que l'assembleur PEP/8. Cette démarche permet non seulement d'appréhender les principes sous-jacents à ces techniques mais aussi de comprendre les défis liés à leur application directe sur des structures de données en mémoire. 
+
+</div>
+
+
+## 3.1. Tri Par Comptage (Counting Sort) <a name="comptage"></a>
 
 <div align="justify">
   
@@ -52,20 +73,7 @@ Le tri par comptage, ou tri par dénombrement, est mis en avant comme une techni
 
 </div>
 
-
-# 2. Énoncé de travail <a name="enonce"></a>
-
-C projet s'articule autour de l'implémentation et de l'analyse de deux techniques algorithmiques fondamentales : le tri par comptage et la recherche dichotomique. L'objectif est double : d'une part, démontrer l'efficacité de ces méthodes dans le traitement des données numériques, et d'autre part, explorer leur mise en œuvre dans un langage de bas niveau, tel que l'assembleur PEP/8. Cette démarche permet non seulement d'appréhender les principes sous-jacents à ces techniques mais aussi de comprendre les défis liés à leur application directe sur des structures de données en mémoire.
-
-## 2.1. Tri Par Comptage (Counting Sort) <a name="comptage"></a>
-
-<div align="justify">
-  
-Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter une comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
-
-</div>
-
-### 2.1.1. Algorithme du Tri Par Comptage
+### 3.1.1. Algorithme du Tri Par Comptage
 
 <div align="justify">
 Le déroulement du tri par comptage s'effectue selon des étapes systématiques :
@@ -90,7 +98,7 @@ Une implémentation en pseudo-code du tri par comptage est présentée ci-après
 </p>
 
 
-### 2.1.2. Exemple détaillé de Tri Par Comptage
+### 3.1.2. Exemple détaillé de Tri Par Comptage
 <div align="justify">
 Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec l'intention de le trier en utilisant la méthode du tri par comptage.
 <br><br></div>
@@ -228,7 +236,7 @@ Ce processus continue avec chaque indice de l'`histogramme`, ajoutant les nombre
 
 
 
-## 2.2. Recherche dichotomique <a name="dichotomique"></a>
+## 3.2. Recherche dichotomique <a name="dichotomique"></a>
 
 <div align="justify">
 La recherche dichotomique représente une avancée importante dans les méthodes de recherche algorithmique, visant à identifier rapidement un élément donné au sein d'un ensemble trié. Cette approche est similaire à la méthode utilisée pour trouver un nom dans un annuaire téléphonique, ciblant des informations spécifiques liées à un identifiant prédéfini.<br><br>
@@ -237,9 +245,9 @@ Grâce à sa stratégie de réduction progressive de l'espace de recherche, la r
 </div>
 
 
-### 2.2.1. Approche Naïve vs Approche Dichotomique
+### 3.2.1. Approche Naïve vs Approche Dichotomique
 
-#### 2.2.1.1. Recherche Naïve
+#### 3.2.1.1. Recherche Naïve
 
 <div align="justify">
 L'approche naïve, basée sur le parcours séquentiel de chaque élément d'un tableau pour trouver une valeur déterminée, est intuitivement simple mais devient inefficace avec l'augmentation de la taille de l'ensemble de données. Elle repose sur une recherche linéaire, comparant successivement chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou conclure à son absence. Facile à comprendre, cette méthode présente cependant une complex
@@ -267,7 +275,7 @@ La recherche dichotomique applique une stratégie de division successive en deux
 </p>
 
 
-### 2.2.2. Vérification de l'Applicabilité de la Recherche dichotomique
+### 3.2.2. Vérification de l'Applicabilité de la Recherche dichotomique
 
 <div align="justify">La recherche dichotomique est appréciée pour sa capacité à identifier rapidement des éléments dans des ensembles de données structurés. Afin d'assurer cette efficience, il est impératif de valider deux critères fondamentaux : la garantie de terminaison de l'algorithme et la fiabilité des résultats.</div>
 <div align="justify">
@@ -292,7 +300,7 @@ L'exactitude garantit que l'indice renvoyé, le cas échéant, correspond réell
 
 
 
-### 2.2.3. Exemple détaillé de la recherche dichotomique
+### 3.2.3. Exemple détaillé de la recherche dichotomique
 
 <div align="justify">
 Considérons la recherche du chiffre 56 dans un tableau ordonné pour illustrer la recherche dichotomique. Cette méthode démarre par l'évaluation de l'élément au milieu du tableau. Si la valeur recherchée est supérieure à cet élément central, l'analyse se recentre sur la moitié supérieure du tableau, et vice versa. Ce procédé est répété, réduisant progressivement l'espace de recherche jusqu'à ce que la valeur désirée soit trouvée ou que l'on conclue à son absence.
@@ -330,13 +338,13 @@ Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable 
 
 
 
-# 3. Gestion de la pile <a name="pile"></a>
+# 4. Gestion de la pile <a name="pile"></a>
 
 
 <div align="justify">
 La gestion efficace de la mémoire est essentielle en programmation PEP/8, en particulier pour la manipulation de données structurées comme les tableaux. À titre d'exemple, la gestion d'une pile, un espace de stockage temporaire utilisé pour traiter des données. L'accent est mis sur la manipulation de trois tableaux de caractères ASCII, nécessitant chacun une quantité spécifique d'octets pour leur stockage.</div>
 
-## 3.1. Préparation de la pile :
+## 4.1. Préparation de la pile :
 <div align="justify">
 Un espace sera réservé dans la pile pour trois tableaux de caractères ASCII, nécessitant respectivement 10, 20 et 30 octets pour leur stockage.</div>
   
@@ -346,7 +354,7 @@ a_tab2:  .ASCII  "Message!!!"      ; Tableau 2 : [77 101 115 115 97 103 101 33 3
 a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
 ```
 
-## 3.2. Chargement des tableaux dans la pile:
+## 4.2. Chargement des tableaux dans la pile:
 <div align="justify">
 Pour faciliter la gestion des emplacements et des dimensions des tableaux dans la pile, nous définissons des constantes telles que `a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3`. Ces définitions permettent de manipuler de manière dynamique les adresses et les tailles des tableaux pendant leur chargement, assurant ainsi une gestion mémoire flexible et efficace.</div>
 
@@ -385,7 +393,14 @@ La finalisation du chargement de tous les tableaux résulte en une configuration
 <div align="justify">
 Cette démarche méthodologique souligne l'importance d'une gestion précise et réfléchie de la pile, essentielle pour le traitement efficace des structures de données complexes dans des environnements où l'optimisation de l'espace mémoire est primordiale.</div>
 
-# 4. Sous-programmes à implémenter <a name="fonction"></a>
+## 5 Outils de validation : <a name="outil"></a>
+<div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce projet, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
+  
+- **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
+
+- **Fenêtre Output** : Cette fenêtre est utilisée pour observer les résultats définitifs des tableaux après leur traitement. Elle fournit un aperçu précis des changements effectués sur les données, à la suite des processus de tri et de recherche.</div>
+
+# 6. Sous-programmes à implémenter <a name="fonction"></a>
 
 <div align="justify">
 Pour structurer efficacement le programme et garantir une mise en œuvre méthodique, il est convenable d'organiser les différentes tâches en sous-programmes détaillés. Cette organisation permet non seulement une meilleure compréhension du fonctionnement interne du programme mais aussi une modularité accrue, facilitant ainsi les éventuelles modifications ou extensions. Les sous-tâches de base seront abordées en premier, constituant les fondations sur lesquelles les procédures plus complexes seront construites. </div>
@@ -393,7 +408,7 @@ Pour structurer efficacement le programme et garantir une mise en œuvre méthod
 
 
 
-## 4.1. Sous-Tâches de Base :
+## 6.1. Sous-Tâches de Base :
 <div align="justify">
 Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation. </div>
  
@@ -470,7 +485,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
       </div>
      
 
-## 4.2. Procédures de Tri et Recherche :
+## 6.2. Procédures de Tri et Recherche :
 <div align="justify">Une fois les sous-tâches de base réalisées, il est nécessaire d'implémenter les procédures de tri et de recherche suivantes :</div>
 
 1. **A_TRICOM** 
@@ -499,12 +514,12 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    **Retour :**
    - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
 
-## 5. Resultats attendus: <a name="resultat"></a>
+## 6. Resultats attendus: <a name="resultat"></a>
 
 <div align="justify">
 Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
 
-### 5.1. Lecture et tri du tableau 1 :
+### 6.1. Lecture et tri du tableau 1 :
 
 <div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile tel qu'anticipé. Voici un aperçu de l'état de la mémoire à ce stade</div>
 
@@ -541,7 +556,7 @@ Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploi
 </p>
 
 
-### 5.2. Lecture des tableaux 1 et 2 et tri du tableau 2:
+### 6.2. Lecture des tableaux 1 et 2 et tri du tableau 2:
 <div align="justify">La démarche commence par la lecture des données des tableaux 1 et 2, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
@@ -573,7 +588,7 @@ Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri p
 
 
 
-### 5.3. Lecture des tableaux 1, 2 et 3 et tri du tableau 3:
+### 7.3. Lecture des tableaux 1, 2 et 3 et tri du tableau 3:
 <div align="justify">La démarche commence par la lecture des données des tableaux 1, 2 et 3, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
@@ -605,74 +620,66 @@ Le tri du tableau 3 est réalisé en dernier, en utilisant la technique du tri p
 
 
 
-### 5.4. Recherche dichotomique dans le tableau trié :
+### 7.4. Recherche dichotomique dans le tableau trié :
 
 <div align="justify">
 Cette sous-section détaille les différentes instances de recherche dichotomique effectuées sur les tableaux triés, illustrant à la fois les cas de succès et d'échec. Chaque scénario est accompagné d'un aperçu visuel reflétant le résultat de la recherche, démontrant ainsi la précision et l'efficacité de l'algorithme de recherche dichotomique dans la localisation d'éléments spécifiques au sein de structures de données organisées.</div>
 
 
-#### 5.4.1. Cas 1: Recherche d'une valeur inexistante dans le tableau 1
+#### 7.4.1. Cas 1: Recherche d'une valeur inexistante dans le tableau 1
 <div align="justify">Ce scénario expose la recherche infructueuse d'une valeur absente du tableau 1.</div>
 <p align="center">
   <img src="./Images/Resultat_14.png">
 </p>
 
-#### 5.4.2. Cas 2: Recherche d'une valeur présente dans le tableau 1
+#### 7.4.2. Cas 2: Recherche d'une valeur présente dans le tableau 1
 <div align="justify">Ce cas détaille la recherche réussie d'une valeur existante dans le tableau 1.</div>
 
 <p align="center">
   <img src="./Images/Resultat_13.png">
 </p>
 
-#### 5.5. Cas 3: Recherche d'une valeur inexistante dans le tableau 2
+#### 7.5. Cas 3: Recherche d'une valeur inexistante dans le tableau 2
 <div align="justify">Ce scénario montre la recherche d'une valeur non présente dans le tableau 2.</div>
 <p align="center">
   <img src="./Images/Resultat_15.png">
 </p>
 
-#### 5.4.4. Cas 4: Recherche d'une valeur présente dans le tableau 2
+#### 7.4.4. Cas 4: Recherche d'une valeur présente dans le tableau 2
 <div align="justify">Ce cas illustre la recherche fructueuse d'une valeur existante dans le tableau 2.</div>
 
 <p align="center">
   <img src="./Images/Resultat_16.png">
 </p>
 
-#### 5.4.5. Cas 5: Recherche d'une valeur inexistante dans le tableau 3
+#### 7.4.5. Cas 5: Recherche d'une valeur inexistante dans le tableau 3
 <div align="justify">Ce scénario dépeint la tentative de localisation d'une valeur absente du tableau 3.</div>
 <p align="center">
   <img src="./Images/Resultat_18.png">
 </p>
 
-#### 5.4.6. Cas 6: Recherche d'une valeur présente dans le tableau 3
+#### 7.4.6. Cas 6: Recherche d'une valeur présente dans le tableau 3
 <div align="justify">Ce cas présente la recherche réussie d'une valeur existante dans le tableau 3.</div>
 
 <p align="center">
   <img src="./Images/Resultat_17.png">
 </p>
 
-#### 5.4.7. Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
+#### 7.4.7. Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
 <div align="justify">Ce scénario met en lumière la recherche d'une valeur inexistante dans le tableau 1, suivie de multiples tentatives erronées de sélection du tableau par l'utilisateur. Il illustre la capacité du programme à gérer les erreurs de saisie, guidant l'utilisateur vers une saisie correcte avant de procéder à la recherche. L'image ci-dessous représente le résultat de cette démarche, soulignant l'absence de la valeur recherchée même après la correction des sélections de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_19.png">
 </p>
 
-#### 5.4.8. Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
+#### 7.4.8. Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
 <div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 1, effectuée après plusieurs sélections incorrectes du tableau par l'utilisateur. Cette situation démontre l'efficacité du système à rediriger l'utilisateur depuis des erreurs initiales vers la réalisation d'une recherche fructueuse. L'image suivante affiche le résultat de cette opération, confirmant la présence de la valeur recherchée dans le tableau 1 suite à la correction des entrées de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_20.png">
 </p>
 
-## 6 Outils de validation : <a name="outil"></a>
-<div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce TP, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
-  
-- **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
-
-- **Fenêtre Output** : Cette fenêtre est utilisée pour observer les résultats définitifs des tableaux après leur traitement. Elle fournit un aperçu précis des changements effectués sur les données, à la suite des processus de tri et de recherche.</div>
-
-
-# 7. Remise <a name="remise"></a>
+# 8. Remise <a name="remise"></a>
 <div align="justify">Ce projet est organisé en trois étapes de soumission étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à développer et à tester afin d'en assurer le bon fonctionnement.</div>
 
   - Semaine 1: TP02_H24_Semaine_01.pep
@@ -681,7 +688,7 @@ Cette sous-section détaille les différentes instances de recherche dichotomiqu
   
 <div align="justify">Après avoir réussi l'implémentation et les tests de toutes les fonctions, il est essentiel de sauvegarder soigneusement votre projet. Les fichiers de programme doivent être compilés dans une archive zip nommée selon le format suivant : equipe_xx.zip, où xx désigne le numéro de votre équipe.<br><br></div>
 
-# 8. Barème /100 <a name="bareme"></a>
+# 9. Barème /100 <a name="bareme"></a>
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
 |A_LECTUR | 16 |
