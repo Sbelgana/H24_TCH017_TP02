@@ -28,19 +28,16 @@
 # 1. Introduction <a name="Introduction"></a>
 
 <div align="justify">
-Nous vivons dans une époque définie par le déluge de données, où le traitement et l'analyse de volumes massifs d'informations jouent un rôle pivot dans de nombreux domaines de la science et de la technologie. Au cœur de ces processus se trouvent les algorithmes, dont l'efficacité détermine la rapidité et la précision avec lesquelles nous pouvons tirer des conclusions et prendre des décisions. Ce projet vise à vous familiariser avec deux techniques algorithmiques fondamentales: le tri comptage et la recherche dichotomique. Ces techniques ne sont pas seulement vitales pour le traitement des données, mais constituent également une porte d'entrée vers la compréhension des principes opérationnels au cœur de l'informatique.<br><br></div>
+Nous vivons dans une époque définie par le déluge de données, où le traitement et l'analyse de volumes massifs d'informations jouent un rôle pivot dans de nombreux domaines de la science et de la technologie. Au cœur de ces processus se trouvent les algorithmes, dont l'efficacité détermine la rapidité et la précision avec lesquelles nous pouvons tirer des conclusions et prendre des décisions. <br><br></div>
 
 <div align="justify">
-Le tri comptage se distingue en tant que méthode de tri non comparatif, optimisée pour organiser des nombres entiers au sein de plages de valeurs définies. Sa spécificité réside dans sa capacité à classifier les données sans nécessiter de comparaisons directes entre elles, ce qui le rend particulièrement efficace pour trier de grands ensembles de données où les valeurs se trouvent à proximité les unes des autres. D'autre part, la recherche dichotomique adopte une stratégie de "division et conquête", permettant de localiser avec rapidité un élément spécifique dans un tableau trié. Cette méthode s'avère significativement plus rapide que la recherche séquentielle, offrant une efficience accrue pour les opérations de recherche dans de grandes bases de données. À travers ce projet, nous explorerons en profondeur ces techniques pour révéler non seulement leur fonctionnement interne et leurs avantages, mais également leurs limites.<br><br></div>
+  
+Ce projet vise à vous familiariser avec deux techniques algorithmiques fondamentales: 
+- **Le tri comptage :** Une technique de tri pour les ensembles de données répartis dans un intervalle spécifique.
+- **La recherche dichotomique :** Une méthode de recherche rapide et optimale pour les ensembles ordonnés.</div>
 
 <div align="justify">
-En parallèle, nous plongerons dans le monde de la programmation en assembleur PEP/8, un langage de bas niveau qui dévoile les mécanismes sous-jacents des opérations informatiques. Ce cadre vous apprendra à manipuler des tableaux un élément fondamental dans la gestion des structures de données avec une attention particulière portée au tri comptage et à la recherche dichotomique. Vous aborderez également la gestion de la mémoire, une composante cruciale de la programmation en assembleur, qui vous éclairera sur la façon dont la mémoire est allouée, employée, et libérée dans le cadre d'un programme. L'utilisation de la pile, essentielle pour la gestion des appels de fonction et la déclaration des variables locales, ainsi que les techniques pour définir et appeler des fonctions en langage assembleur, seront examinées en détail.<br><br></div>
-
-<div align="justify">
-Ce projet vous offre également l'occasion d'appréhender les subtilités du passage de paramètres par valeur et par adresse deux concepts clés pour une gestion optimale des données en programmation. Cette expérience enrichissante vous munira des compétences et connaissances nécessaires pour naviguer à travers des problématiques informatiques plus sophistiquées, élargissant ainsi votre horizon et approfondissant votre compréhension des processus internes qui animent les ordinateurs.<br><br></div>
-
-<div align="justify">
-Au final, ce projet est conçu pour tisser ensemble la théorie et la pratique, dans le but d'affermir votre compréhension des principes essentiels de l'informatique tout en affûtant vos compétences en programmation en assembleur PEP/8. Il vous équipera pour relever avec confiance des défis informatiques variés, armés d'une perspective éclairée et d'une appréciation profonde pour l'essence même de la technologie informatique.</div>
+Au-delà de l'exploration de ces techniques, ce projet constitue une opportunité précieuse de vous familiariser avec la manipulation de fonctions en langage assembleur PEP/8. Vous plongerez dans les détails techniques du passage de paramètres par valeur et par adresse, deux principes fondamentaux pour une gestion efficace des données. Vous aborderez également le retour de résultats de traitement et la gestion de la pile, des compétences essentielles pour la programmation en bas niveau et la compréhension profonde des systèmes informatiques. </div>
 
 # 2. Énoncé de travail<a name="enonce"></a>
 
