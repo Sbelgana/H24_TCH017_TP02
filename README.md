@@ -28,17 +28,17 @@
 # 1. Introduction <a name="Introduction"></a>
 
 <div align="justify">
-Aujourd'hui, l'abondance de données numériques exige un traitement et une analyse rigoureux, cruciaux pour le progrès scientifique et technologique. Les algorithmes, essentiels à ces tâches, déterminent la rapidité et la précision de nos analyses, influençant significativement la prise de décisions et l'élaboration de conclusions pertinentes. Avec l'augmentation de la complexité et du volume de données, l'amélioration continue des algorithmes est impérative pour renforcer leur efficacité et fiabilité. <br><br></div>
+Dans le contexte actuel, marqué par une prolifération des données numériques, le traitement et l'analyse rigoureux de ces données se révèlent cruciaux pour le progrès scientifique et technologique. La performance et la précision des analyses dépendent largement des algorithmes, qui jouent un rôle déterminant dans la prise de décisions et l'élaboration de conclusions pertinentes. Face à l'augmentation de la complexité et du volume des données, l'amélioration continue de ces algorithmes s'impose comme une nécessité pour en renforcer l'efficacité et la fiabilité.<br><br></div>
 
 <div align="justify">
   
-Ce projet est conçu pour introduire deux techniques algorithmiques essentielles : </div>
+Le projet présenté vise à explorer deux techniques algorithmiques clés pour le traitement des données : </div>
 
-- **Le tri comptage :** une technique de tri adaptée aux ensembles de données distribués dans un intervalle spécifique.
-- **La recherche dichotomique :** une méthode de recherche rapide et efficace pour les ensembles ordonnés.
+- **Le tri comptage :** adapté aux données réparties dans un intervalle spécifique, cette méthode de tri se distingue par son efficacité.
+- **La recherche dichotomique :** elle représente une approche rapide et efficace pour la recherche dans des ensembles ordonnés de données.
 
 <div align="justify">
-Au-delà de l'exploration de ces techniques algorithmiques, ce projet offre une occasion d'approfondir la compréhension de la manipulation de fonctions en langage assembleur PEP/8. Il permet d'examiner en détail le passage de paramètres par valeur et par adresse, deux principes fondamentaux pour une gestion efficace des données. La gestion de la pile et le retour des résultats de traitement, compétences clés pour la programmation de bas niveau et la compréhension approfondie des systèmes informatiques, seront également abordés.</div>
+Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la compréhension de la manipulation des fonctions en langage assembleur PEP/8, mettant en lumière l'importance du  passage de paramètres par valeur et par adresse, ainsi qu'à la gestion de la pile et au retour des résultats après traitement. Ces aspects sont cruciaux pour toute personne visant à acquérir une maîtrise approfondie des systèmes informatiques et à améliorer sa compétence en programmation au niveau de l'assemblage.</div>
 
 # 2. Énoncé de travail<a name="enonce"></a>
 
@@ -46,13 +46,14 @@ Au-delà de l'exploration de ces techniques algorithmiques, ce projet offre une 
 
 <div align="justify">
   
-Le tri comptage, également connu sous le nom de tri par dénombrement, est présenté comme une méthode algorithmique spécifiquement adaptée au tri efficace d'ensembles de nombres entiers situés dans une plage définie. Cette technique se caractérise par une approche novatrice qui commence par la création d'un `histogramme` qui capture la fréquence de chaque valeur dans l'ensemble. Cet aperçu de la distribution est par la suite utilisé pour assembler de manière systématique l'ensemble trié. L'avantage principal du tri comptage est sa capacité à organiser les données sans avoir besoin de comparaisons directes entre les éléments, ce qui le rend particulièrement efficace pour les ensembles où les valeurs sont nombreuses mais confinées à une gamme restreinte.
+Le tri comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri comptage réside dans sa capacité à trier les données sans nécessiter de comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
 </div>
 
 
 ### 2.1.1. Exemple détaillé de Tri Comptage
 <div align="justify">
-Considérons un ensemble de données composé de nombres allant de 0 à 9, avec pour objectif de le trier selon la méthode du tri comptage.<br><br></div>
+Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec l'intention de le trier en utilisant la méthode du tri comptage.
+<br><br></div>
 
 <p align="center">
   <img src="./Images/image_01.svg">
@@ -60,15 +61,16 @@ Considérons un ensemble de données composé de nombres allant de 0 à 9, avec 
 
 #### 2.1.1.1. Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
 <div align="justify">
-La première étape consiste à préparer un tableau auxiliaire de longueur 10 (correspondant à l'intervalle de valeurs de 0 à 9), initialisé à zéro. Chaque indice de ce tableau est associé à une valeur potentielle de l'ensemble de données.</div>
+  La première phase consiste à préparer un tableau auxiliaire de dix éléments (pour correspondre à l'intervalle de valeurs de 0 à 9), tous initialisés à zéro. Chaque indice de ce tableau correspond à une valeur potentielle dans l'ensemble de données.
+</div>
 
 <p align="center">
   <img src="./Images/image_02.svg">
 </p>
 
 <div align="justify">
-  
-L'étape suivante consiste à parcourir l'ensemble de données, en incrémentant la valeur dans le tableau auxiliaire pour chaque élément rencontré. Ce procédé est répété pour chaque élément, aboutissant progressivement à un `histogramme` représentant la totalité des valeurs.
+
+  En parcourant l'ensemble de données, on augmente la valeur correspondante dans le tableau auxiliaire pour chaque occurrence d'un élément. Ce processus est répété pour chaque élément, résultant en un `histogramme` qui reflète la fréquence de chaque valeur.
 </div>
 
 <p align="center">
@@ -76,7 +78,9 @@ L'étape suivante consiste à parcourir l'ensemble de données, en incrémentant
 </p>
 
 <div align="justify">
-Pour un deuxième élément étant un 7, l'incrémentation s'effectue à l'indice 7 du tableau auxiliaire :</div>
+
+  Pour l'élément suivant, qui est un 7, l'opération consiste à incrémenter la valeur à l'indice 7 du tableau auxiliaire.
+  </div>
 
 <p align="center">
   <img src="./Images/image_04.svg">
@@ -105,7 +109,7 @@ Ce principe étant établi, après traitement de tous les éléments, le tableau
 
 <div align="justify">
   
-Cet `histogramme` offre une vue d'ensemble précise de la distribution des valeurs au sein de l'ensemble de données, indiquant le nombre exact de fois que chaque valeur est présente.<br><br>
+À l'issue du traitement de tous les éléments, le tableau auxiliaire illustre un `histogramme` complet de la distribution des valeurs dans l'ensemble de données, indiquant précisément combien de fois chaque valeur apparaît.<br><br>
 </div>
 
 Les occurrences dans l'ensemble à trier se présentent comme suit :
@@ -124,8 +128,8 @@ Ces données seront exploitées dans la phase 2 pour réarranger le tableau à t
 
 #### 2.1.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
 <div align="justify">
-  
-La seconde phase du tri comptage se sert de l'`histogramme` pour reconstituer l'ensemble trié. Cette étape consiste à parcourir le tableau auxiliaire et à insérer chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`, ce qui résulte en un ensemble de données méticuleusement ordonné.
+
+La deuxième phase utilise l'`histogramme` pour assembler l'ensemble trié. En parcourant le tableau auxiliaire, on place chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`. Ce processus aboutit à un ensemble de données méthodiquement organisé.
 </div>
 
 <p align="center">
@@ -133,6 +137,9 @@ La seconde phase du tri comptage se sert de l'`histogramme` pour reconstituer l'
 </p>
 
 <div align="justify">
+
+Pour illustrer, on commence avec l'indice 0 du tableau auxiliaire, où se trouve un 1, ce qui signifie que le nombre 0 est inséré une fois dans l'ensemble à trier. 
+
 Pour illustrer, le processus débute à l'indice 0 du tableau auxiliaire, où se trouve un 1. Par conséquent, le chiffre 0 est inscrit une fois dans l'ensemble à trier.</div>
 
 <p align="center">
@@ -141,7 +148,7 @@ Pour illustrer, le processus débute à l'indice 0 du tableau auxiliaire, où se
 
 <div align="justify">
   
-À l'indice 1 de l'`histogramme`, aucun élément n'est présent (valeur 0), indiquant qu'aucun 1 n'est ajouté à l'ensemble à trier.
+L'absence de valeurs à l'indice 1 (valeur 0 dans l'`histogramme`) indique qu'aucun 1 n'est ajouté à l'ensemble. 
 </div>
 
 <p align="center">
@@ -165,14 +172,12 @@ Arrivé à l'indice 3, qui compte un 3, cela conduit à insérer trois fois le c
 </p>
 
 <div align="justify">
-Le processus continue en ajoutant une fois le 4, cinq fois le 6, une fois le 7, deux fois le 8, et finalement une fois le 9 dans l'ensemble à trier :</div>
+  
+Ce processus continue avec chaque indice de l'`histogramme`, ajoutant les nombres dans l'ensemble à trier en fonction de leur fréquence d'occurrence. Finalement, cela résulte en un ensemble de données soigneusement trié, démontrant l'efficacité du tri comptage.</div>
 
 <p align="center">
   <img src="./Images/image_13.svg">
 </p>
-
-<div align="justify">
-Cette phase s'achève avec la formation d'un ensemble de données trié, signifiant la réussite de l'application de l'algorithme de tri comptage.</div>
 
 
 
@@ -180,22 +185,18 @@ Cette phase s'achève avec la formation d'un ensemble de données trié, signifi
 ### 2.1.2. Algorithme du Tri Comptage
 
 <div align="justify">
-L'exécution du tri comptage se déroule à travers une série d'étapes systématiques :
+Le déroulement du tri comptage s'effectue selon des étapes systématiques :
 </div>
 
  <div align="justify">
-   
-1. **Détermination de la borne maximale et minimale :** 
- Cette étape consiste à identifier les valeurs extrêmes au sein de l'ensemble de données, ce qui permet de dimensionner adéquatement le tableau auxiliaire pour le comptage.
 
-2. **Initialisation du tableau de comptage :**  
- Un tableau auxiliaire est préparé pour englober toutes les valeurs possibles comprises entre les bornes déterminées, initialisé avec des cellules à zéro.
 
-3. **Complétion du tableau de comptage :** 
- L'ensemble de données est examiné, chaque élément observé augmente le compteur correspondant dans le tableau auxiliaire, formant ainsi l'`histogramme` des occurrences.
-  
-4. **Assemblage du tableau trié :** 
- Le processus se conclut par la reconstruction de l'ensemble de données en ordre croissant, basée sur les données de l'`histogramme`, achevant le tri.</div>
+1. **Détermination de la borne maximale et minimale :** Identifie les valeurs extrêmes dans l'ensemble de données pour ajuster la taille du tableau auxiliaire pour le comptage.
+2. **Initialisation du tableau de comptage :** Prépare un tableau auxiliaire couvrant toutes les valeurs potentielles entre les bornes extrêmes, initialisé à zéro.
+3. **Complétion du tableau de comptage :** En parcourant l'ensemble de données, chaque observation augmente le compteur correspondant dans le tableau auxiliaire, créant un `histogramme` des fréquences.
+4. **Assemblage du tableau trié :** Reconstruit l'ensemble de données en ordre croissant, basé sur les informations de l'`histogramme`.
+
+</div>
 
 <div align="justify">
 Une implémentation en pseudo-code du tri comptage est présentée ci-après :
@@ -209,7 +210,7 @@ Une implémentation en pseudo-code du tri comptage est présentée ci-après :
 ## 2.2. Recherche dichotomique <a name="Dichotomique"></a>
 
 <div align="justify">
-La recherche dichotomique constitue un progrès notable dans le champ des algorithmes de recherche, avec pour but de détecter rapidement la présence et la position d'un élément spécifique dans un ensemble trié. Cette technique est comparable à la façon dont on cherche un nom dans un annuaire téléphonique, où l'objectif est de localiser des informations précises associées à un identifiant déterminé. Par sa méthode efficace de division successive de l'espace de recherche, la recherche dichotomique se distingue par son aptitude à parcourir des ensembles de données organisées séquentiellement, offrant une performance supérieure en termes de vitesse et de précision par rapport aux méthodes traditionnelles.
+La recherche dichotomique représente une avancée importante dans les méthodes de recherche algorithmique, visant à identifier rapidement un élément donné au sein d'un ensemble trié. Cette approche est similaire à la méthode utilisée pour trouver un nom dans un annuaire téléphonique, ciblant des informations spécifiques liées à un identifiant prédéfini. Grâce à sa stratégie de réduction progressive de l'espace de recherche, la recherche dichotomique excelle dans l'examen d'ensembles de données agencés de manière séquentielle, offrant une efficacité notable en termes de rapidité et de précision comparée aux techniques conventionnelles.
 </div>
 
 
@@ -218,7 +219,7 @@ La recherche dichotomique constitue un progrès notable dans le champ des algori
 #### 2.2.1.1. Recherche Naïve
 
 <div align="justify">
-L'approche naïve, qui consiste à parcourir chaque élément d'un tableau de manière séquentielle pour identifier une valeur spécifique, est simple d'intuition mais se montre peu efficace pour les vastes ensembles de données. Cette technique engage un examen linéaire du tableau, effectuant une comparaison de chaque élément avec la valeur cible jusqu'à détecter une correspondance ou établir son absence. Bien que cette méthode soit facile à comprendre, elle est caractérisée par une complexité linéaire, faisant ainsi du temps de recherche un facteur directement proportionnel à la dimension de l'ensemble.
+L'approche naïve, basée sur le parcours séquentiel de chaque élément d'un tableau pour trouver une valeur déterminée, est intuitivement simple mais devient inefficace avec l'augmentation de la taille de l'ensemble de données. Elle repose sur une recherche linéaire, comparant successivement chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou conclure à son absence. Facile à comprendre, cette méthode présente cependant une complexité linéaire, rendant le temps de recherche proportionnel à la taille de l'ensemble.
 </div>
 
 ```c++
@@ -233,7 +234,7 @@ int Rech_nai(int tab[], int taille, int val) {
 #### 2.2.1.2. Recherche dichotomique
 
 <div align="justify">
-Employant une tactique de division par moitié, la recherche dichotomique initie son processus par l'examen de l'élément au milieu du tableau. Si cet élément central diffère de l'objectif, la recherche continue dans la section du tableau adéquate, déterminée par la comparaison de cet élément avec la cible. Cette méthode itérative, réduisant de moitié l'espace de recherche à chaque étape, facilite efficacement la détection de la valeur ciblée ou confirme sa non-présence, tirant avantage de l'ordonnancement préétabli des données pour accélérer le processus de recherche.
+La recherche dichotomique applique une stratégie de division successive en deux de l'espace de recherche, commençant son opération par l'évaluation de l'élément situé au centre du tableau. Si cet élément central ne correspond pas à la valeur recherchée, la recherche se poursuit dans la moitié du tableau appropriée, choisie en fonction du résultat de la comparaison entre cet élément et la valeur cible. Cette approche itérative, qui diminue de moitié la taille de l'espace de recherche à chaque tour, permet de localiser rapidement la valeur recherchée ou de confirmer son absence, exploitant l'organisation préalable des données pour optimiser la vitesse de la recherche.
 </div>
 
 <p align="center">
@@ -247,29 +248,29 @@ Employant une tactique de division par moitié, la recherche dichotomique initie
 <div align="justify">
   
 1. **Terminaison de la Boucle** : 
-La finitude de l'algorithme repose sur le concept de "variant de boucle", qui prévoit une réduction constante et mesurable de l'espace de recherche à chaque cycle. Cette approche, maintenant le critère de décroissance toujours positif ou nul, confirme que l'algorithme atteindra une résolution en un nombre limité de pas, éliminant le risque de bouclage perpétuel.
+La terminaison repose sur l'utilisation d'un `variant de boucle`, assurant une réduction constante de l'espace de recherche après chaque itération. Ce mécanisme garantit une décroissance systématique et évite un fonctionnement infini de l'algorithme, promettant ainsi une issue en un nombre fini d'étapes.
 
 2. **Exactitude des Résultats** : 
-L'exactitude est essentielle pour vérifier que l'indice retourné par l'algorithme correspond effectivement à l'élément ciblé, ou signale de manière appropriée son absence. La précision des retours valide la confiance en la recherche dichotomique comme méthode d'investigation au sein d'ensembles ordonnés.<br><br></div>
+L'exactitude garantit que l'indice renvoyé, le cas échéant, correspond réellement à l'élément recherché ou indique correctement son absence. Cette assurance de précision établit la fiabilité de la recherche dichotomique dans l'examen d'ensembles préalablement triés.<br><br></div>
 
-<div align="justify">L'adoption d'un cadre de vérification strict assure la compétence de la recherche dichotomique à produire des conclusions fiables et justes. Cette technique utilise une stratégie de fractionnement efficace, réduisant exponentiellement l'espace de recherche à chaque étape, ce qui affûte rapidement le champ d'investigation jusqu'à la localisation exacte de l'élément recherché ou la détermination de son absence.<br><br></div>
+<div align="justify">Le respect rigoureux de ces critères confirme l'efficacité de la recherche dichotomique pour fournir des résultats justes et fiables. La stratégie de division efficace de l'espace de recherche accélère la convergence vers l'élément cible ou confirme son absence, grâce à une réduction exponentielle de la zone d'examen à chaque étape.<br><br></div>
 
-<div align="justify">Pour exposer le mécanisme assurant la terminaison et la fidélité des résultats :
+<div align="justify">Le processus de vérification se base sur :
 
-1. Le milieu est déterminé par `milieu = (gauche + droite) // 2`, veillant à ce que `gauche <= milieu <= droite`.
-2. Trois cas se présentent alors :
-   - Si `tab[milieu] = val`, la cible est trouvée et la quête s'achève.
-   - Si `tab[milieu] > val`, l'exploration se dirige vers la section inférieure, réajustant la limite `droite` à `milieu - 1`, diminuant ainsi la zone de recherche.
-   - Si `tab[milieu] < val`, le processus se poursuit dans la moitié supérieure, en déplaçant la frontière `gauche` à `milieu + 1`.<br><br></div>
+1. La détermination du milieu par `milieu = (gauche + droite) // 2`, en s'assurant que `gauche <= milieu <= droite`.
+2. Trois possibilités émergent :
+   - Si `tab[milieu] = val`, l'élément est trouvé, concluant la recherche.
+   - Si `tab[milieu] > val`, la recherche se concentre sur la moitié inférieure, réajustant `droite` à `milieu - 1` pour réduire l'espace de recherche.
+   - Si `tab[milieu] < val`, l'investigation se poursuit dans la moitié supérieure, avec `gauche` ajusté à `milieu + 1`.<br><br></div>
 
-<div align="justify">Ces démarches assurent une diminution systématique de l'espace de recherche, garantissant ainsi la conclusion de l'algorithme tout en préservant une exactitude optimale des déductions.</div>
+<div align="justify">Ces étapes facilitent une diminution méthodique de l'espace de recherche, assurant ainsi la finitude de l'algorithme et l'exactitude des conclusions.</div>
 
 
 
 ### 2.2.3. Exemple détaillé de la recherche dichotomique
 
 <div align="justify">
-Prenons l'exemple de la quête du chiffre 56 au sein d'un tableau ordonné pour illustrer la recherche dichotomique. Cette méthode initie son processus en évaluant l'élément au centre du tableau. Si la valeur cible excède cet élément central, la recherche se concentre désormais sur la demi-section supérieure du tableau, et inversement. Ce processus se répète, affinant de façon progressive l'espace de recherche jusqu'à la détection de la valeur souhaitée ou la détermination de son absence.
+Considérons la recherche du chiffre 56 dans un tableau ordonné pour illustrer la recherche dichotomique. Cette méthode démarre par l'évaluation de l'élément au milieu du tableau. Si la valeur recherchée est supérieure à cet élément central, l'analyse se recentre sur la moitié supérieure du tableau, et vice versa. Ce procédé est répété, réduisant progressivement l'espace de recherche jusqu'à ce que la valeur désirée soit trouvée ou que l'on conclue à son absence.
 </div>
 
 <p align="center">
@@ -277,28 +278,28 @@ Prenons l'exemple de la quête du chiffre 56 au sein d'un tableau ordonné pour 
 </p>
 
 <div align="justify">
-La première action consiste à examiner l'élément médian, qui est 45. Étant donné que la valeur recherchée est plus grande que 45, l'attention se porte sur la partie droite du tableau, réduisant l'espace de recherche à un sous-tableau comprenant les valeurs 48, 56, 60, 79, et 86.</div>
+Initialement, l'élément médian, ici 45, est examiné. La valeur cible étant plus élevée que 45, la recherche se focalise sur la partie droite du tableau, limitant ainsi l'espace de recherche aux valeurs 48, 56, 60, 79, et 86.</div>
 
 <p align="center">
   <img src="./Images/image_15.svg">
 </p>
 
 <div align="justify">
-Pour la deuxième étape, l'élément central du sous-tableau (48, 56, 60, 79, 86) est 60. Comme 60 est supérieur au chiffre recherché, la recherche se dirige vers la moitié gauche du sous-tableau, constituée de 48 et 56.</div>
+Lors de la deuxième étape, l'élément au centre du sous-ensemble (48, 56, 60, 79, 86) est 60. Puisque 60 est plus grand que le chiffre recherché, l'attention se déplace vers la moitié gauche du sous-ensemble, comprenant 48 et 56.</div>
 
 <p align="center">
   <img src="./Images/image_16.svg">
 </p>
 
 <div align="justify">
-Dans la phase finale, il ne reste plus que les valeurs 48 et 56. L'élément au milieu étant 48, inférieur à la valeur recherchée, la logique veut que la valeur suivante, 56, soit celle recherchée. L'algorithme conclut ici son exécution.</div>
+Dans l'étape finale, avec seulement 48 et 56 restants, et l'élément médian étant 48, qui est inférieur à la valeur cherchée, la logique conduit à la conclusion que le chiffre suivant, 56, est l'élément recherché. L'algorithme s'achève ainsi avec succès.</div>
 
 <p align="center">
   <img src="./Images/image_17.svg">
 </p>
 
 <div align="justify">
-Cet exemple souligne l'efficacité intrinsèque de la recherche dichotomique, qui permet de trouver rapidement un élément au sein d'un tableau ordonné en réduisant méthodiquement l'espace de recherche, démontrant ainsi la force de la stratégie de division pour régner caractéristique des algorithmes de recherche.
+Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable de localiser rapidement un élément dans un tableau ordonné par la diminution méthodique de l'espace de recherche, illustrant la puissance de l'approche diviser pour mieux régner propre aux algorithmes de recherche.
 </div>
 
 
@@ -625,7 +626,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 
 # 4. Remise <a name="Remise"></a>
-<div align="justify">Ce projet est structuré autour de trois phases de remise réparties sur trois semaines, avec un focus sur un groupe spécifique de fonctions à développer et à tester pour garantir leur bon fonctionnement.</div>
+<div align="justify">Ce projet est organisé en trois étapes de soumission étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à développer et à tester afin d'en assurer le bon fonctionnement.</div>
 
   - Semaine 1: TP02_H24_Semaine_01.pep
   - Semaine 2: TP02_H24_Semaine_02.pep
