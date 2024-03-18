@@ -359,7 +359,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    
    **Retour :**
    - <div align="justify">Ne retourne pas de valeur directement. Les éléments convertis en décimale sont placés à l'emplacement spécifié dans la pile.</div>
-
+---
 
 2. **A_AFFICH** 
     <div align="justify">Fonction pour afficher le contenu d'un tableau en format décimale.</div>
@@ -370,6 +370,8 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    
    **Retour :**
    - <div align="justify">Ne retourne pas de valeur. Les éléments du tableau sont affichés en décimal. </div>
+
+---
 
 3. **A_MINIM** 
    
@@ -382,6 +384,8 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    - `a_min` : Stocke la valeur minimale trouvée dans le tableau.
 
+---
+
 4. **A_MAXIM** 
    
     <div align="justify">Fonction pour trouver la valeur maximale dans un tableau.</div>
@@ -393,7 +397,8 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    - `a_max` : Stocke la valeur maximale trouvée dans le tableau.
    
-  
+---
+ 
 5. **A_HISTO** 
    
    <div align="justify">Fonction pour calculer la fréquence des éléments d'un tableau et réorganiser ces éléments en utilisant un histogramme.</div>
@@ -420,7 +425,9 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
   
    **Retour :**
    - <div align="justify">Ne retourne pas de valeur directement. Les éléments du tableau sont triés et mis à jour directement dans leur emplacement sur la pile.</div>
-   
+
+---
+
 2. **A_RECHDI** 
    
     <div align="justify">Fonction pour effectuer une recherche dichotomique afin de localiser une valeur cible dans un tableau préalablement trié. Cette méthode divise l'intervalle de recherche en deux à chaque étape, réduisant ainsi le nombre de comparaisons nécessaires pour trouver l'élément.</div>
