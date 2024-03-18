@@ -45,7 +45,9 @@ Au-delà de l'exploration de ces techniques algorithmiques, ce projet offre une 
 ## 2.1. Tri Comptage (Counting Sort) <a name="Comptage"></a>
 
 <div align="justify">
-Le tri comptage, également connu sous le nom de tri par dénombrement, est présenté comme une méthode algorithmique spécifiquement adaptée au tri efficace d'ensembles de nombres entiers situés dans une plage définie. Cette technique se caractérise par une approche novatrice qui commence par la création d'un `histogramme` qui capture la fréquence de chaque valeur dans l'ensemble. Cet aperçu de la distribution est par la suite utilisé pour assembler de manière systématique l'ensemble trié. L'avantage principal du tri comptage est sa capacité à organiser les données sans avoir besoin de comparaisons directes entre les éléments, ce qui le rend particulièrement efficace pour les ensembles où les valeurs sont nombreuses mais confinées à une gamme restreinte.</div>
+  
+Le tri comptage, également connu sous le nom de tri par dénombrement, est présenté comme une méthode algorithmique spécifiquement adaptée au tri efficace d'ensembles de nombres entiers situés dans une plage définie. Cette technique se caractérise par une approche novatrice qui commence par la création d'un `histogramme` qui capture la fréquence de chaque valeur dans l'ensemble. Cet aperçu de la distribution est par la suite utilisé pour assembler de manière systématique l'ensemble trié. L'avantage principal du tri comptage est sa capacité à organiser les données sans avoir besoin de comparaisons directes entre les éléments, ce qui le rend particulièrement efficace pour les ensembles où les valeurs sont nombreuses mais confinées à une gamme restreinte.
+</div>
 
 
 ### 2.1.1. Exemple détaillé de Tri Comptage
