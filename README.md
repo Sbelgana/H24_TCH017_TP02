@@ -8,7 +8,7 @@
 - [Introduction](#Introduction)
 - [Énoncé de travail](#enonce)
   - [Tri Comptage](#Comptage)
-  - [Recherche Dichotomique](#Dichotomique)
+  - [Recherche dichotomique](#Dichotomique)
 - [Sous-programmes à implémenter](#Fonction)
 - [Remise](#Remise)
 - [Barème](#bareme)
@@ -28,28 +28,28 @@
 # 1. Introduction <a name="Introduction"></a>
 
 <div align="justify">
-Nous vivons dans une époque définie par le déluge de données, où le traitement et l'analyse de volumes massifs d'informations jouent un rôle pivot dans de nombreux domaines de la science et de la technologie. Au cœur de ces processus se trouvent les algorithmes, dont l'efficacité détermine la rapidité et la précision avec lesquelles nous pouvons tirer des conclusions et prendre des décisions. Ce projet vise à vous familiariser avec deux techniques algorithmiques fondamentales: le tri comptage et la recherche dichotomique. Ces techniques ne sont pas seulement vitales pour le traitement des données mais constituent également une porte d'entrée vers la compréhension des principes opérationnels au cœur de l'informatique.<br><br></div>
+Nous vivons dans une époque définie par le déluge de données, où le traitement et l'analyse de volumes massifs d'informations jouent un rôle pivot dans de nombreux domaines de la science et de la technologie. Au cœur de ces processus se trouvent les algorithmes, dont l'efficacité détermine la rapidité et la précision avec lesquelles nous pouvons tirer des conclusions et prendre des décisions. Ce projet vise à vous familiariser avec deux techniques algorithmiques fondamentales: le tri comptage et la recherche dichotomique. Ces techniques ne sont pas seulement vitales pour le traitement des données, mais constituent également une porte d'entrée vers la compréhension des principes opérationnels au cœur de l'informatique.<br><br></div>
 
 <div align="justify">
-Le tri comptage se distingue en tant que méthode de tri non comparatif, optimisée pour organiser des nombres entiers au sein de plages de valeurs définies. Sa spécificité réside dans sa capacité à classifier les données sans nécessiter de comparaisons directes entre elles, ce qui le rend particulièrement efficace pour trier de grands ensembles de données où les valeurs se trouvent à proximité les unes des autres. D'autre part, la recherche dichotomique adopte une stratégie de "division et conquête", permettant de localiser avec rapidité un élément spécifique dans un tableau trié. Cette méthode s'avère significativement plus rapide que la recherche séquentielle, offrant une efficience accrue pour les opérations de recherche dans de grandes bases de données. À travers ce projet, nous explorerons en profondeur ces techniques pour révéler non seulement leur fonctionnement interne et leurs avantages mais également leurs limites.<br><br></div>
+Le tri comptage se distingue en tant que méthode de tri non comparatif, optimisée pour organiser des nombres entiers au sein de plages de valeurs définies. Sa spécificité réside dans sa capacité à classifier les données sans nécessiter de comparaisons directes entre elles, ce qui le rend particulièrement efficace pour trier de grands ensembles de données où les valeurs se trouvent à proximité les unes des autres. D'autre part, la recherche dichotomique adopte une stratégie de "division et conquête", permettant de localiser avec rapidité un élément spécifique dans un tableau trié. Cette méthode s'avère significativement plus rapide que la recherche séquentielle, offrant une efficience accrue pour les opérations de recherche dans de grandes bases de données. À travers ce projet, nous explorerons en profondeur ces techniques pour révéler non seulement leur fonctionnement interne et leurs avantages, mais également leurs limites.<br><br></div>
 
 <div align="justify">
-En parallèle, nous plongerons dans le monde de la programmation en assembleur PEP/8, un langage de bas niveau qui dévoile les mécanismes sous-jacents des opérations informatiques. Ce cadre vous apprendra à manipuler des tableaux un élément fondamental dans la gestion des structures de données avec une attention particulière portée au tri comptage et à la recherche dichotomique. Vous aborderez également la gestion de la mémoire, une composante crucial de la programmation en assembleur, qui vous éclairera sur la façon dont la mémoire est allouée, employée, et libérée dans le cadre d'un programme. L'utilisation de la pile, essentielle pour la gestion des appels de fonction et la déclaration des variables locales, ainsi que les techniques pour définir et appeler des fonctions en langage assembleur, seront examinées en détail.<br><br></div>
+En parallèle, nous plongerons dans le monde de la programmation en assembleur PEP/8, un langage de bas niveau qui dévoile les mécanismes sous-jacents des opérations informatiques. Ce cadre vous apprendra à manipuler des tableaux un élément fondamental dans la gestion des structures de données avec une attention particulière portée au tri comptage et à la recherche dichotomique. Vous aborderez également la gestion de la mémoire, une composante cruciale de la programmation en assembleur, qui vous éclairera sur la façon dont la mémoire est allouée, employée, et libérée dans le cadre d'un programme. L'utilisation de la pile, essentielle pour la gestion des appels de fonction et la déclaration des variables locales, ainsi que les techniques pour définir et appeler des fonctions en langage assembleur, seront examinées en détail.<br><br></div>
 
 <div align="justify">
 Ce projet vous offre également l'occasion d'appréhender les subtilités du passage de paramètres par valeur et par adresse deux concepts clés pour une gestion optimale des données en programmation. Cette expérience enrichissante vous munira des compétences et connaissances nécessaires pour naviguer à travers des problématiques informatiques plus sophistiquées, élargissant ainsi votre horizon et approfondissant votre compréhension des processus internes qui animent les ordinateurs.<br><br></div>
 
 <div align="justify">
-Au final, ce projet est conçu pour tisser ensemble la théorie et la pratique, dans le but d'affermir votre compréhension des principes essentiels de l'informatique tout en affûtant vos compétences en programmation en assembleur PEP/8. Il vous équipera pour relever avec confiance des défis informatiques variés, armé d'une perspective éclairée et d'une appréciation profonde pour l'essence même de la technologie informatique.</div>
+Au final, ce projet est conçu pour tisser ensemble la théorie et la pratique, dans le but d'affermir votre compréhension des principes essentiels de l'informatique tout en affûtant vos compétences en programmation en assembleur PEP/8. Il vous équipera pour relever avec confiance des défis informatiques variés, armés d'une perspective éclairée et d'une appréciation profonde pour l'essence même de la technologie informatique.</div>
 
 # 2. Énoncé de travail<a name="enonce"></a>
 
 ## 2.1. Tri Comptage (Counting Sort) <a name="Comptage"></a>
 
 <div align="justify">
-Le tri comptage, également connu sous le nom de tri par dénombrement, est une technique algorithmique conçue spécifiquement pour trier des ensembles de nombres entiers situés dans un intervalle précis. Cette méthode se distingue par son approche unique : elle établit d'abord un "histogramme" des données, identifiant le nombre d'occurrences de chaque valeur, puis elle utilise cette distribution pour reconstruire l'ensemble trié. L'avantage principal du tri comptage réside dans sa capacité à trier les données sans avoir besoin de comparer les éléments entre eux, ce qui le rend particulièrement efficace pour les ensembles de données où les valeurs sont nombreuses mais étroitement groupées.</div>
+Le tri comptage, également connu sous le nom de tri par dénombrement, est une technique algorithmique conçue spécifiquement pour trier des ensembles de nombres entiers situés dans un intervalle précis. Cette méthode se distingue par son approche unique : elle établit d'abord un "histogramme" des données, identifiant le nombre d'occurrences de chaque valeur, puis elle utilise cette distribution pour reconstruire l'ensemble trié. L'avantage principal du tri comptage réside dans sa capacité à trier les données sans avoir besoin de comparer les éléments entre eux, ce qui le rend particulièrement efficace pour les ensembles de données où les valeurs sont nombreuses, mais étroitement groupées.</div>
 
-### 2.1.1. Exemple Détaillé de Tri Comptage
+### 2.1.1. Exemple détaillé de Tri Comptage
 <div align="justify">
 Imaginons un ensemble de données contenant des nombres allant de 0 à 9. Notre objectif est de trier cet ensemble selon le principe du tri comptage.<br><br></div>
 
@@ -197,7 +197,7 @@ Voici une implémentation en pseudo-code du tri comptage:
 
 
 
-## 2.2. Recherche Dichotomique <a name="Dichotomique"></a>
+## 2.2. Recherche dichotomique <a name="Dichotomique"></a>
 
 <div align="justify">
 La recherche dichotomique représente une avancée significative dans le domaine des algorithmes de recherche, visant à identifier rapidement la présence et l'emplacement d'une donnée spécifique au sein d'un ensemble ordonné. Cette méthode s'apparente à la recherche d'une entrée dans un annuaire téléphonique, où l'objectif est de trouver des informations précises liées à un identifiant spécifique. Grâce à sa stratégie efficace de division de l'espace de recherche, la recherche dichotomique excelle dans la navigation à travers des données structurées de manière séquentielle, surpassant les approches conventionnelles par sa rapidité et sa précision.
@@ -208,7 +208,7 @@ La recherche dichotomique représente une avancée significative dans le domaine
 #### 2.2.1.1. Recherche Naïve
 
 <div align="justify">
-L'approche naïve, consistant à examiner séquentiellement chaque élément d'un tableau pour trouver une valeur cible, est intuitive mais inefficace pour les grands ensembles de données. Cette méthode implique un parcours linéaire du tableau, comparant chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou confirmer son absence. La simplicité de cette technique s'accompagne d'une complexité linéaire, rendant le temps de recherche proportionnel à la taille de l'ensemble.
+L'approche naïve, consistant à examiner séquentiellement chaque élément d'un tableau pour trouver une valeur cible est intuitive, mais inefficace pour les grands ensembles de données. Cette méthode implique un parcours linéaire du tableau, comparant chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou confirmer son absence. La simplicité de cette technique s'accompagne d'une complexité linéaire, rendant le temps de recherche proportionnel à la taille de l'ensemble.
 </div>
 
 ```c++
@@ -224,7 +224,7 @@ int Rech_nai(int tab[], int taille, int val) {
 Malgré sa simplicité, l'approche naïve ne capitalise pas sur l'ordre des éléments au sein du tableau, chaque recherche étant indépendante de la précédente sans tirer de leçons de l'ordre établi des données.
 </div>
 
-#### 2.2.1.2. Recherche Dichotomique
+#### 2.2.1.2. Recherche dichotomique
 
 <div align="justify">
 La recherche dichotomique adopte une stratégie de division efficace, commençant par l'élément central du tableau. Si cet élément n'est pas la cible, la recherche se poursuit dans la moitié pertinente du tableau, en fonction de la comparaison avec la valeur cible. Ce processus se répète, réduisant l'espace de recherche de moitié à chaque itération, ce qui permet une localisation rapide de la valeur recherchée ou la confirmation de son absence, exploitant ainsi l'ordre des éléments pour optimiser la recherche.
@@ -234,7 +234,7 @@ La recherche dichotomique adopte une stratégie de division efficace, commençan
     <img src="./Images/dicho.svg">
 </p>
 
-### 2.2.2. Vérification de la Fiabilité de la Recherche Dichotomique
+### 2.2.2. Vérification de la Aiabilité de la Recherche dichotomique
 
 <div align="justify">La recherche dichotomique est reconnue pour son efficacité dans la localisation rapide d'éléments au sein de données structurées. Pour garantir cette efficacité, deux aspects cruciaux doivent être systématiquement vérifiés : la terminaison de l'algorithme et la précision des résultats obtenus.</div>
 <div align="justify">
@@ -258,7 +258,7 @@ Quant à la précision, elle est primordiale pour confirmer que l'indice renvoy�
 <div align="justify">Ces étapes garantissent la réduction continue de l'espace de recherche, assurant la terminaison de l'algorithme tout en maintenant une précision optimale des résultats.</div>
 
 
-### 2.2.3. Exemple Détaillé de la Recherche Dichotomique
+### 2.2.3. Exemple détaillé de la recherche dichotomique
 
 <div align="justify">
 Illustrons la recherche dichotomique par l'exemple de la recherche du nombre 56 dans un tableau trié. La méthode commence par examiner l'élément central du tableau. Si la valeur recherchée est supérieure à cet élément central, la recherche se concentre alors sur la moitié supérieure du tableau, et vice versa. Cette procédure se répète, affinant progressivement l'espace de recherche jusqu'à localiser la valeur cible ou conclure à son absence.
@@ -296,9 +296,9 @@ Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable 
 # 3. Sous-programmes à implémenter <a name="Fonction"></a>
 
 <div align="justify">
-Le projet nécessite la création de trois tableaux de caractères ASCII dans la pile. Ces tableaux, les seuls variables globales du projet, sont définis comme suit :</div>
+Le projet nécessite la création de trois tableaux de caractères ASCII dans la pile. Ces tableaux, les seules variables globales du projet, sont définis comme suit :</div>
 
-## 3.1. Préparation de la Pile :
+## 3.1. Préparation de la pile :
 <div align="justify">
 Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux représentent les seules variables globales du projet et sont définis comme suit :</div>
   
@@ -310,17 +310,17 @@ a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 
 <div align="justify">
 Pour chaque tableau, vous devrez allouer de l'espace dans la pile pour stocker l'adresse, la taille et les données du tableau.</div>
 
-## 3.2. Chargement des Tableaux :
+## 3.2. Chargement des tableaux :
 <div align="justify">
 Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 sont définies pour gérer les emplacements et les tailles des tableaux dans la pile. Ces constantes permettent de manipuler les adresses et les longueurs des tableaux de manière dynamique lors du chargement.<br><br></div>
 
 <div align="justify">
-Le processus de chargement des tableaux implique de réserver l'espace nécessaire dans la pile pour chacun des tableaux.  Cela est réalisé en reculant le pointeur de pile de la taille totale des tableaux et en sauvegardant ensuite les adresses de départ et les tailles de chaque tableau au-dessus de leursemplacements respectifs dans la pile.</div>   
+Le processus de chargement des tableaux implique de réserver l'espace nécessaire dans la pile pour chacun des tableaux.  Cela est réalisé en reculant le pointeur de pile de la taille totale des tableaux et en sauvegardant ensuite les adresses de départ et les tailles de chaque tableau au-dessus de leurs emplacements respectifs dans la pile.</div>   
 
 **Exemple de chargement pour le tableau 1 :**
 <div align="justify">Reculer le pointeur de pile de 10 octets pour le tableau 1, sauvegarder l'adresse de départ et la taille du tableau.<br><br></div>
 
-<div align="justify">Lorsque cela fonctionnera pour 1 tableau, Vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :  </div>     
+<div align="justify">Lorsque cela fonctionnera pour 1 tableau, vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :  </div>     
 <p align="center">
   <img src="./Images/image_18.svg">
 </p>
@@ -349,7 +349,7 @@ a_ad_his:.EQUATE ?      ; Adresse du premier élément de l'histogramme dans la 
 
 ## 3.3. Sous-Tâches de Base :
 <div align="justify">
-Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous-tâches simple en premier. </div>
+Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous-tâches simples en premier. </div>
  
     
 1. **A_LECTUR** 
@@ -358,14 +358,14 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Paramètres :**
    - `a_tab`  : Adresse du début du tableau ASCII en mémoire.
    - `a_tai`  : Taille du tableau, indiquant le nombre de caractères ASCII à convertir.
-   - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimal doivent être stockés.
+   - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimale doivent être stockés.
    
    **Retour :**
-   - <div align="justify">Ne retourne pas de valeur directement. Les éléments convertis en décimal sont placés à l'emplacement spécifié dans la pile.</div>
+   - <div align="justify">Ne retourne pas de valeur directement. Les éléments convertis en décimale sont placés à l'emplacement spécifié dans la pile.</div>
 
 
 2. **A_AFFICH** 
-    <div align="justify">Fonction pour afficher le contenu d'un tableau en format décimal.</div>
+    <div align="justify">Fonction pour afficher le contenu d'un tableau en format décimale.</div>
      
    **Paramètres :**
    - `a_ad_t`: Adresse dans la pile du premier élément du tableau à afficher.
@@ -436,9 +436,9 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    **Retour :**
    - `a_indice` : la taille du tableau.
    
-## 3.5. Resultats attendue :
+## 3.5. Resultats attendus :
 
-### 3.5.1. Lecture et Trie du tableau 1 :
+### 3.5.1. Lecture et trie du tableau 1 :
 
 <div align="justify">La première étape consiste à lire les données du tableau 1 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.</div>
 
@@ -464,7 +464,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
 </p>
 
 
-### 3.5.2. Lecture du tableau 1 et 2 et Trie du tableau 2:
+### 3.5.2. Lecture du tableau 1 et 2 et trie du tableau 2:
 <div align="justify">La première étape consiste à lire les données du tableau 1 et 2 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.</div>
 
 <p align="center">
@@ -490,7 +490,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
 
 
 
-### 3.5.3. Lecture du tableau 1, 2 et 3 et Trie du tableau 3:
+### 3.5.3. Lecture du tableau 1, 2 et 3 et trie du tableau 3:
 <div align="justify">La première étape consiste à lire les données du tableau 1, 2 et 3 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.</div>
 
 <p align="center">
