@@ -11,9 +11,9 @@
   - [Tri Par Comptage](#comptage)
   - [Recherche dichotomique](#dichotomique)
 - [Gestion de la pile](#pile)
+- [Outils de validation](#outil)
 - [Sous-programmes à implémenter](#fonction)
 - [Resultats attendus](#resultat)
-- [Outils de validation](#outil)
 - [Remise](#remise)
 - [Barème](#bareme)
 
