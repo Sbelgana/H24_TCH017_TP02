@@ -17,7 +17,7 @@
 
 # Directives particulières <a name="directives"></a>
 * Le travail doit être effectué en équipe de 2 à 4 personnes.
-* Respecter [guide de codage](https://ena.etsmtl.ca/pluginfile.php/1984632/mod_resource/content/1/TCH017%20-%20Normes%20de%20programmation.docx.pdf)
+* Respecter le [guide de codage](https://ena.etsmtl.ca/pluginfile.php/1984632/mod_resource/content/1/TCH017%20-%20Normes%20de%20programmation.docx.pdf)
 * Noms de variables et fonctions adéquats (concis, compréhensibles);
 * Documentation du code
 * Liens utiles:
@@ -32,9 +32,10 @@ L'époque actuelle est définie par un déluge de données, dans lequel le trait
 
 <div align="justify">
   
-Ce projet est conçu pour introduire deux techniques algorithmiques essentielles : 
+Ce projet est conçu pour introduire deux techniques algorithmiques essentielles : </div>
+
 - **Le tri comptage :** une technique de tri adaptée aux ensembles de données distribués dans un intervalle spécifique.
-- **La recherche dichotomique :** une méthode de recherche rapide et efficace pour les ensembles ordonnés.</div>
+- **La recherche dichotomique :** une méthode de recherche rapide et efficace pour les ensembles ordonnés.
 
 <div align="justify">
 Au-delà de l'exploration de ces techniques algorithmiques, ce projet offre une occasion d'approfondir la compréhension de la manipulation de fonctions en langage assembleur PEP/8. Il permet d'examiner en détail le passage de paramètres par valeur et par adresse, deux principes fondamentaux pour une gestion efficace des données. La gestion de la pile et le retour des résultats de traitement, compétences clés pour la programmation de bas niveau et la compréhension approfondie des systèmes informatiques, seront également abordés.</div>
