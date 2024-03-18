@@ -28,17 +28,17 @@
 # 1. Introduction <a name="Introduction"></a>
 
 <div align="justify">
-Dans le contexte actuel, marqué par une prolifération des données numériques, le traitement et l'analyse rigoureux de ces données se révèlent cruciaux pour le progrès scientifique et technologique. La performance et la précision des analyses dépendent largement des algorithmes, qui jouent un rôle déterminant dans la prise de décisions et l'élaboration de conclusions pertinentes. Face à l'augmentation de la complexité et du volume des données, l'amélioration continue de ces algorithmes s'impose comme une nécessité pour en renforcer l'efficacité et la fiabilité.<br><br></div>
+Dans le contexte actuel, marqué par une prolifération des données numériques, le traitement et l'analyse rigoureux de ces données se révèle crucial pour le progrès scientifique et technologique. <br><br>La performance et la précision des analyses dépendent largement des algorithmes, qui jouent un rôle déterminant dans la prise de décisions et l'élaboration de conclusions pertinentes. Face à l'augmentation de la complexité et du volume des données, l'amélioration continue de ces algorithmes s'impose comme une nécessité pour en renforcer l'efficacité et la fiabilité.<br><br></div>
 
 <div align="justify">
   
-Le projet présenté vise à explorer deux techniques algorithmiques clés pour le traitement des données : </div>
+Le présent projet vise à explorer deux techniques algorithmiques clés pour le traitement des données : </div>
 
 - **Le tri par comptage :** adapté aux données réparties dans un intervalle spécifique, cette méthode de tri se distingue par son efficacité.
 - **La recherche dichotomique :** elle représente une approche rapide et efficace pour la recherche dans des ensembles ordonnés de données.
 
 <div align="justify">
-Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la compréhension de la manipulation des fonctions en langage assembleur PEP/8, mettant en lumière l'importance du  passage de paramètres par valeur et par adresse, ainsi qu'à la gestion de la pile et au retour des résultats après traitement. Ces aspects sont cruciaux pour toute personne visant à acquérir une maîtrise approfondie des systèmes informatiques et à améliorer sa compétence en programmation au niveau de l'assemblage.</div>
+Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la compréhension de la manipulation des fonctions en langage assembleur PEP/8, mettant en lumière l'importance du  passage de paramètres par valeur et par adresse, ainsi qu'à la gestion de la pile et au retour des résultats après traitement. Ces aspects sont cruciaux pour toute personne visant à acquérir une maîtrise approfondie des systèmes informatiques et à améliorer sa compétence en programmation PEP/8.</div>
 
 # 2. Énoncé de travail<a name="enonce"></a>
 
@@ -46,7 +46,8 @@ Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la comp
 
 <div align="justify">
   
-Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter de comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
+Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter une comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
+
 </div>
 
 
@@ -60,8 +61,11 @@ Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec 
 </p>
 
 #### 2.1.1.1. Algorithme de Tri Par Comptage – Phase 1 : Comptage des Éléments
+
 <div align="justify">
+  
   La première phase consiste à préparer un tableau auxiliaire de dix éléments (pour correspondre à l'intervalle de valeurs de 0 à 9), tous initialisés à zéro. Chaque indice de ce tableau correspond à une valeur potentielle dans l'ensemble de données.
+  
 </div>
 
 <p align="center">
@@ -71,6 +75,7 @@ Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec 
 <div align="justify">
 
   En parcourant l'ensemble de données, on augmente la valeur correspondante dans le tableau auxiliaire pour chaque occurrence d'un élément. Ce processus est répété pour chaque élément, résultant en un `histogramme` qui reflète la fréquence de chaque valeur.
+  
 </div>
 
 <p align="center">
@@ -80,6 +85,7 @@ Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec 
 <div align="justify">
 
   Pour l'élément suivant, qui est un 7, l'opération consiste à incrémenter la valeur à l'indice 7 du tableau auxiliaire.
+  
   </div>
 
 <p align="center">
@@ -130,6 +136,7 @@ Ces données seront exploitées dans la phase 2 pour réarranger le tableau à t
 <div align="justify">
 
 La deuxième phase utilise l'`histogramme` pour assembler l'ensemble trié. En parcourant le tableau auxiliaire, on place chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`. Ce processus aboutit à un ensemble de données méthodiquement organisé.
+
 </div>
 
 <p align="center">
@@ -157,7 +164,7 @@ L'absence de valeurs à l'indice 1 (valeur 0 dans l'`histogramme`) indique qu'au
 
 <div align="justify">
   
-L'indice 2 de l'`histogramme` affiche à nouveau un 1, menant à l'ajout d'un 2 dans l'ensemble à trier :
+L'indice 2 de l'`histogramme` qui compte un 2, cela conduit à insérer deux fois le chiffre 2 dans l'ensemble :</div>
 </div>
 
 <p align="center">
@@ -210,7 +217,9 @@ Une implémentation en pseudo-code du tri par comptage est présentée ci-après
 ## 2.2. Recherche dichotomique <a name="Dichotomique"></a>
 
 <div align="justify">
-La recherche dichotomique représente une avancée importante dans les méthodes de recherche algorithmique, visant à identifier rapidement un élément donné au sein d'un ensemble trié. Cette approche est similaire à la méthode utilisée pour trouver un nom dans un annuaire téléphonique, ciblant des informations spécifiques liées à un identifiant prédéfini. Grâce à sa stratégie de réduction progressive de l'espace de recherche, la recherche dichotomique excelle dans l'examen d'ensembles de données agencés de manière séquentielle, offrant une efficacité notable en termes de rapidité et de précision comparée aux techniques conventionnelles.
+La recherche dichotomique représente une avancée importante dans les méthodes de recherche algorithmique, visant à identifier rapidement un élément donné au sein d'un ensemble trié. Cette approche est similaire à la méthode utilisée pour trouver un nom dans un annuaire téléphonique, ciblant des informations spécifiques liées à un identifiant prédéfini.<br><br>
+
+Grâce à sa stratégie de réduction progressive de l'espace de recherche, la recherche dichotomique excelle dans l'examen d'ensembles de données agencés de manière séquentielle, offrant une efficacité notable en termes de rapidité et de précision comparée aux techniques conventionnelles.
 </div>
 
 
