@@ -669,11 +669,11 @@ Cette sous-section détaille les différentes instances de recherche dichotomiqu
 # 8. Barème /100 <a name="bareme"></a>
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
-|A_LECTUR | 15 |
+|A_LECTUR | 16 |
 |A_AFFICH | 10 |
-|A_MINIM | 5 |
-|A_MAXIM | 5 |
-|A_HISTO | 25 |
+|A_MINIM | 7 |
+|A_MAXIM | 7 |
+|A_HISTO | 20 |
 |A_TRICOM | 20 |
 |A_RECHDI | 20 |
 
