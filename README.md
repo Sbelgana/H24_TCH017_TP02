@@ -3,7 +3,7 @@
 </p>
 
 
-# PR02: Manipulation de tableaux de caractères et algorithme avancés
+# TP02: Manipulation de tableaux de caractères et algorithme avancés
 - [Directives particulières](#directives)
 - [Introduction](#Introduction)
 - [Énoncé de travail](#enonce)
