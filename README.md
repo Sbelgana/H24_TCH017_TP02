@@ -350,22 +350,21 @@ a_ad_his:.EQUATE ?      ; Adresse du premier élément de l'histogramme dans la 
 ## 3.3. Sous-Tâches de Base :
 <div align="justify">
 Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous-tâches simple en premier. </div>
-
+ 
+    
 1. **A_LECTUR** 
-
-<div align="justify">
-  Fonction pour charger un tableau de caractères ASCII, le convertir en valeurs décimales, et placer les éléments convertis à l'emplacement approprié dans la pile.</div>
-   
+    <div align="justify">Fonction pour charger un tableau de caractères ASCII, le convertir en valeurs décimales, et placer les éléments convertis à l'emplacement approprié dans la pile.</div>
+     
    **Paramètres :**
    - `a_tab`  : Adresse du début du tableau ASCII en mémoire.
    - `a_tai`  : Taille du tableau, indiquant le nombre de caractères ASCII à convertir.
    - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimal doivent être stockés.
-  
+   
    **Retour :**
-   <div align="justify">Ne retourne pas de valeur directement. Les éléments convertis en décimal sont placés à l'emplacement spécifié dans la pile.</div>
-   
+   - <div align="justify">Ne retourne pas de valeur directement. Les éléments convertis en décimal sont placés à l'emplacement spécifié dans la pile.</div>
+
+
 2. **A_AFFICH** 
-   
     <div align="justify">Fonction pour afficher le contenu d'un tableau en format décimal.</div>
      
    **Paramètres :**
@@ -373,7 +372,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    - `a_tai` : Taille du tableau, indiquant le nombre d'éléments à afficher.
    
    **Retour :**
-   <div align="justify">Ne retourne pas de valeur. Les éléments du tableau sont affichés en décimal. </div>
+   - <div align="justify">Ne retourne pas de valeur. Les éléments du tableau sont affichés en décimal. </div>
 
 3. **A_MINIM** 
    
@@ -408,7 +407,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    - `a_ad_his`: Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
    
    **Retour :**
-    <div align="justify">Ne retourne pas de valeur directement. Le tableau est réorganisé selon l'histogramme et les éléments sont replacés à leur emplacement spécifié dans la pile.</div>     
+    - <div align="justify">Ne retourne pas de valeur directement. Le tableau est réorganisé selon l'histogramme et les éléments sont replacés à leur emplacement spécifié dans la pile.</div>     
 
 ## 3.4. Procédures de Tri et Recherche :
 <div align="justify">Après avoir implémenté les sous-tâches de base, vous devez mettre en œuvre les procédures de tri et de recherche :</div>
@@ -423,7 +422,7 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
    - `a_ad_his` : Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
   
    **Retour :**
-   <div align="justify">Ne retourne pas de valeur directement. Les éléments du tableau sont triés et mis à jour directement dans leur emplacement sur la pile.</div>
+   - <div align="justify">Ne retourne pas de valeur directement. Les éléments du tableau sont triés et mis à jour directement dans leur emplacement sur la pile.</div>
    
 2. **A_RECHDI** 
    
