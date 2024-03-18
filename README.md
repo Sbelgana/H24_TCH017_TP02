@@ -5,15 +5,15 @@
 
 # TP02: Manipulation de tableaux de caractères et algorithme avancés
 - [Directives particulières](#directives)
-- [Introduction](#Introduction)
+- [Introduction](#introduction)
 - [Énoncé de travail](#enonce)
-  - [Tri Par Comptage](#Comptage)
-  - [Recherche dichotomique](#Dichotomique)
-- [Gestion de la pile](#Pile)
-- [Sous-programmes à implémenter](#Fonction)
-- [Resultats attendus](#Resultat)
-- [Outils de validation](#Outil)
-- [Remise](#Remise)
+  - [Tri Par Comptage](#comptage)
+  - [Recherche dichotomique](#dichotomique)
+- [Gestion de la pile](#pile)
+- [Sous-programmes à implémenter](#fonction)
+- [Resultats attendus](#resultat)
+- [Outils de validation](#uutil)
+- [Remise](#remise)
 - [Barème](#bareme)
 
 :alarm_clock: [Date de remise le dimanche 14 avril à 23h59](https://www.timeanddate.com/countdown/generic?iso=20240414T235959&p0=165&font=cursive)
@@ -28,7 +28,7 @@
   * [Recherche dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique#:~:text=La%20recherche%20dichotomique%2C%20ou%20recherche,%C3%A9l%C3%A9ment%20dans%20un%20tableau%20tri%C3%A9.)
 
   
-# 1. Introduction <a name="Introduction"></a>
+# 1. Introduction <a name="introduction"></a>
 
 <div align="justify">
 Dans le contexte actuel, marqué par une prolifération des données numériques, le traitement et l'analyse rigoureux de ces données se révèle crucial pour le progrès scientifique et technologique. <br><br>La performance et la précision des analyses dépendent largement des algorithmes, qui jouent un rôle déterminant dans la prise de décisions et l'élaboration de conclusions pertinentes. Face à l'augmentation de la complexité et du volume des données, l'amélioration continue de ces algorithmes s'impose comme une nécessité pour en renforcer l'efficacité et la fiabilité.<br><br></div>
@@ -43,9 +43,9 @@ Le présent projet vise à explorer deux techniques algorithmiques clés pour le
 <div align="justify">
 Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la compréhension de la manipulation des fonctions en langage assembleur PEP/8, mettant en lumière l'importance du  passage de paramètres par valeur et par adresse, ainsi qu'à la gestion de la pile et au retour des résultats après traitement. Ces aspects sont cruciaux pour toute personne visant à acquérir une maîtrise approfondie des systèmes informatiques et à améliorer sa compétence en programmation PEP/8.</div>
 
-# 2. Énoncé de travail<a name="enonce"></a>
+# 2. Énoncé de travail <a name="enonce"></a>
 
-## 2.1. Tri Par Comptage (Counting Sort) <a name="Comptage"></a>
+## 2.1. Tri Par Comptage (Counting Sort) <a name="comptage"></a>
 
 <div align="justify">
   
@@ -217,7 +217,7 @@ Une implémentation en pseudo-code du tri par comptage est présentée ci-après
 </p>
 
 
-## 2.2. Recherche dichotomique <a name="Dichotomique"></a>
+## 2.2. Recherche dichotomique <a name="dichotomique"></a>
 
 <div align="justify">
 La recherche dichotomique représente une avancée importante dans les méthodes de recherche algorithmique, visant à identifier rapidement un élément donné au sein d'un ensemble trié. Cette approche est similaire à la méthode utilisée pour trouver un nom dans un annuaire téléphonique, ciblant des informations spécifiques liées à un identifiant prédéfini.<br><br>
@@ -315,7 +315,7 @@ Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable 
 </div>
 
 
-# 3. Gestion de la pile <a name="Pile"></a>
+# 3. Gestion de la pile <a name="pile"></a>
 
 
 <div align="justify">
@@ -370,7 +370,7 @@ La finalisation du chargement de tous les tableaux résulte en une configuration
 <div align="justify">
 Cette démarche méthodologique souligne l'importance d'une gestion précise et réfléchie de la pile, essentielle pour le traitement efficace des structures de données complexes dans des environnements où l'optimisation de l'espace mémoire est primordiale.</div>
 
-# 4. Sous-programmes à implémenter <a name="Fonction"></a>
+# 4. Sous-programmes à implémenter <a name="fonction"></a>
 
 <div align="justify">
 Pour structurer efficacement le programme et garantir une mise en œuvre méthodique, il est convenable d'organiser les différentes tâches en sous-programmes détaillés. Cette organisation permet non seulement une meilleure compréhension du fonctionnement interne du programme mais aussi une modularité accrue, facilitant ainsi les éventuelles modifications ou extensions. Les sous-tâches de base seront abordées en premier, constituant les fondations sur lesquelles les procédures plus complexes seront construites. </div>
@@ -484,7 +484,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    **Retour :**
    - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
 
-## 5. Resultats attendus :<a name="Resultat"></a>
+## 5. Resultats attendus: <a name="resultat"></a>
 
 <div align="justify">
 Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
@@ -649,7 +649,7 @@ Cette sous-section détaille les différentes instances de recherche dichotomiqu
   <img src="./Images/Resultat_20.png">
 </p>
 
-## 6 Outils de validation : <a name="Outil"></a>
+## 6 Outils de validation : <a name="outil"></a>
 <div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce TP, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
   
 - **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
@@ -657,7 +657,7 @@ Cette sous-section détaille les différentes instances de recherche dichotomiqu
 - **Fenêtre Output** : Cette fenêtre est utilisée pour observer les résultats définitifs des tableaux après leur traitement. Elle fournit un aperçu précis des changements effectués sur les données, à la suite des processus de tri et de recherche.</div>
 
 
-# 7. Remise <a name="Remise"></a>
+# 7. Remise <a name="remise"></a>
 <div align="justify">Ce projet est organisé en trois étapes de soumission étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à développer et à tester afin d'en assurer le bon fonctionnement.</div>
 
   - Semaine 1: TP02_H24_Semaine_01.pep
