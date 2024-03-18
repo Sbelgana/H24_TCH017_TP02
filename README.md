@@ -7,7 +7,7 @@
 - [Directives particulières](#directives)
 - [Introduction](#Introduction)
 - [Énoncé de travail](#enonce)
-  - [Tri Comptage](#Comptage)
+  - [Tri Par Comptage](#Comptage)
   - [Recherche dichotomique](#Dichotomique)
 - [Sous-programmes à implémenter](#Fonction)
 - [Remise](#Remise)
@@ -21,7 +21,7 @@
 * Noms de variables et fonctions adéquats (concis, compréhensibles);
 * Documentation du code
 * Liens utiles:
-  * [Tri Comptage](https://fr.wikipedia.org/wiki/Tri_comptage)
+  * [Tri Par Comptage](https://fr.wikipedia.org/wiki/Tri_comptage)
   * [Recherche dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique#:~:text=La%20recherche%20dichotomique%2C%20ou%20recherche,%C3%A9l%C3%A9ment%20dans%20un%20tableau%20tri%C3%A9.)
 
   
@@ -34,7 +34,7 @@ Dans le contexte actuel, marqué par une prolifération des données numériques
   
 Le projet présenté vise à explorer deux techniques algorithmiques clés pour le traitement des données : </div>
 
-- **Le tri comptage :** adapté aux données réparties dans un intervalle spécifique, cette méthode de tri se distingue par son efficacité.
+- **Le tri par comptage :** adapté aux données réparties dans un intervalle spécifique, cette méthode de tri se distingue par son efficacité.
 - **La recherche dichotomique :** elle représente une approche rapide et efficace pour la recherche dans des ensembles ordonnés de données.
 
 <div align="justify">
@@ -42,24 +42,24 @@ Au-delà de ces techniques, le projet offre l'opportunité d'approfondir la comp
 
 # 2. Énoncé de travail<a name="enonce"></a>
 
-## 2.1. Tri Comptage (Counting Sort) <a name="Comptage"></a>
+## 2.1. Tri Par Comptage (Counting Sort) <a name="Comptage"></a>
 
 <div align="justify">
   
-Le tri comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri comptage réside dans sa capacité à trier les données sans nécessiter de comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
+Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter de comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
 </div>
 
 
-### 2.1.1. Exemple détaillé de Tri Comptage
+### 2.1.1. Exemple détaillé de Tri Par Comptage
 <div align="justify">
-Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec l'intention de le trier en utilisant la méthode du tri comptage.
+Imaginons un ensemble de données constitué de nombres variant de 0 à 9, avec l'intention de le trier en utilisant la méthode du tri par comptage.
 <br><br></div>
 
 <p align="center">
   <img src="./Images/image_01.svg">
 </p>
 
-#### 2.1.1.1. Algorithme de Tri Comptage – Phase 1 : Comptage des Éléments
+#### 2.1.1.1. Algorithme de Tri Par Comptage – Phase 1 : Comptage des Éléments
 <div align="justify">
   La première phase consiste à préparer un tableau auxiliaire de dix éléments (pour correspondre à l'intervalle de valeurs de 0 à 9), tous initialisés à zéro. Chaque indice de ce tableau correspond à une valeur potentielle dans l'ensemble de données.
 </div>
@@ -126,7 +126,7 @@ Les occurrences dans l'ensemble à trier se présentent comme suit :
 
 Ces données seront exploitées dans la phase 2 pour réarranger le tableau à trier.
 
-#### 2.1.1.2. Algorithme de Tri Comptage – Phase 2 : Réorganisation des Éléments
+#### 2.1.1.2. Algorithme de Tri Par Comptage – Phase 2 : Réorganisation des Éléments
 <div align="justify">
 
 La deuxième phase utilise l'`histogramme` pour assembler l'ensemble trié. En parcourant le tableau auxiliaire, on place chaque valeur dans l'ensemble final autant de fois que son nombre d'occurrences indiqué dans l'`histogramme`. Ce processus aboutit à un ensemble de données méthodiquement organisé.
@@ -173,7 +173,7 @@ Arrivé à l'indice 3, qui compte un 3, cela conduit à insérer trois fois le c
 
 <div align="justify">
   
-Ce processus continue avec chaque indice de l'`histogramme`, ajoutant les nombres dans l'ensemble à trier en fonction de leur fréquence d'occurrence. Finalement, cela résulte en un ensemble de données soigneusement trié, démontrant l'efficacité du tri comptage.</div>
+Ce processus continue avec chaque indice de l'`histogramme`, ajoutant les nombres dans l'ensemble à trier en fonction de leur fréquence d'occurrence. Finalement, cela résulte en un ensemble de données soigneusement trié, démontrant l'efficacité du tri par comptage.</div>
 
 <p align="center">
   <img src="./Images/image_13.svg">
@@ -182,10 +182,10 @@ Ce processus continue avec chaque indice de l'`histogramme`, ajoutant les nombre
 
 
 
-### 2.1.2. Algorithme du Tri Comptage
+### 2.1.2. Algorithme du Tri Par Comptage
 
 <div align="justify">
-Le déroulement du tri comptage s'effectue selon des étapes systématiques :
+Le déroulement du tri par comptage s'effectue selon des étapes systématiques :
 </div>
 
  <div align="justify">
@@ -199,7 +199,7 @@ Le déroulement du tri comptage s'effectue selon des étapes systématiques :
 </div>
 
 <div align="justify">
-Une implémentation en pseudo-code du tri comptage est présentée ci-après :
+Une implémentation en pseudo-code du tri par comptage est présentée ci-après :
 </div>
 
 <p align="center">
@@ -303,9 +303,8 @@ Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable 
 </div>
 
 
-# 3. Sous-programmes à implémenter <a name="Fonction"></a>
+# 3. Gestion de la pile <a name="Pile"></a>
 
-## 3.1. Préparation de la pile :
 <div align="justify">
 Un espace sera réservé dans la pile pour trois tableaux de caractères ASCII, nécessitant respectivement 10, 20 et 30 octets pour leur stockage.</div>
   
@@ -315,7 +314,6 @@ a_tab2:  .ASCII  "Message!!!"      ; Tableau 2 : [77 101 115 115 97 103 101 33 3
 a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
 ```
 
-## 3.2. Chargement des tableaux :
 <div align="justify">
 Pour gérer les emplacements et les tailles des tableaux dans la pile, les constantes `a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3` sont établies. Ces définitions facilitent la manipulation des adresses et des dimensions des tableaux de façon dynamique pendant leur chargement.</div>
 
@@ -350,10 +348,15 @@ Après le chargement de tous les tableaux, ils seront disposés les uns sur les 
   <img src="./Images/image_19.svg">
 </p>
 
+# 4. Sous-programmes à implémenter <a name="Fonction"></a>
+
+<div align="justify">
+Pour structurer efficacement le programme et garantir une mise en œuvre méthodique, il est convenable d'organiser les différentes tâches en sous-programmes détaillés. Cette organisation permet non seulement une meilleure compréhension du fonctionnement interne du programme mais aussi une modularité accrue, facilitant ainsi les éventuelles modifications ou extensions. Les sous-tâches de base seront abordées en premier, constituant les fondations sur lesquelles les procédures plus complexes seront construites. </div>
 
 
 
-## 3.3. Sous-Tâches de Base :
+
+## 4.1. Sous-Tâches de Base :
 <div align="justify">
 Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation. </div>
  
@@ -430,7 +433,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
       </div>
      
 
-## 3.4. Procédures de Tri et Recherche :
+## 4.2. Procédures de Tri et Recherche :
 <div align="justify">Une fois les sous-tâches de base réalisées, il est nécessaire d'implémenter les procédures de tri et de recherche suivantes :</div>
 
 1. **A_TRICOM** 
@@ -459,11 +462,14 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    **Retour :**
    - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
 
-## 3.5. Resultats attendus :
+## 5. Resultats attendus :
 
-### 3.5.1. Lecture et tri du tableau 1 :
+<div align="justify">
+Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
 
-<div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile tel qu'anticipé. Voici un aperçu de l'état de la mémoire à ce moment.</div>
+### 5.1. Lecture et tri du tableau 1 :
+
+<div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile tel qu'anticipé. Voici un aperçu de l'état de la mémoire à ce stade</div>
 
 <p align="center">
   <img src="./Images/Resultat_02.png">
@@ -471,7 +477,8 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 <div align="justify">
   
-  L'étape suivante est la création de l'`histogramme`, qui consiste à comptabiliser la fréquence de chaque nombre dans le tableau et à enregistrer ces compteurs dans un tableau d'`histogramme` préalablement défini. Un aperçu de l'état de la mémoire à cette phase est présenté ci-dessous.
+L'étape suivante est la création de l'`histogramme`, qui consiste à comptabiliser la fréquence de chaque nombre dans le tableau et à enregistrer ces compteurs dans un tableau d'histogramme préalablement défini. Un aperçu de l'état de la mémoire à cette phase est présenté ci-dessous.
+
   </div>
 
 <p align="center">
@@ -480,21 +487,24 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 <div align="justify">
   
-  Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploitant l'`histogramme` pour ordonner les éléments de manière croissante. Un aperçu de l'état de la mémoire suite à cette opération est donné ci-après.
-  
+Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploitant l'histogramme pour ordonner les éléments de manière croissante. Un aperçu de l'état de la mémoire suite à cette opération est donné ci-après.
+
   </div>
 
 <p align="center">
   <img src="./Images/Resultat_04.png">
 </p>
 
-<div align="justify">Il est enfin nécessaire de montrer le contenu du tableau sur la console, avant et après le tri, pour valider visuellement l'efficacité de cette méthode. L'image suivante illustre à quoi devrait ressembler l'affichage final sur la console.</div>
+<div align="justify">Il est enfin nécessaire d'afficher le contenu du tableau 1 sur la console, avant et après le tri, pour valider visuellement les résultats obtenus. L'image suivante illustre à quoi devrait ressembler l'affichage final sur la console.</div>
+
+<p align="center">
+
 <p align="center">
   <img src="./Images/Resultat_01.png">
 </p>
 
 
-### 3.5.2. Lecture des tableaux 1 et 2 et tri du tableau 2:
+### 5.2. Lecture des tableaux 1 et 2 et tri du tableau 2:
 <div align="justify">La démarche commence par la lecture des données des tableaux 1 et 2, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
@@ -502,122 +512,122 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 </p>
 
 <div align="justify">
-  
-  La construction de l'`histogramme` pour le tableau 2 s'ensuit, avec le comptage des occurrences de chaque élément et leur enregistrement dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce moment est présenté ensuite.
-  
+La construction de l'`histogramme` pour le tableau 2 s'ensuit, avec le comptage des occurrences de chaque élément et leur enregistrement dans un tableau d'`histogramme`. Un aperçu de la mémoire à cette étape est présenté ensuite.
   </div>
 
 <p align="center">
   <img src="./Images/Resultat_07.png">
 </p>
 
-<div align="justify">
-  
-  Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.
-  
+div align="justify">
+Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.
+
   </div>
 
 <p align="center">
   <img src="./Images/Resultat_08.png">
 </p>
 
-<div align="justify">Pour conclure, il est indispensable d'afficher le contenu du tableau 2 sur la console, avant et après le tri, pour confirmer l'efficacité du processus. L'image suivante montre ce à quoi l'affichage final devrait ressembler sur la console.</div>
+<div align="justify">Il est enfin nécessaire d'afficher le contenu du tableau 2 sur la console, avant et après le tri, pour valider visuellement les résultats obtenus. L'image suivante illustre à quoi devrait ressembler l'affichage final sur la console.</div>
+
 <p align="center">
   <img src="./Images/Resultat_05.png">
 </p>
 
 
 
-### 3.5.3. Lecture des tableaux 1, 2 et 3 et tri du tableau 3:
-<div align="justify">La procédure initie par la lecture des données des tableaux 1, 2, et 3, suivie de leur stockage dans la pile aux lieux prédéfinis. Cette phase prépare les données pour les traitements futurs. Un aperçu de l'état de la mémoire après ces lectures est donné ci-après.</div>
+### 5.3. Lecture des tableaux 1, 2 et 3 et tri du tableau 3:
+<div align="justify">La démarche commence par la lecture des données des tableaux 1, 2 et 3, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
   <img src="./Images/Resultat_10.png">
 </p>
 
 <div align="justify">
-  
-  La création de l'`histogramme` pour le tableau 3 suit, nécessitant le comptage des fréquences de chaque élément et leur stockage dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce stade est illustré ci-dessous.
-  
+La construction de l'`histogramme` pour le tableau 3 s'ensuit, avec le comptage des occurrences de chaque élément et leur enregistrement dans un tableau d'`histogramme`. Un aperçu de la mémoire à cette étape est présenté ensuite.
   </div>
 
 <p align="center">
   <img src="./Images/Resultat_11.png">
 </p>
 
-<div align="justify">
-  
-  Le tri du tableau 3 constitue l'étape finale, avec l'application du tri par comptage basé sur l'`histogramme`. Un aperçu de la mémoire après cette opération est présenté ci-dessous.
-  
+div align="justify">
+Le tri du tableau 3 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.
+
   </div>
 
 <p align="center">
   <img src="./Images/Resultat_12.png">
 </p>
 
-<div align="justify">En dernier lieu, il est essentiel d'exposer le contenu du tableau 3 sur la console, avant et après le tri, pour attester de l'efficacité de la méthode. L'image suivante propose un exemple de l'affichage final attendu sur la console.</div>
+<div align="justify">Il est enfin nécessaire d'afficher le contenu du tableau 3 sur la console, avant et après le tri, pour valider visuellement les résultats obtenus. L'image suivante illustre à quoi devrait ressembler l'affichage final sur la console.</div>
+
 <p align="center">
   <img src="./Images/Resultat_09.png">
 </p>
 
 
 
-### 3.5.4. Recherche dichotomique dans le tableau trié :
+### 5.4. Recherche dichotomique dans le tableau trié :
 
-#### 3.5.4.1. Cas 1: Recherche d'une valeur inexistante dans le tableau 1
+<div align="justify">
+Cette sous-section détaille les différentes instances de recherche dichotomique effectuées sur les tableaux triés, illustrant à la fois les cas de succès et d'échec. Chaque scénario est accompagné d'un aperçu visuel reflétant le résultat de la recherche, démontrant ainsi la précision et l'efficacité de l'algorithme de recherche dichotomique dans la localisation d'éléments spécifiques au sein de structures de données organisées.</div>
+
+
+#### 5.4.1. Cas 1: Recherche d'une valeur inexistante dans le tableau 1
 <div align="justify">Ce scénario expose la recherche infructueuse d'une valeur absente du tableau 1.</div>
 <p align="center">
   <img src="./Images/Resultat_14.png">
 </p>
 
-#### 3.5.4.2. Cas 2: Recherche d'une valeur présente dans le tableau 1
+#### 5.4.2. Cas 2: Recherche d'une valeur présente dans le tableau 1
 <div align="justify">Ce cas détaille la recherche réussie d'une valeur existante dans le tableau 1.</div>
 
 <p align="center">
   <img src="./Images/Resultat_13.png">
 </p>
 
-#### 3.5.4.3. Cas 3: Recherche d'une valeur inexistante dans le tableau 2
+#### 5.5. Cas 3: Recherche d'une valeur inexistante dans le tableau 2
 <div align="justify">Ce scénario montre la recherche d'une valeur non présente dans le tableau 2.</div>
 <p align="center">
   <img src="./Images/Resultat_15.png">
 </p>
 
-#### 3.5.4.4. Cas 4: Recherche d'une valeur présente dans le tableau 2
+#### 5.4.4. Cas 4: Recherche d'une valeur présente dans le tableau 2
 <div align="justify">Ce cas illustre la recherche fructueuse d'une valeur existante dans le tableau 2.</div>
 
 <p align="center">
   <img src="./Images/Resultat_16.png">
 </p>
 
-#### 3.5.4.5. Cas 5: Recherche d'une valeur inexistante dans le tableau 3
+#### 5.4.5. Cas 5: Recherche d'une valeur inexistante dans le tableau 3
 <div align="justify">Ce scénario dépeint la tentative de localisation d'une valeur absente du tableau 3.</div>
 <p align="center">
   <img src="./Images/Resultat_18.png">
 </p>
 
-#### 3.5.4.6. Cas 6: Recherche d'une valeur présente dans le tableau 3
+#### 5.4.6. Cas 6: Recherche d'une valeur présente dans le tableau 3
 <div align="justify">Ce cas présente la recherche réussie d'une valeur existante dans le tableau 3.</div>
 
 <p align="center">
   <img src="./Images/Resultat_17.png">
 </p>
 
-#### 3.5.4.7. Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
+#### 5.4.7. Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
 <div align="justify">Ce scénario met en lumière la recherche d'une valeur inexistante dans le tableau 1, suivie de multiples tentatives erronées de sélection du tableau par l'utilisateur. Il illustre la capacité du programme à gérer les erreurs de saisie, guidant l'utilisateur vers une saisie correcte avant de procéder à la recherche. L'image ci-dessous représente le résultat de cette démarche, soulignant l'absence de la valeur recherchée même après la correction des sélections de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_19.png">
 </p>
 
-#### 3.5.4.8. Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
+#### 5.4.8. Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
 <div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 1, effectuée après plusieurs sélections incorrectes du tableau par l'utilisateur. Cette situation démontre l'efficacité du système à rediriger l'utilisateur depuis des erreurs initiales vers la réalisation d'une recherche fructueuse. L'image suivante affiche le résultat de cette opération, confirmant la présence de la valeur recherchée dans le tableau 1 suite à la correction des entrées de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_20.png">
 </p>
 
-## 3.6. Validation :
+## 6 Outils de validation :
 <div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce TP, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
   
 - **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
@@ -625,7 +635,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 - **Fenêtre Output** : Cette fenêtre est utilisée pour observer les résultats définitifs des tableaux après leur traitement. Elle fournit un aperçu précis des changements effectués sur les données, à la suite des processus de tri et de recherche.</div>
 
 
-# 4. Remise <a name="Remise"></a>
+# 7. Remise <a name="Remise"></a>
 <div align="justify">Ce projet est organisé en trois étapes de soumission étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à développer et à tester afin d'en assurer le bon fonctionnement.</div>
 
   - Semaine 1: TP02_H24_Semaine_01.pep
@@ -634,11 +644,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
   
 <div align="justify">Après avoir réussi l'implémentation et les tests de toutes les fonctions, il est essentiel de sauvegarder soigneusement votre projet. Les fichiers de programme doivent être compilés dans une archive zip nommée selon le format suivant : equipe_xx.zip, où xx désigne le numéro de votre équipe.<br><br></div>
 
-Bon travaille! :blush:
-
-
-
-# 5. Barème /100 <a name="bareme"></a>
+# 8. Barème /100 <a name="bareme"></a>
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
 |A_LECTUR | 15 |
@@ -648,3 +654,5 @@ Bon travaille! :blush:
 |A_HISTO | 25 |
 |A_TRICOM | 20 |
 |A_RECHDI | 20 |
+
+Bon travaille! :blush:
