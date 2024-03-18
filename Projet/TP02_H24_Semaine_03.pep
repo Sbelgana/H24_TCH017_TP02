@@ -20,59 +20,9 @@
   
          STOP
 
-; A_LECTUR
-;        Fonction pour charger un tableau de caractères ASCII, le convertir en valeurs décimales,
-;        et placer les éléments convertis à l'emplacement approprié dans la pile.
-; PARAMÈTRES:
-;        a_tab : Adresse du début du tableau ASCII en mémoire.
-;        a_tai : Taille du tableau, indiquant le nombre de caractères ASCII à convertir.
-;        a_ad_t: Adresse dans la pile où les éléments convertis en décimal doivent être stockés.
-; RETOURNE:
-;        Ne retourne pas de valeur directement. Les éléments convertis en décimal sont placés à l'emplacement spécifié dans la pile.          
 
+;Copiez le code des fonctions implémentées lors des semaine 1 et 2 ici.
 
-   
-
-; A_AFFICH
-;        Fonction pour afficher le contenu d'un tableau en format décimal.
-; PARAMÈTRES :
-;        a_ad_t: Adresse dans la pile du premier élément du tableau à afficher.
-;        a_tai : Taille du tableau, indiquant le nombre d'éléments à afficher.
-; RETOURNE :
-;        Ne retourne pas de valeur. Les éléments du tableau sont affichés en décimal.          
-
-   
-
-; A_MINIM
-;        Fonction pour trouver la valeur minimale dans un tableau.
-; PARAMÈTRES :
-;        a_ad_t: Adresse dans la pile du premier élément du tableau à examiner.
-;        a_tai : Taille du tableau, spécifiant le nombre d'éléments à considérer.
-; RETOURNE :
-;        a_min : Stocke la valeur minimale trouvée dans le tableau.
-
-
-
-; A_MAXIM
-;        Fonction pour trouver la valeur maximale dans un tableau.
-; PARAMÈTRES :
-;        a_ad_t: Adresse dans la pile du premier élément du tableau à examiner.
-;        a_tai : Taille du tableau, spécifiant le nombre d'éléments à considérer.
-; RETOURNE :
-;        a_max : Stocke la valeur maximale trouvée dans le tableau.
-
-
-
-; A_HISTO
-;        Fonction pour calculer la fréquence des éléments d'un tableau et réorganiser ces éléments en utilisant un histogramme.
-; PARAMÈTRES :
-;        a_ad_t:   Adresse dans la pile du premier élément du tableau à analyser.
-;        a_tai :   Taille du tableau, indiquant le nombre d'éléments à traiter.
-;        a_ad_his: Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
-; RETOURNE :
-;        Ne retourne pas de valeur directement. Le tableau est réorganisé selon l'histogramme 
-;        et les éléments sont replacés à leur emplacement spécifié dans la pile.         
-  
 
 
 ; A_TRICOM
