@@ -28,7 +28,7 @@
 # 1. Introduction <a name="Introduction"></a>
 
 <div align="justify">
-L'époque actuelle est définie par un déluge de données, dans lequel le traitement et l'analyse de volumes massifs d'informations occupent une place centrale dans de nombreux domaines scientifiques et technologiques. Les algorithmes, au cœur de ces processus, jouent un rôle fondamental dans la détermination de la vitesse et de la précision de nos capacités à tirer des conclusions et à prendre des décisions. <br><br></div>
+Aujourd'hui, l'abondance de données numériques exige un traitement et une analyse rigoureux, cruciaux pour le progrès scientifique et technologique. Les algorithmes, essentiels à ces tâches, déterminent la rapidité et la précision de nos analyses, influençant significativement la prise de décisions et l'élaboration de conclusions pertinentes. Avec l'augmentation de la complexité et du volume de données, l'amélioration continue des algorithmes est impérative pour renforcer leur efficacité et fiabilité. <br><br></div>
 
 <div align="justify">
   
