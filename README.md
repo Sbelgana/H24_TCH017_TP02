@@ -288,47 +288,22 @@ Dans la phase finale, il ne reste plus que les valeurs 48 et 56. L'élément au 
 Cet exemple souligne l'efficacité intrinsèque de la recherche dichotomique, qui permet de trouver rapidement un élément au sein d'un tableau ordonné en réduisant méthodiquement l'espace de recherche, démontrant ainsi la force de la stratégie de division pour régner caractéristique des algorithmes de recherche.
 </div>
 
-# 3. Sous-programmes à implémenter <a name="Fonction"></a>
 
-<div align="justify">
-Le projet nécessite la création de trois tableaux de caractères ASCII dans la pile. Ces tableaux, les seules variables globales du projet, sont définis comme suit :</div>
+# 3. Sous-programmes à implémenter <a name="Fonction"></a>
 
 ## 3.1. Préparation de la pile :
 <div align="justify">
-Trois tableaux de caractères ASCII seront stockés dans la pile. Ces tableaux représentent les seules variables globales du projet et sont définis comme suit :</div>
+Un espace sera réservé dans la pile pour trois tableaux de caractères ASCII, nécessitant respectivement 10, 20 et 30 octets pour leur stockage.</div>
   
 ```asm
 a_tab1:  .ASCII  "Allo!"           ; Tableau 1 : [65 108 108 111 33]
 a_tab2:  .ASCII  "Message!!!"      ; Tableau 2 : [77 101 115 115 97 103 101 33 33 33]
 a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
 ```
-<div align="justify">
-Pour chaque tableau, vous devrez allouer de l'espace dans la pile pour stocker l'adresse, la taille et les données du tableau.</div>
 
 ## 3.2. Chargement des tableaux :
 <div align="justify">
-Les constantes a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3 sont définies pour gérer les emplacements et les tailles des tableaux dans la pile. Ces constantes permettent de manipuler les adresses et les longueurs des tableaux de manière dynamique lors du chargement.<br><br></div>
-
-<div align="justify">
-Le processus de chargement des tableaux implique de réserver l'espace nécessaire dans la pile pour chacun des tableaux.  Cela est réalisé en reculant le pointeur de pile de la taille totale des tableaux et en sauvegardant ensuite les adresses de départ et les tailles de chaque tableau au-dessus de leurs emplacements respectifs dans la pile.</div>   
-
-**Exemple de chargement pour le tableau 1 :**
-<div align="justify">Reculer le pointeur de pile de 10 octets pour le tableau 1, sauvegarder l'adresse de départ et la taille du tableau.<br><br></div>
-
-<div align="justify">Lorsque cela fonctionnera pour 1 tableau, vous viendrez ajouter les autres un à un.  Par exemple pour le tableau de 10 octets, vous aurez :  </div>     
-<p align="center">
-  <img src="./Images/image_18.svg">
-</p>
-
-<div align="justify">
-Quand les trois tableaux seront chargés, ils seront un par-dessus l’autre dans ce format. L'image suivante illustre l'état de la pile après le chargement des tableaux, montrant clairement leur agencement l'un par rapport à l'autre. </div>
-
-<p align="center">
-  <img src="./Images/image_19.svg">
-</p>
-
-<div align="justify">
-L'organisation de la pile et la déclaration des constantes permettent une manipulation flexible des tableaux, facilitant l'accès aux données et la gestion de la mémoire dans des opérations ultérieures telles que le tri ou la recherche.</div>
+Pour gérer les emplacements et les tailles des tableaux dans la pile, les constantes `a_tai1, a_tai2, a_tai3, a_ad_t1, a_ad_t2, et a_ad_t3` sont établies. Ces définitions facilitent la manipulation des adresses et des dimensions des tableaux de façon dynamique pendant leur chargement.</div>
 
 ```asm
 a_tai1:  .EQUATE 10     ; Taille en octets du tableau 1.
@@ -342,253 +317,281 @@ a_ad_t3: .EQUATE ?      ; Adresse du premier élément du tableau 3 dans la pile
 a_ad_his:.EQUATE ?      ; Adresse du premier élément de l'histogramme dans la pile.
 ```
 
+<div align="justify">
+Le chargement des tableaux dans la pile exige la réservation de l'espace nécessaire pour chaque tableau. Cela se fait en ajustant le pointeur de pile selon la taille totale du tableau, puis en enregistrant l'adresse de début et la taille du tableau au-dessus de leur position respective dans la pile.</div>   
+
+**Exemple de chargement pour le tableau 1 :**
+<div align="justify">Ajuster le pointeur de pile de 10 octets pour le tableau 1, et noter l'adresse de départ ainsi que la taille du tableau.<br><br></div>
+
+<p align="center">
+  <img src="./Images/image_18.svg">
+</p>
+
+<div align="justify">Une fois cette opération effectuée pour un tableau, les autres tableaux seront ajoutés successivement de la même manière.</div>     
+
+<div align="justify">
+Après le chargement de tous les tableaux, ils seront disposés les uns sur les autres dans la pile, comme le montre l'image suivante qui illustre la configuration de la pile une fois les tableaux chargés.</div>
+
+<p align="center">
+  <img src="./Images/image_19.svg">
+</p>
+
+
+
+
 ## 3.3. Sous-Tâches de Base :
 <div align="justify">
-Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est suggéré de s’occuper des sous-tâches simples en premier. </div>
+Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation. </div>
  
     
-1. **A_LECTUR** 
-    <div align="justify">Fonction pour charger un tableau de caractères ASCII, le convertir en valeurs décimales, et placer les éléments convertis à l'emplacement approprié dans la pile.</div>
+1. **A_LECTUR**
+   
+    <div align="justify">Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.</div>
      
    **Paramètres :**
    - `a_tab`  : Adresse du début du tableau ASCII en mémoire.
    - `a_tai`  : Taille du tableau, indiquant le nombre de caractères ASCII à convertir.
-   - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimale doivent être stockés.
+   - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimale doivent être placés.
    
    **Retour :**
-   - <div align="justify">Ne retourne pas de valeur directement. Les éléments convertis en décimale sont placés à l'emplacement spécifié dans la pile.</div>
+   - <div align="justify">Aucune valeur retournée directement. Les éléments convertis en décimale sont positionnés à l'adresse spécifiée dans la pile.</div>
 ---
 
-2. **A_AFFICH** 
-    <div align="justify">Fonction pour afficher le contenu d'un tableau en format décimale.</div>
+2. **A_AFFICH**
+   
+    <div align="justify">Fonction destinée à afficher le contenu d'un tableau en format décimal.</div>
      
    **Paramètres :**
    - `a_ad_t`: Adresse dans la pile du premier élément du tableau à afficher.
    - `a_tai` : Taille du tableau, indiquant le nombre d'éléments à afficher.
    
    **Retour :**
-   - <div align="justify">Ne retourne pas de valeur. Les éléments du tableau sont affichés en décimal. </div>
+   - <div align="justify">Aucune valeur retournée. Les éléments du tableau sont affichés en format décimal. </div>
 
 ---
 
 3. **A_MINIM** 
    
-    <div align="justify">Fonction pour trouver la valeur minimale dans un tableau.</div>
+    <div align="justify">Fonction dédiée à la recherche de la valeur minimale au sein d'un tableau.</div>
      
    **Paramètres :**
    - `a_ad_t`: Adresse dans la pile du premier élément du tableau à examiner.
-   - `a_tai` : Taille du tableau, spécifiant le nombre d'éléments à considérer.
+   - `a_tai` : Taille du tableau, déterminant le nombre d'éléments à analyser.
    
    **Retour :**
-   - `a_min` : Stocke la valeur minimale trouvée dans le tableau.
+   - `a_min` : Contient la valeur minimale identifiée dans le tableau.
 
 ---
 
 4. **A_MAXIM** 
    
-    <div align="justify">Fonction pour trouver la valeur maximale dans un tableau.</div>
+    <div align="justify">Fonction pour identifier la valeur maximale dans un tableau.</div>
      
    **Paramètres :**
    - `a_ad_t`: Adresse dans la pile du premier élément du tableau à examiner.
    - `a_tai` : Taille du tableau, spécifiant le nombre d'éléments à considérer.
    
    **Retour :**
-   - `a_max` : Stocke la valeur maximale trouvée dans le tableau.
+   - `a_max` : Enregistre la valeur maximale trouvée dans le tableau.
    
 ---
  
 5. **A_HISTO** 
    
-   <div align="justify">Fonction pour calculer la fréquence des éléments d'un tableau et réorganiser ces éléments en utilisant un `histogramme`.</div>
+   <div align="justify">Fonction permettant de calculer la fréquence des éléments d'un tableau et de réorganiser ces derniers à l'aide d'un `histogramme`.</div>
      
    **Paramètres :**
    - `a_ad_t`  : Adresse dans la pile du premier élément du tableau à analyser.
-   - `a_tai`   : Taille du tableau, indiquant le nombre d'éléments à traiter.
-   - `a_ad_his`: Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
+   - `a_tai`   : Taille du tableau, précisant le nombre d'éléments à évaluer.
+   - `a_ad_his`: Adresse dans la pile où débutera l'histogramme, recensant la fréquence de chaque élément du tableau.
    
    **Retour :**
-    - <div align="justify">Ne retourne pas de valeur directement. Le tableau est réorganisé selon l'`histogramme` et les éléments sont replacés à leur emplacement spécifié dans la pile.</div>     
+    - <div align="justify">Aucune valeur retournée directement. Le tableau est restructuré selon l'`histogramme` et les éléments sont repositionnés à l'adresse indiquée dans la pile.</div>
+     
 
 ## 3.4. Procédures de Tri et Recherche :
-<div align="justify">Après avoir implémenté les sous-tâches de base, vous devez mettre en œuvre les procédures de tri et de recherche :</div>
+<div align="justify">Une fois les sous-tâches de base réalisées, il est nécessaire d'implémenter les procédures de tri et de recherche suivantes :</div>
 
 1. **A_TRICOM** 
 
-   <div align="justify">Fonction pour implémenter le tri par comptage, une méthode efficace pour trier un tableau.</div>
+   <div align="justify">Procédure dédiée à l'exécution du tri par comptage, une technique adaptée au tri efficace de tableaux.</div>
    
    **Paramètres :**
    - `a_ad_t`   : Adresse dans la pile du premier élément du tableau à trier.
-   - `a_tai`    : Taille du tableau, spécifiant le nombre d'éléments à trier.
-   - `a_ad_his` : Adresse dans la pile où débutera l'histogramme, qui stocke la fréquence de chaque élément du tableau.
+   - `a_tai`    : Taille du tableau, définissant le nombre d'éléments à ordonner.
+   - `a_ad_his` : Adresse dans la pile destinée à l'histogramme, recensant la fréquence de chaque élément du tableau.
   
    **Retour :**
-   - <div align="justify">Ne retourne pas de valeur directement. Les éléments du tableau sont triés et mis à jour directement dans leur emplacement sur la pile.</div>
+   - <div align="justify">Aucune valeur n'est retournée directement. Les éléments du tableau sont ordonnés et actualisés à leur position respective sur la pile.</div>
 
 ---
 
 2. **A_RECHDI** 
    
-    <div align="justify">Fonction pour effectuer une recherche dichotomique afin de localiser une valeur cible dans un tableau préalablement trié. Cette méthode divise l'intervalle de recherche en deux à chaque étape, réduisant ainsi le nombre de comparaisons nécessaires pour trouver l'élément.</div>
+    <div align="justify">Procédure conçue pour réaliser une recherche dichotomique, visant à identifier une valeur spécifique au sein d'un tableau déjà trié. Cette méthode optimise la recherche en divisant l'intervalle de recherche par deux à chaque itération, diminuant ainsi le nombre de comparaisons nécessaires pour repérer l'élément ciblé.</div>
      
    **Paramètres :**
    - `a_ad_t`  : Adresse dans la pile du premier élément du tableau trié.
-   - `a_tai`   : Taille du tableau, indiquant le nombre d'éléments à considérer dans la recherche.
-   - `a_cible` : La valeur cible à rechercher dans le tableau.
+   - `a_tai`   : Taille du tableau, précisant le nombre d'éléments inclus dans la recherche.
+   - `a_cible` : La valeur recherchée dans le tableau.
    
    **Retour :**
-   - `a_indice` : la taille du tableau.
-   
+   - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
+
 ## 3.5. Resultats attendus :
 
-### 3.5.1. Lecture et trie du tableau 1 :
+### 3.5.1. Lecture et tri du tableau 1 :
 
-<div align="justify">La première étape consiste à lire les données du tableau 1 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile tel qu'anticipé. Voici un aperçu de l'état de la mémoire à ce moment.</div>
 
 <p align="center">
   <img src="./Images/Resultat_02.png">
 </p>
 
-<div align="justify">La création de l'`histogramme` des fréquences d'apparition de chaque nombre dans le tableau est la prochaine étape. Cela implique de compter combien de fois chaque élément apparaît dans le tableau et de stocker ces compteurs dans un tableau d'`histogramme` préalablement défini. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">L'étape suivante est la création de l'`histogramme`, qui consiste à comptabiliser la fréquence de chaque nombre dans le tableau et à enregistrer ces compteurs dans un tableau d'`histogramme` préalablement défini. Un aperçu de l'état de la mémoire à cette phase est présenté ci-dessous.</div>
 
 <p align="center">
   <img src="./Images/Resultat_03.png">
 </p>
 
-<div align="justify">La dernière étape est de trier le tableau en utilisant le tri par comptage, une méthode qui utilise l'`histogramme` des fréquences pour organiser les éléments du tableau en ordre croissant. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploitant l'`histogramme` pour ordonner les éléments de manière croissante. Un aperçu de l'état de la mémoire suite à cette opération est donné ci-après.</div>
 
 <p align="center">
   <img src="./Images/Resultat_04.png">
 </p>
 
-<div align="justify">Finalement, il est nécessaire d'afficher le contenu du tableau sur la console avant et après l'utilisation du tri par comptage. Cela permet de vérifier visuellement l'efficacité du tri. L'image suivante donne un exemple de ce à quoi devrait ressembler l'affichage final sur la console.</div>
+<div align="justify">Il est enfin nécessaire de montrer le contenu du tableau sur la console, avant et après le tri, pour valider visuellement l'efficacité de cette méthode. L'image suivante illustre à quoi devrait ressembler l'affichage final sur la console.</div>
 <p align="center">
   <img src="./Images/Resultat_01.png">
 </p>
 
 
-### 3.5.2. Lecture du tableau 1 et 2 et trie du tableau 2:
-<div align="justify">La première étape consiste à lire les données du tableau 1 et 2 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+### 3.5.2. Lecture des tableaux 1 et 2 et tri du tableau 2:
+<div align="justify">La démarche commence par la lecture des données des tableaux 1 et 2, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
   <img src="./Images/Resultat_06.png">
 </p>
 
-<div align="justify">La création de l'`histogramme` des fréquences d'apparition de chaque nombre dans le tableau 2 est la prochaine étape. Cela implique de compter combien de fois chaque élément apparaît dans le tableau et de stocker ces compteurs dans un tableau d'`histogramme` préalablement défini. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">La construction de l'`histogramme` pour le tableau 2 s'ensuit, avec le comptage des occurrences de chaque élément et leur enregistrement dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce moment est présenté ensuite.</div>
 
 <p align="center">
   <img src="./Images/Resultat_07.png">
 </p>
 
-<div align="justify">La dernière étape est de trier le tableau 2 en utilisant le tri par comptage, une méthode qui utilise l'`histogramme` des fréquences pour organiser les éléments du tableau en ordre croissant. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.</div>
 
 <p align="center">
   <img src="./Images/Resultat_08.png">
 </p>
 
-<div align="justify">Finalement, il est nécessaire d'afficher le contenu du tableau 2 sur la console avant et après l'utilisation du tri par comptage. Cela permet de vérifier visuellement l'efficacité du tri. L'image suivante donne un exemple de ce à quoi devrait ressembler l'affichage final sur la console.</div>
+<div align="justify">Pour conclure, il est indispensable d'afficher le contenu du tableau 2 sur la console, avant et après le tri, pour confirmer l'efficacité du processus. L'image suivante montre ce à quoi l'affichage final devrait ressembler sur la console.</div>
 <p align="center">
   <img src="./Images/Resultat_05.png">
 </p>
 
 
 
-### 3.5.3. Lecture du tableau 1, 2 et 3 et trie du tableau 3:
-<div align="justify">La première étape consiste à lire les données du tableau 1, 2 et 3 et à les stocker dans la pile aux emplacements prédéfinis. Cette opération permet de préparer  les données pour les traitements ultérieurs. Une fois la lecture terminée, l'état de la mémoire montre les valeurs du tableau stockées comme prévu. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+### 3.5.3. Lecture des tableaux 1, 2 et 3 et tri du tableau 3:
+<div align="justify">La procédure initie par la lecture des données des tableaux 1, 2, et 3, suivie de leur stockage dans la pile aux lieux prédéfinis. Cette phase prépare les données pour les traitements futurs. Un aperçu de l'état de la mémoire après ces lectures est donné ci-après.</div>
 
 <p align="center">
   <img src="./Images/Resultat_10.png">
 </p>
 
-<div align="justify">La création de l'`histogramme` des fréquences d'apparition de chaque nombre dans le tableau 3 est la prochaine étape. Cela implique de compter combien de fois chaque élément apparaît dans le tableau et de stocker ces compteurs dans un tableau d'`histogramme` préalablement défini. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">La création de l'`histogramme` pour le tableau 3 suit, nécessitant le comptage des fréquences de chaque élément et leur stockage dans un tableau d'`histogramme`. Un aperçu de la mémoire à ce stade est illustré ci-dessous.</div>
 
 <p align="center">
   <img src="./Images/Resultat_11.png">
 </p>
 
-<div align="justify">La dernière étape est de trier le tableau 3 en utilisant le tri par comptage, une méthode qui utilise l'`histogramme` des fréquences pour organiser les éléments du tableau en ordre croissant. Voici un aperçu du contenu de la mémoire à ce stade.</div>
+<div align="justify">Le tri du tableau 3 constitue l'étape finale, avec l'application du tri par comptage basé sur l'`histogramme`. Un aperçu de la mémoire après cette opération est présenté ci-dessous.</div>
 
 <p align="center">
   <img src="./Images/Resultat_12.png">
 </p>
 
-<div align="justify">Finalement, il est nécessaire d'afficher le contenu du tableau 3 sur la console avant et après l'utilisation du tri par comptage. Cela permet de vérifier visuellement l'efficacité du tri. L'image suivante donne un exemple de ce à quoi devrait ressembler l'affichage final sur la console.</div>
+<div align="justify">En dernier lieu, il est essentiel d'exposer le contenu du tableau 3 sur la console, avant et après le tri, pour attester de l'efficacité de la méthode. L'image suivante propose un exemple de l'affichage final attendu sur la console.</div>
 <p align="center">
   <img src="./Images/Resultat_09.png">
 </p>
 
 
-### 3.5.4. Recherche dichotomique dans le tableau trier:
 
-#### 3.5.4.1. cas 1: Recherche d'une valeur inexistante dans le tableau 1
-<div align="justify">Ce cas démontre la recherche d'une valeur qui n'existe pas dans le tableau 1.</div>
+### 3.5.4. Recherche dichotomique dans le tableau trié :
+
+#### 3.5.4.1. Cas 1: Recherche d'une valeur inexistante dans le tableau 1
+<div align="justify">Ce scénario expose la recherche infructueuse d'une valeur absente du tableau 1.</div>
 <p align="center">
   <img src="./Images/Resultat_14.png">
 </p>
 
-#### 3.5.4.2. cas 1: Recherche d'une valeur présente dans le tableau 1
-<div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 1.</div>
+#### 3.5.4.2. Cas 2: Recherche d'une valeur présente dans le tableau 1
+<div align="justify">Ce cas détaille la recherche réussie d'une valeur existante dans le tableau 1.</div>
 
 <p align="center">
   <img src="./Images/Resultat_13.png">
 </p>
 
-#### 3.5.4.3. cas 3: Recherche d'une valeur inexistante dans le tableau 2
-<div align="justify">Ce cas démontre la recherche d'une valeur qui n'existe pas dans le tableau 2.</div>
+#### 3.5.4.3. Cas 3: Recherche d'une valeur inexistante dans le tableau 2
+<div align="justify">Ce scénario montre la recherche d'une valeur non présente dans le tableau 2.</div>
 <p align="center">
   <img src="./Images/Resultat_15.png">
 </p>
 
-#### 3.5.4.4. cas 4: Recherche d'une valeur présente dans le tableau 2
-<div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 2.</div>
+#### 3.5.4.4. Cas 4: Recherche d'une valeur présente dans le tableau 2
+<div align="justify">Ce cas illustre la recherche fructueuse d'une valeur existante dans le tableau 2.</div>
 
 <p align="center">
   <img src="./Images/Resultat_16.png">
 </p>
 
-#### 3.5.4.5. cas 5: Recherche d'une valeur inexistante dans le tableau 3
-<div align="justify">Ce cas démontre la recherche d'une valeur qui n'existe pas dans le tableau 3.</div>
+#### 3.5.4.5. Cas 5: Recherche d'une valeur inexistante dans le tableau 3
+<div align="justify">Ce scénario dépeint la tentative de localisation d'une valeur absente du tableau 3.</div>
 <p align="center">
   <img src="./Images/Resultat_18.png">
 </p>
 
-#### 3.5.4.6. cas 6: Recherche d'une valeur présente dans le tableau 3
-<div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 3.</div>
+#### 3.5.4.6. Cas 6: Recherche d'une valeur présente dans le tableau 3
+<div align="justify">Ce cas présente la recherche réussie d'une valeur existante dans le tableau 3.</div>
 
 <p align="center">
   <img src="./Images/Resultat_17.png">
 </p>
 
-#### 3.5.4.7. cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
-<div align="justify">Ce cas démontre la procédure de recherche pour une valeur absente du tableau 1, après que l'utilisateur a effectué plusieurs tentatives avec des numéros de tableau invalides. Ce scénario souligne comment le programme est conçu pour naviguer à travers les erreurs de saisie de l'utilisateur, guidant efficacement vers la saisie correcte avant de procéder à la recherche. L'image associée montre le résultat attendu de cette séquence, illustrant l'absence de la valeur recherchée même après correction des saisies du numéro de tableau.</div>
+#### 3.5.4.7. Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
+<div align="justify">Ce scénario met en lumière la recherche d'une valeur inexistante dans le tableau 1, suivie de multiples tentatives erronées de sélection du tableau par l'utilisateur. Il illustre la capacité du programme à gérer les erreurs de saisie, guidant l'utilisateur vers une saisie correcte avant de procéder à la recherche. L'image ci-dessous représente le résultat de cette démarche, soulignant l'absence de la valeur recherchée même après la correction des sélections de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_19.png">
 </p>
 
-#### 3.5.4.8. cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
-<div align="justify">Ce cas illustre la recherche d'une valeur existante dans le tableau 1, qui survient après que l'utilisateur a introduit plusieurs numéros de tableau invalides. Cette situation met en avant la capacité du système à orienter l'utilisateur à travers des erreurs de saisie, vers la réussite de la recherche de la valeur correcte. L'image correspondante présente le résultat de cette recherche, confirmant la présence de la valeur dans le tableau 1 après les ajustements nécessaires des entrées de l'utilisateur.</div>
+#### 3.5.4.8. Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
+<div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 1, effectuée après plusieurs sélections incorrectes du tableau par l'utilisateur. Cette situation démontre l'efficacité du système à rediriger l'utilisateur depuis des erreurs initiales vers la réalisation d'une recherche fructueuse. L'image suivante affiche le résultat de cette opération, confirmant la présence de la valeur recherchée dans le tableau 1 suite à la correction des entrées de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_20.png">
 </p>
 
 ## 3.6. Validation :
-<div align="justify">Pour garantir l'exactitude de votre travail dans le cadre de ce TP, vous utiliserez divers outils de visualisation fournis par l'environnement de développement PEP/8.
+<div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce TP, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
   
-- **Vue Memory Dump** : Cet outil est indispensable pour inspecter directement le contenu de la mémoire et vérifier que les valeurs sont correctement attribuées aux tableaux. Cela vous permet de valider manuellement l'exactitude des données insérées.
+- **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
 
-- **Fenêtre Output** : Utilisez cette interface pour examiner les résultats finaux des tableaux après traitement. Elle offre une visualisation claire des modifications apportées aux données, suite aux opérations de tri et de recherche.</div>
+- **Fenêtre Output** : Cette fenêtre est utilisée pour observer les résultats définitifs des tableaux après leur traitement. Elle fournit un aperçu précis des changements effectués sur les données, à la suite des processus de tri et de recherche.</div>
+
 
 # 4. Remise <a name="Remise"></a>
-<div align="justify">Le projet est organisé en trois phases de remise étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à implémenter et à tester pour assurer leur fonctionnement correct.</div>
+<div align="justify">Ce projet est structuré autour de trois phases de remise réparties sur trois semaines, avec un focus sur un groupe spécifique de fonctions à développer et à tester pour garantir leur bon fonctionnement.</div>
 
   - Semaine 1: TP02_H24_Semaine_01.pep
   - Semaine 2: TP02_H24_Semaine_02.pep
   - Semaine 3: TP02_H24_Semaine_03.pep
   
-<div align="justify"> Une fois toutes les fonctions correctement implémentées et testées, il est crucial de sauvegarder le travail. Les fichiers de code doivent être enregistré dans un fichier zip avec le format de nom de fichier suivant : equipe_xx.zip, où xx représente le numéro d'équipe.<br><br></div>
+<div align="justify">Après avoir réussi l'implémentation et les tests de toutes les fonctions, il est essentiel de sauvegarder soigneusement votre projet. Les fichiers de programme doivent être compilés dans une archive zip nommée selon le format suivant : equipe_xx.zip, où xx désigne le numéro de votre équipe.<br><br></div>
 
-Bon travail! :blush:	
+Bon travaille! :blush:
+
 
 
 # 5. Barème /100 <a name="bareme"></a>
