@@ -9,7 +9,7 @@
 - [Énoncé de travail](#enonce)
   - [Tri Par Comptage](#Comptage)
   - [Recherche dichotomique](#Dichotomique)
-- [Gestion de la pile](#Pile)<a name="Outil"></a> <a name="Resultat"></a>
+- [Gestion de la pile](#Pile)
 - [Sous-programmes à implémenter](#Fonction)
 - [Resultats attendus](#Resultat)
 - [Outils de validation](#Outil)
