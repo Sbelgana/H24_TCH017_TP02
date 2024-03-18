@@ -422,7 +422,11 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_ad_his`: Adresse dans la pile où débutera l'histogramme, recensant la fréquence de chaque élément du tableau.
    
    **Retour :**
-    - <div align="justify">Aucune valeur retournée directement. Le tableau est restructuré selon l'`histogramme` et les éléments sont repositionnés à l'adresse indiquée dans la pile.</div>
+    - <div align="justify">
+      
+      Aucune valeur retournée directement. Le tableau est restructuré selon l'`histogramme` et les éléments sont repositionnés à l'adresse indiquée dans la pile.
+
+      </div>
      
 
 ## 3.4. Procédures de Tri et Recherche :
