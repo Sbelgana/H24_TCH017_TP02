@@ -584,9 +584,9 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
   - Semaine 2: TP02_H24_Semaine_02.pep
   - Semaine 3: TP02_H24_Semaine_03.pep
   
-<div align="justify"> Une fois toutes les fonctions correctement implémentées et testées, il est crucial de sauvegarder le travail. Les fichiers de code doivent être enregistré dans un fichier zip avec le format de nom de fichier suivant : equipe_xx.zip, où xx représente le numéro d'équipe.</div>
+<div align="justify"> Une fois toutes les fonctions correctement implémentées et testées, il est crucial de sauvegarder le travail. Les fichiers de code doivent être enregistré dans un fichier zip avec le format de nom de fichier suivant : equipe_xx.zip, où xx représente le numéro d'équipe.<br><br></div>
 
-Bon travail!
+Bon travail! :blush:	
 
 
 # 5. Barème /100 <a name="bareme"></a>
