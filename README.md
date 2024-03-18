@@ -578,14 +578,13 @@ Lorsque vos tableaux sont sur la pile avec leur adresse et leur taille, il est s
 - **Fenêtre Output** : Utilisez cette interface pour examiner les résultats finaux des tableaux après traitement. Elle offre une visualisation claire des modifications apportées aux données, suite aux opérations de tri et de recherche.</div>
 
 # 4. Remise <a name="Remise"></a>
-<div align="justify">
-Le projet est organisé en trois phases étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à implémenter et à tester pour assurer leur fonctionnement correct.</div>
+<div align="justify">Le projet est organisé en trois phases de remise étalées sur trois semaines, chacune se concentrant sur un ensemble spécifique de fonctions à implémenter et à tester pour assurer leur fonctionnement correct.</div>
 
-  - Semaine 1: `A_LECTUR` et  `A_AFFICH`
-  - Semaine 2: `A_MINIM`, `A_MAXIM` et , `A_HISTO`
-  - Semaine 3: `A_TRICOM` et , `A_RECHDI`
+  - Semaine 1: TP02_H24_Semaine_01.pep
+  - Semaine 2: TP02_H24_Semaine_02.pep
+  - Semaine 3: TP02_H24_Semaine_03.pep
   
-<div align="justify"> Une fois toutes les fonctions correctement implémentées et testées, il est crucial de sauvegarder le travail. Le code doit être enregistré avec le format de nom de fichier suivant : equipe_xx.pep, où xx représente le numéro d'équipe.</div>
+<div align="justify"> Une fois toutes les fonctions correctement implémentées et testées, il est crucial de sauvegarder le travail. Les fichiers de code doivent être enregistré dans un fichier zip avec le format de nom de fichier suivant : equipe_xx.zip, où xx représente le numéro d'équipe.</div>
 
 Bon travail!
 
