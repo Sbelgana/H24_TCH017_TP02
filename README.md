@@ -404,7 +404,9 @@ Cette démarche méthodologique souligne l'importance d'une gestion précise et 
 # 6. Sous-programmes à implémenter <a name="fonction"></a>
 
 <div align="justify">
-Pour structurer efficacement le programme et garantir une mise en œuvre méthodique, il est convenable d'organiser les différentes tâches en sous-programmes détaillés. Cette organisation permet non seulement une meilleure compréhension du fonctionnement interne du programme mais aussi une modularité accrue, facilitant ainsi les éventuelles modifications ou extensions. Les sous-tâches de base seront abordées en premier, constituant les fondations sur lesquelles les procédures plus complexes seront construites. </div>
+Pour assurer une construction organisée et une exécution efficace du programme, il est essentiel d'adopter une approche structurée, divisant le travail en sous-programmes spécifiques. Cette méthodologie ne favorise pas seulement une meilleure compréhension du mécanisme interne du programme mais elle augmente également sa modularité, ce qui est avantageux pour d'éventuelles modifications ou expansions futures. La première étape consiste à se concentrer sur les sous-tâches fondamentales, qui serviront de base sur laquelle les fonctionnalités plus complexes seront développées. <br><br>
+
+Pour une compréhension approfondie et une validation efficace de la logique de programmation, il est vivement recommandé d'entamer le processus par l'implémentation et le test des sous-programmes en C ou en Java. Cette démarche, bien qu'elle représente une étape supplémentaire, s'avère indispensable pour assurer la solidité et l'exactitude de la logique avant de procéder à la traduction en PEP/8.</div>
 
 
 
