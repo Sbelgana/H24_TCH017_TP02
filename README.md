@@ -392,7 +392,7 @@ La finalisation du chargement de tous les tableaux résulte en une configuration
 <div align="justify">
 Cette démarche méthodologique souligne l'importance d'une gestion précise et réfléchie de la pile, essentielle pour le traitement efficace des structures de données complexes dans des environnements où l'optimisation de l'espace mémoire est primordiale.</div>
 
-## 5 Outils de validation : <a name="outil"></a>
+# 5. Outils de validation : <a name="outil"></a>
 <div align="justify">Afin de s'assurer de la précision des opérations réalisées dans ce projet, divers outils de visualisation disponibles dans l'environnement de développement PEP/8 seront employés.
   
 - **Vue Memory Dump** : Cet outil s'avère crucial pour l'examen direct du contenu de la mémoire, permettant de confirmer que les valeurs sont correctement stockées dans les tableaux. Il facilite ainsi la validation manuelle de l'exactitude des données insérées.
