@@ -514,12 +514,14 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    **Retour :**
    - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
 
-## 6. Resultats attendus: <a name="resultat"></a>
+## 7. Resultats attendus: <a name="resultat"></a>
 
 <div align="justify">
 Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
 
-### 6.1. Lecture et tri du tableau 1 :
+### 7.1. Lecture et tri du tableau:
+
+<ins> **Cas 1: Lecture et tri du tableau 1:** </ins>
 
 <div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile tel qu'anticipé. Voici un aperçu de l'état de la mémoire à ce stade</div>
 
@@ -556,7 +558,7 @@ Le tri du tableau s'effectue ensuite par la méthode du tri par comptage, exploi
 </p>
 
 
-### 6.2. Lecture des tableaux 1 et 2 et tri du tableau 2:
+<ins> **Cas 2: Lecture des tableaux 1 et 2 et tri du tableau 2:** </ins><br>
 <div align="justify">La démarche commence par la lecture des données des tableaux 1 et 2, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
@@ -588,7 +590,7 @@ Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri p
 
 
 
-### 7.3. Lecture des tableaux 1, 2 et 3 et tri du tableau 3:
+<ins> **Cas 3: Lecture des tableaux 1, 2 et 3 et tri du tableau 3:** </ins><br>
 <div align="justify">La démarche commence par la lecture des données des tableaux 1, 2 et 3, stockées ensuite dans la pile aux emplacements préétablis. Cette action prépare les données pour les étapes suivantes. Un aperçu de l'état de la mémoire après cette opération est disponible ci-dessous.</div>
 
 <p align="center">
@@ -620,59 +622,59 @@ Le tri du tableau 3 est réalisé en dernier, en utilisant la technique du tri p
 
 
 
-### 7.4. Recherche dichotomique dans le tableau trié :
+### 7.2. Recherche dichotomique dans le tableau trié :
 
 <div align="justify">
 Cette sous-section détaille les différentes instances de recherche dichotomique effectuées sur les tableaux triés, illustrant à la fois les cas de succès et d'échec. Chaque scénario est accompagné d'un aperçu visuel reflétant le résultat de la recherche, démontrant ainsi la précision et l'efficacité de l'algorithme de recherche dichotomique dans la localisation d'éléments spécifiques au sein de structures de données organisées.</div>
 
 
-#### 7.4.1. Cas 1: Recherche d'une valeur inexistante dans le tableau 1
+<ins> **Cas 1: Recherche d'une valeur inexistante dans le tableau 1** </ins><br>
 <div align="justify">Ce scénario expose la recherche infructueuse d'une valeur absente du tableau 1.</div>
 <p align="center">
   <img src="./Images/Resultat_14.png">
 </p>
 
-#### 7.4.2. Cas 2: Recherche d'une valeur présente dans le tableau 1
+<ins> **Cas 2: Recherche d'une valeur présente dans le tableau 1** </ins><br>
 <div align="justify">Ce cas détaille la recherche réussie d'une valeur existante dans le tableau 1.</div>
 
 <p align="center">
   <img src="./Images/Resultat_13.png">
 </p>
 
-#### 7.5. Cas 3: Recherche d'une valeur inexistante dans le tableau 2
+<ins> **Cas 3: Recherche d'une valeur inexistante dans le tableau 2** </ins><br>
 <div align="justify">Ce scénario montre la recherche d'une valeur non présente dans le tableau 2.</div>
 <p align="center">
   <img src="./Images/Resultat_15.png">
 </p>
 
-#### 7.4.4. Cas 4: Recherche d'une valeur présente dans le tableau 2
+<ins> **Cas 4: Recherche d'une valeur présente dans le tableau 2** </ins><br>
 <div align="justify">Ce cas illustre la recherche fructueuse d'une valeur existante dans le tableau 2.</div>
 
 <p align="center">
   <img src="./Images/Resultat_16.png">
 </p>
 
-#### 7.4.5. Cas 5: Recherche d'une valeur inexistante dans le tableau 3
+<ins> **Cas 5: Recherche d'une valeur inexistante dans le tableau 3** </ins><br>
 <div align="justify">Ce scénario dépeint la tentative de localisation d'une valeur absente du tableau 3.</div>
 <p align="center">
   <img src="./Images/Resultat_18.png">
 </p>
 
-#### 7.4.6. Cas 6: Recherche d'une valeur présente dans le tableau 3
+<ins> **Cas 6: Recherche d'une valeur présente dans le tableau 3** </ins><br>
 <div align="justify">Ce cas présente la recherche réussie d'une valeur existante dans le tableau 3.</div>
 
 <p align="center">
   <img src="./Images/Resultat_17.png">
 </p>
 
-#### 7.4.7. Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple 
+<ins> **Cas 7: Recherche d'une valeur inexistante dans le tableau 1 avec saisie multiple** </ins><br>
 <div align="justify">Ce scénario met en lumière la recherche d'une valeur inexistante dans le tableau 1, suivie de multiples tentatives erronées de sélection du tableau par l'utilisateur. Il illustre la capacité du programme à gérer les erreurs de saisie, guidant l'utilisateur vers une saisie correcte avant de procéder à la recherche. L'image ci-dessous représente le résultat de cette démarche, soulignant l'absence de la valeur recherchée même après la correction des sélections de l'utilisateur.</div>
 
 <p align="center">
   <img src="./Images/Resultat_19.png">
 </p>
 
-#### 7.4.8. Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple
+<ins> **Cas 8: Recherche d'une valeur présente dans le tableau 1 avec saisie multiple** </ins><br>
 <div align="justify">Ce cas illustre la recherche réussie d'une valeur présente dans le tableau 1, effectuée après plusieurs sélections incorrectes du tableau par l'utilisateur. Cette situation démontre l'efficacité du système à rediriger l'utilisateur depuis des erreurs initiales vers la réalisation d'une recherche fructueuse. L'image suivante affiche le résultat de cette opération, confirmant la présence de la valeur recherchée dans le tableau 1 suite à la correction des entrées de l'utilisateur.</div>
 
 <p align="center">
