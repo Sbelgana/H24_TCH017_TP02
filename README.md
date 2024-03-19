@@ -350,9 +350,9 @@ La gestion efficace de la mémoire est essentielle en programmation PEP/8, en pa
 Un espace sera réservé dans la pile pour trois tableaux de caractères ASCII, nécessitant respectivement 10, 20 et 30 octets pour leur stockage.</div>
   
 ```asm
-a_tab1:  .ASCII  "Allo!"           ; Tableau 1 : [65 108 108 111 33]
-a_tab2:  .ASCII  "Message!!!"      ; Tableau 2 : [77 101 115 115 97 103 101 33 33 33]
-a_tab3:  .ASCII  "Bonjour TCH017!" ; Tableau 3 : [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
+a_tab1: .ASCII  "Allo!"           ; Tableau 1  [65 108 108 111 33]
+a_tab2: .ASCII  "Message!!!"      ; Tableau 2: [77 101 115 115 97 103 101 33 33 33]
+a_tab3: .ASCII  "Bonjour TCH017!" ; Tableau 3: [66 111 110 106 111 117 114 32 84 67 72 48 49 55 33]
 ```
 
 ## 4.2. Chargement des tableaux dans la pile:
