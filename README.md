@@ -746,7 +746,7 @@ La répartition des points pour l'évaluation de ce projet est détaillée ci-de
 |A_RECHDI | 20 |
 
 
-La grille de correction suivante sera utilisée pour la correction de chacune des fonctions implémentées.
+La grille de correction suivante sera utilisée pour la correction de chacun des sous-programmes implémentées.
 
 
 | Élément de correction                  | Explication                                                                                              | Pondération |
