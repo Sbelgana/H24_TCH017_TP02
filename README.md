@@ -522,7 +522,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 <div align="justify">
 Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
 
-### 7.1. Lecture et tri du tableau:
+### 7.1. Lecture et tri de tableaux:
 
 <ins> **Cas 1: Lecture et tri du tableau 1:** </ins>
 
