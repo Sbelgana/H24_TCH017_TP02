@@ -740,4 +740,17 @@ Cette sous-section détaille les différents scénarios de recherche dichotomiqu
 |A_TRICOM | 20 |
 |A_RECHDI | 20 |
 
+
+La grille de correction suivante sera utilisée pour la correction de chacune des fonctions implémentées.
+
+
+| Élément de correction                  | Explication                                                                                              | Pondération |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------|-------------|
+| Structure du Programme                 | Utilisation adéquate des instructions et structuration logique du programme. Bonne gestion des registres et de la mémoire.       | 5%          |
+| Utilisation des Instructions Assembleur | Utilisation efficace des instructions spécifiques à PEP/8. Emploi adéquat des sauts conditionnels, des appels de sous-routines et des manipulations de registres. | 20%         |
+| Algorithme                             | Pertinence et efficacité de l'algorithme en assembleur par rapport aux exigences du problème. Utilisation optimisée des ressources système. | 20%         |
+| Normes et Standards Enseignés          | Utilisation de commentaires pour expliquer le fonctionnement du code, nommage approprié des étiquettes (labels) et respect des conventions de codage en assembleur. | 5%          |
+| Pénalités                              | Erreurs de syntaxe, instructions illégales, problèmes d'exécution ou de logique du programme. Utilisation inappropriée des registres ou de la mémoire. | -40%        |
+
+
 Bon travail! :blush:
