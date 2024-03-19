@@ -612,7 +612,7 @@ La construction de l'`histogramme` pour le tableau 2 s'ensuit, avec le comptage 
   <img src="./Images/Resultat_07.png">
 </p>
 
-div align="justify">
+<div align="justify">
 Le tri du tableau 2 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.
 
   </div>
@@ -644,7 +644,7 @@ La construction de l'`histogramme` pour le tableau 3 s'ensuit, avec le comptage 
   <img src="./Images/Resultat_11.png">
 </p>
 
-div align="justify">
+<div align="justify">
 Le tri du tableau 3 est réalisé en dernier, en utilisant la technique du tri par comptage qui se base sur l'`histogramme`. Un aperçu de la mémoire suite à cette opération est montré ci-dessous.
 
   </div>
