@@ -61,7 +61,7 @@ Ce projet vise à atteindre les objectifs suivants :
 
 <div align="justify">
   
-Dans ce contexte, notre travail s'articule autour de l'implémentation et de l'analyse de deux techniques algorithmiques fondamentales : le tri par comptage et la recherche dichotomique. L'objectif est double : d'une part, démontrer l'efficacité de ces méthodes dans le traitement des données numériques, et d'autre part, explorer leur mise en œuvre dans un langage de bas niveau, tel que l'assembleur PEP/8. Cette démarche permet non seulement d'appréhender les principes sous-jacents à ces techniques mais aussi de comprendre les défis liés à leur application directe sur des structures de données en mémoire. 
+Dans ce contexte, notre travail s'articule autour de l'implémentation et de l'analyse de deux techniques algorithmiques fondamentales : le tri par comptage et la recherche dichotomique. L'objectif est double : d'une part, démontrer l'efficacité de ces méthodes dans le traitement des données numériques, et d'autre part, explorer leur mise en œuvre dans un langage de bas niveau, tel que l'assembleur PEP/8. Cette démarche permet non seulement d'appréhender les principes sous-jacents à ces techniques, mais aussi de comprendre les défis liés à leur application directe sur des structures de données en mémoire. 
 
 </div>
 
@@ -70,7 +70,7 @@ Dans ce contexte, notre travail s'articule autour de l'implémentation et de l'a
 
 <div align="justify">
   
-Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter une comparaisons directes entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
+Le tri par comptage, ou tri par dénombrement, est mis en avant comme une technique de tri algorithmique particulièrement efficace pour les ensembles de nombres entiers contenus dans une plage de valeurs déterminée. Cette méthode se distingue par son approche originale, qui débute avec la création d'un histogramme reflétant la fréquence d'apparition de chaque nombre dans l'ensemble à trier. L'exploitation de cet `histogramme` permet ensuite de reconstituer l'ensemble trié de manière ordonnée. L'un des avantages majeurs du tri par comptage réside dans sa capacité à trier les données sans nécessiter une comparaison directe entre les éléments, offrant ainsi une efficacité notable pour les ensembles de grande taille limités à une étendue de valeurs restreinte.
 
 </div>
 
@@ -251,9 +251,7 @@ Grâce à sa stratégie de réduction progressive de l'espace de recherche, la r
 #### 3.2.1.1. Recherche Naïve
 
 <div align="justify">
-L'approche naïve, basée sur le parcours séquentiel de chaque élément d'un tableau pour trouver une valeur déterminée, est intuitivement simple mais devient inefficace avec l'augmentation de la taille de l'ensemble de données. Elle repose sur une recherche linéaire, comparant successivement chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou conclure à son absence. Facile à comprendre, cette méthode présente cependant une complex
-
-ité linéaire, rendant le temps de recherche proportionnel à la taille de l'ensemble.
+L'approche naïve, basée sur le parcours séquentiel de chaque élément d'un tableau pour trouver une valeur déterminée, est intuitivement simple, mais devient inefficace avec l'augmentation de la taille de l'ensemble de données. Elle repose sur une recherche linéaire, comparant successivement chaque élément à la valeur recherchée jusqu'à trouver une correspondance ou conclure à son absence. Facile à comprendre, cette méthode présente cependant une complexité linéaire, rendant le temps de recherche proportionnel à la taille de l'ensemble.
 </div>
 
 ```c++
@@ -343,7 +341,7 @@ Cet exemple met en lumière l'efficacité de la recherche dichotomique, capable 
 
 
 <div align="justify">
-La gestion efficace de la mémoire est essentielle en programmation PEP/8, en particulier pour la manipulation de données structurées comme les tableaux. À titre d'exemple, la gestion d'une pile, un espace de stockage temporaire utilisé pour traiter des données. L'accent est mis sur la manipulation de trois tableaux de caractères ASCII, nécessitant chacun une quantité spécifique d'octets pour leur stockage.</div>
+La gestion efficace de la mémoire est essentielle en programmation PEP/8, en particulier pour la manipulation de données structurées comme les tableaux. À titre d'exemple, la  pile est un espace de stockage temporaire utilisé pour écrire des données. L'accent est mis sur la manipulation de trois tableaux de caractères ASCII, nécessitant chacun une quantité spécifique d'octets pour leur stockage.</div>
 
 ## 4.1. Préparation de la pile :
 <div align="justify">
@@ -404,7 +402,7 @@ Cette démarche méthodologique souligne l'importance d'une gestion précise et 
 # 6. Sous-programmes à implémenter <a name="fonction"></a>
 
 <div align="justify">
-Pour assurer une construction organisée et une exécution efficace du programme, il est essentiel d'adopter une approche structurée, divisant le travail en sous-programmes spécifiques. Cette méthodologie ne favorise pas seulement une meilleure compréhension du mécanisme interne du programme mais elle augmente également sa modularité, ce qui est avantageux pour d'éventuelles modifications ou expansions futures. La première étape consiste à se concentrer sur les sous-tâches fondamentales, qui serviront de base sur laquelle les fonctionnalités plus complexes seront développées. <br><br>
+Pour assurer une construction organisée et une exécution efficace du programme, il est essentiel d'adopter une approche structurée, divisant le travail en sous-programmes spécifiques. Cette méthodologie ne favorise pas seulement une meilleure compréhension du mécanisme interne du programme, mais elle augmente également sa modularité, ce qui est avantageux pour d'éventuelles modifications ou expansions futures. La première étape consiste à se concentrer sur les sous-tâches fondamentales, qui serviront de base sur laquelle les fonctionnalités plus complexes seront développées. <br><br>
 
 Pour une compréhension approfondie et une validation efficace de la logique de programmation, il est vivement recommandé d'entamer le processus par l'implémentation et le test des sous-programmes en C ou en Java. Cette démarche, bien qu'elle représente une étape supplémentaire, s'avère indispensable pour assurer la solidité et l'exactitude de la logique avant de procéder à la traduction en PEP/8.</div>
 
@@ -415,7 +413,7 @@ Pour une compréhension approfondie et une validation efficace de la logique de 
 <div align="justify">
 Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation. </div>
  
-### Chargement des tableax: A_LECTUR (16 Points) 
+### Chargement des tableaux: A_LECTUR (16 Points) 
 
     <div align="justify">Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.</div>
      
@@ -428,7 +426,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - <div align="justify">Aucune valeur retournée directement. Les éléments convertis en décimale sont positionnés à l'adresse spécifiée dans la pile.</div>
 ---
 
-### Affichage des tableax: A_AFFICH (10 Points) 
+### Affichage des tableaux: A_AFFICH (10 Points) 
 
     <div align="justify">Fonction destinée à afficher le contenu d'un tableau en format décimal.</div>
      
@@ -519,13 +517,13 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 ## 7. Resultats attendus: <a name="resultat"></a>
 
 <div align="justify">
-Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. L'accent est mis sur la pertinence des méthodes employées, telles que le tri par comptage et la recherche dichotomique, pour le traitement efficace et l'analyse des données. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. En outre, des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations, mettant en lumière l'efficacité des procédures implémentées en vue d'atteindre les objectifs fixés.</div>
+Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. Des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations.</div>
 
 ### 7.1. Lecture et tri de tableaux:
 
 <ins> **Cas 1: Lecture et tri du tableau 1:** </ins>
 
-<div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile tel qu'anticipé. Voici un aperçu de l'état de la mémoire à ce stade</div>
+<div align="justify">L'opération initiale consiste à lire les données du tableau 1 et à les placer dans la pile selon les emplacements définis. Cette démarche prépare les données pour les traitements à venir. Après cette lecture, les valeurs du tableau sont stockées dans la pile. Voici un aperçu de l'état de la mémoire à ce stade</div>
 
 <p align="center">
   <img src="./Images/Resultat_02.png">
@@ -627,7 +625,7 @@ Le tri du tableau 3 est réalisé en dernier, en utilisant la technique du tri p
 ### 7.2. Recherche dichotomique dans le tableau trié :
 
 <div align="justify">
-Cette sous-section détaille les différentes instances de recherche dichotomique effectuées sur les tableaux triés, illustrant à la fois les cas de succès et d'échec. Chaque scénario est accompagné d'un aperçu visuel reflétant le résultat de la recherche, démontrant ainsi la précision et l'efficacité de l'algorithme de recherche dichotomique dans la localisation d'éléments spécifiques au sein de structures de données organisées.</div>
+Cette sous-section détaille les différents scénarios de recherche dichotomique effectuée sur les tableaux triés, illustrant à la fois les cas de succès et d'échec. Chaque scénario est accompagné d'un aperçu visuel reflétant le résultat de la recherche, démontrant ainsi la précision et l'efficacité de l'algorithme de recherche dichotomique dans la localisation d'éléments spécifiques au sein de structures de données organisées.</div>
 
 
 <ins> **Cas 1: Recherche d'une valeur inexistante dans le tableau 1** </ins><br>
