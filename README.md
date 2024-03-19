@@ -43,6 +43,7 @@ Ce projet se concentre sur l'étude de deux méthodologies algorithmiques fondam
 <div align="justify">
 En plus de ces approches, le projet permet d'explorer en profondeur la manipulation des fonctions en langage assembleur PEP/8. Cela inclut une compréhension approfondie du passage de paramètres, que ce soit par valeur ou par adresse, ainsi que de la gestion de la pile et du traitement des résultats. Ces compétences sont essentielles pour quiconque cherche à approfondir sa connaissance des systèmes informatiques et à perfectionner ses aptitudes en programmation PEP/8.</div>
 
+<div align="justify">
 
 # 2. Objectifs du Projet <a name="objectif"></a>
 
@@ -264,7 +265,7 @@ int Rech_nai(int tab[], int taille, int val) {
 }
 ```
 
-#### 2.2.1.2. Recherche dichotomique
+#### 3.2.1.2. Recherche dichotomique
 
 <div align="justify">
 La recherche dichotomique applique une stratégie de division successive en deux de l'espace de recherche, commençant son opération par l'évaluation de l'élément situé au centre du tableau. Si cet élément central ne correspond pas à la valeur recherchée, la recherche se poursuit dans la moitié du tableau appropriée, choisie en fonction du résultat de la comparaison entre cet élément et la valeur cible. Cette approche itérative, qui diminue de moitié la taille de l'espace de recherche à chaque tour, permet de localiser rapidement la valeur recherchée ou de confirmer son absence, exploitant l'organisation préalable des données pour optimiser la vitesse de la recherche.
@@ -414,7 +415,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
  
     
 1. **A_LECTUR**
-   
+
     <div align="justify">Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.</div>
      
    **Paramètres :**
