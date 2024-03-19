@@ -88,7 +88,7 @@
 <path transform="matrix(1,0,0,-1,20.601502,268.07728)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0V11.955"/>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="6.9738" font-family="CMBX7" font-weight="bold"><tspan y="-735.897" x="116.279 120.791049">19</tspan></text>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-735.897" x="145.231 149.95328 155.20357 159.65685 165.38535 171.75145 176.47373 182.83983 188.09012">retourner</tspan></text>
-<text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="9.9626" font-family="CMR10"><tspan y="-735.897" x="192.80301 196.12056">-1</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="9.9626" font-family="CMR10"><tspan y="-735.897" x="192.80301 196.12056">-val</tspan></text>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="6.9738" font-family="CMBX7" font-weight="bold"><tspan y="-723.941" x="115.88001 120.39206">20</tspan></text>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 -114.4675 1000.38729)" font-size="9.9626" font-family="CMBX10" font-weight="bold"><tspan y="-723.941" x="129.889 133.06708 136.25511">fin</tspan></text>
 <path transform="matrix(1,0,0,-1,.47750093,282.42329)" stroke-width=".797" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H612"/>
