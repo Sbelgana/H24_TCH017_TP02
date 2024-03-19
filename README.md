@@ -742,7 +742,7 @@ Cette sous-section détaille les différents scénarios de recherche dichotomiqu
 
 
 La grille de correction suivante sera utilisée pour la correction de chacune des fonctions implémentées.
-
+<div align="justify">
 
 | Élément de correction                  | Explication                                                                                              | Pondération |
 |----------------------------------------|----------------------------------------------------------------------------------------------------------|-------------|
@@ -752,5 +752,6 @@ La grille de correction suivante sera utilisée pour la correction de chacune de
 | Normes et Standards Enseignés          | Utilisation de commentaires pour expliquer le fonctionnement du code, nommage approprié des étiquettes (labels) et respect des conventions de codage en assembleur. | 5%          |
 | Pénalités                              | Erreurs de syntaxe, instructions illégales, problèmes d'exécution ou de logique du programme. Utilisation inappropriée des registres ou de la mémoire. | -40%        |
 
+</div>
 
 Bon travail! :blush:
