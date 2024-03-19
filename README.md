@@ -415,8 +415,7 @@ Pour une compréhension approfondie et une validation efficace de la logique de 
 <div align="justify">
 Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation. </div>
  
-    
-1. **A_LECTUR**
+### Chargement des tableax: A_LECTUR (16 Points) 
 
     <div align="justify">Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.</div>
      
@@ -429,8 +428,8 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - <div align="justify">Aucune valeur retournée directement. Les éléments convertis en décimale sont positionnés à l'adresse spécifiée dans la pile.</div>
 ---
 
-2. **A_AFFICH**
-   
+### Affichage des tableax: A_AFFICH (10 Points) 
+
     <div align="justify">Fonction destinée à afficher le contenu d'un tableau en format décimal.</div>
      
    **Paramètres :**
@@ -442,7 +441,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 ---
 
-3. **A_MINIM** 
+### Valeur minimale d'un tableau: A_MINIM (7 Points) 
    
     <div align="justify">Fonction dédiée à la recherche de la valeur minimale au sein d'un tableau.</div>
      
@@ -455,7 +454,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 ---
 
-4. **A_MAXIM** 
+### Valeur maximale d'un tableau: A_MAXIM (7 Points) 
    
     <div align="justify">Fonction pour identifier la valeur maximale dans un tableau.</div>
      
@@ -467,8 +466,8 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_max` : Enregistre la valeur maximale trouvée dans le tableau.
    
 ---
- 
-5. **A_HISTO** 
+
+### Fréquence des éléments d'un tableau: A_HISTO (20 Points) 
    
    <div align="justify">
      
@@ -491,9 +490,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 ## 6.2. Procédures de Tri et Recherche :
 <div align="justify">Une fois les sous-tâches de base réalisées, il est nécessaire d'implémenter les procédures de tri et de recherche suivantes :</div>
 
-1. **A_TRICOM** 
+### Algorithme trie par comptage: A_TRICOM (20 Points) 
 
-   <div align="justify">Procédure dédiée à l'exécution du tri par comptage, une technique adaptée au tri efficace de tableaux.</div>
+   <div align="justify">Procédure dédiée à l'exécution du tri par comptage.</div>
    
    **Paramètres :**
    - `a_ad_t`   : Adresse dans la pile du premier élément du tableau à trier.
@@ -505,9 +504,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 ---
 
-2. **A_RECHDI** 
-   
-    <div align="justify">Procédure conçue pour réaliser une recherche dichotomique, visant à identifier une valeur spécifique au sein d'un tableau déjà trié. Cette méthode optimise la recherche en divisant l'intervalle de recherche par deux à chaque itération, diminuant ainsi le nombre de comparaisons nécessaires pour repérer l'élément ciblé.</div>
+### Algorithme de recherche dichotomique: A_RECHDI (20 Points) 
+
+    <div align="justify">Procédure conçue pour réaliser une recherche dichotomique, visant à identifier une valeur spécifique au sein d'un tableau déjà trié.</div>
      
    **Paramètres :**
    - `a_ad_t`  : Adresse dans la pile du premier élément du tableau trié.
