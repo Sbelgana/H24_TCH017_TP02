@@ -32,16 +32,16 @@
 # 1. Introduction <a name="introduction"></a>
 
 <div align="justify">
-Dans une ère caractérisée par l'expansion rapide des données numériques, leur traitement et analyse minutieux deviennent indispensables à l'avancement scientifique et technologique. La capacité à extraire des informations significatives et à prendre des décisions éclairées repose largement sur l'efficacité des algorithmes, qui sont au cœur des processus d'analyse de données. Avec l'augmentation constante de la complexité et du volume des données, il est impératif d'améliorer continuellement ces algorithmes pour garantir leur précision et leur fiabilité.<br><br></div>
+Dans une ère caractérisée par l'expansion rapide des données numériques, leur traitement et analyse minutieux deviennent indispensables à l'avancement scientifique et technologique. La capacité à extraire des informations significatives et à prendre des décisions éclairées repose largement sur l'efficacité des algorithmes, qui sont au cœur des processus d'analyse de données. Face à l'augmentation de la complexité et du volume des données, l'amélioration continue de ces algorithmes s'impose comme une nécessité pour en renforcer l'efficacité et la fiabilité.<br><br></div>
 
 <div align="justify">
 Ce projet se concentre sur l'étude de deux méthodologies algorithmiques fondamentales dans le domaine du traitement des données :
 
 - **Le tri par comptage :** Une méthode de tri extrêmement efficace pour les données dont la distribution se situe dans un intervalle bien défini, offrant des performances remarquables en termes de vitesse et d'efficacité.
-- **La recherche dichotomique :** Cette technique fournit une méthode de recherche rapide et précise au sein d'ensembles de données triés, optimisant le temps de recherche et minimisant les ressources nécessaires.</div>
+- **La recherche dichotomique :** Une méthode de recherche rapide et précise au sein d'ensembles de données triés, optimisant le temps de recherche et minimisant les ressources nécessaires.</div>
 
 <div align="justify">
-En plus de ces approches, le projet permet d'explorer en profondeur la manipulation des fonctions en langage assembleur PEP/8. Cela inclut une compréhension approfondie du passage de paramètres, que ce soit par valeur ou par adresse, ainsi que de la gestion de la pile et du traitement des résultats. Ces compétences sont essentielles pour quiconque cherche à approfondir sa connaissance des systèmes informatiques et à perfectionner ses aptitudes en programmation PEP/8.</div>
+Au-delà de l'étude de ces méthodologies, ce projet est conçu pour explorer l'univers de la gestion de données via le langage de programmation PEP/8, offrant une opportunité unique pour le développement de compétences avancées en manipulation de données, en algorithmique, et en programmation structurée. Cette initiative permet d'acquérir une maîtrise des techniques fondamentales de traitement des données et de comprendre leur application pratique dans divers contextes, ouvrant ainsi la voie vers des analyses plus poussées et des prises de décision informées.</div>
 
 <div align="justify">
 
