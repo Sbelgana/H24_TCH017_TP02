@@ -558,7 +558,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 <div align="justify">
 Dans cette section, les résultats escomptés sont présentés à travers diverses étapes de manipulation et d'analyse des données contenues dans les tableaux. Cela comprend la lecture et le tri de ces tableaux, ainsi que la réalisation de recherches spécifiques au sein de ces structures de données organisées. Les résultats attendus sont illustrés par des aperçus de l'état de la mémoire à différentes phases du traitement, offrant une vision claire des transformations subies par les données. Des captures d'écran de la console sont fournies pour visualiser le résultat final de ces opérations.</div>
 
-### 7.1. Lecture et tri de tableaux:
+## 7.1. Lecture et tri de tableaux:
 
 <ins> **Cas 1: Lecture et tri du tableau 1:** </ins>
 
@@ -661,7 +661,7 @@ Le tri du tableau 3 est réalisé en dernier, en utilisant la technique du tri p
 
 
 
-### 7.2. Recherche dichotomique dans le tableau trié :
+## 7.2. Recherche dichotomique dans le tableau trié :
 
 <div align="justify">
 Cette sous-section détaille les différents scénarios de recherche dichotomique effectuée sur les tableaux triés, illustrant à la fois les cas de succès et d'échec. Chaque scénario est accompagné d'un aperçu visuel reflétant le résultat de la recherche, démontrant ainsi la précision et l'efficacité de l'algorithme de recherche dichotomique dans la localisation d'éléments spécifiques au sein de structures de données organisées.</div>
