@@ -408,16 +408,20 @@ Pour une compréhension approfondie et une validation efficace de la logique de 
 
 
 
-<div align="justify">
+
   
 ## 6.1. Sous-Tâches de Base :
 
-Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation. 
+<div align="justify">
+  
+Il est recommandé de commencer par les sous-tâches simples qui permettent la lecture, le chargement des tableaux dans la pile, ainsi que leur manipulation.  
+
+</div>
+
 
 <div align="justify">
   
 ### Chargement des tableaux: A_LECTUR (16 Points) 
-
     Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.
      
    **Paramètres :**
@@ -500,7 +504,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    **Retour :**
     - Aucune valeur retournée directement. Le tableau est restructuré selon l'`histogramme` et les éléments sont repositionnés à l'adresse indiquée dans la pile.
 
-      </div>
+</div>
      
 
 ## 6.2. Procédures de Tri et Recherche :
