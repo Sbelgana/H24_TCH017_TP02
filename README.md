@@ -49,12 +49,12 @@ Au-delà de l'étude de ces méthodologies, ce projet est conçu pour explorer l
 
 Ce projet vise à atteindre les objectifs suivants :
 
-- **Explorer la manipulation des fonctions en langage assembleur PEP/8**, incluant une compréhension approfondie du passage de paramètres par valeur et par adresse, ainsi que de la gestion de la pile et du traitement des résultats.
-- **Adhésion aux standards de programmation** : Encourager l'adoption des meilleures pratiques de programmation, y compris le respect des conventions de codage et la production d'un code clair, maintenable, et efficace.
-- **Développer des compétences en manipulation de données** en utilisant des techniques avancées de programmation pour gérer et analyser efficacement les données numériques.
-- **Appliquer des connaissances théoriques à des scénarios pratiques**, permettant aux étudiants de consolider leur compréhension des systèmes informatiques et d'affiner leurs compétences en programmation PEP/8.
-- **Maîtriser l'algorithme du tri par comptage** pour traiter efficacement des ensembles de nombres entiers, en appliquant une méthode originale basée sur la création et l'utilisation d'un histogramme.
-- **Implémenter la recherche dichotomique** afin de fournir une méthode rapide et précise pour la recherche dans des ensembles de données triés, optimisant ainsi le temps de recherche et minimisant les ressources nécessaires.
+- **Manipulation des fonctions en langage assembleur PEP/8** : Acquérir une maîtrise approfondie de la manipulation des fonctions, y compris le passage de paramètres par valeur et par adresse, ainsi que la gestion efficace de la pile et le traitement des résultats.
+- **Respect des standards de programmation** : Promouvoir l'adoption des meilleures pratiques de programmation, en insistant sur le respect des conventions de codage et la production d'un code à la fois clair, maintenable, et efficace.
+- **Développement des compétences en manipulation de données** : Utiliser des techniques avancées de programmation pour une gestion et une analyse efficaces des données numériques.
+- **Implémentation de l'algorithme du tri par comptage** : Appliquer efficacement l'algorithme du tri par comptage pour le traitement des ensembles de nombres entiers, utilisant une méthode originale qui repose sur la création et l'exploitation d'un histogramme.
+- **Implémentation de la recherche dichotomique** : Mettre en œuvre une méthode de recherche dichotomique pour une localisation rapide et précise d'éléments dans des ensembles de données triés, optimisant le temps de recherche et réduisant l'utilisation des ressources.
+
 </div>
 
 # 3. Énoncé de travail <a name="enonce"></a>
