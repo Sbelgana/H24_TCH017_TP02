@@ -426,7 +426,10 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimale doivent être placés.
    
    **Retour :**
-   - Aucune valeur retournée directement. Les éléments convertis en décimale sont positionnés à l'adresse spécifiée dans la pile.</div>
+   - Aucune valeur retournée directement. Les éléments convertis en décimale sont positionnés à l'adresse spécifiée dans la pile.
+
+</div>
+
 ---
 
  <div align="justify">
@@ -440,7 +443,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_tai` : Taille du tableau, indiquant le nombre d'éléments à afficher.
    
    **Retour :**
-   - Aucune valeur retournée. Les éléments du tableau sont affichés en format décimal. </div>
+   - Aucune valeur retournée. Les éléments du tableau sont affichés en format décimal. 
+
+</div>
 
 ---
 
@@ -455,7 +460,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_tai` : Taille du tableau, déterminant le nombre d'éléments à analyser.
    
    **Retour :**
-   - `a_min` : Contient la valeur minimale identifiée dans le tableau.</div>
+   - `a_min` : Contient la valeur minimale identifiée dans le tableau.
+
+</div>
 
 ---
 
@@ -470,8 +477,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_tai` : Taille du tableau, spécifiant le nombre d'éléments à considérer.
    
    **Retour :**
-   - `a_max` : Enregistre la valeur maximale trouvée dans le tableau.</div>
-   
+   - `a_max` : Enregistre la valeur maximale trouvée dans le tableau.
+
+</div>
 ---
 
 
@@ -510,8 +518,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_ad_his` : Adresse dans la pile destinée à l'histogramme, recensant la fréquence de chaque élément du tableau.
   
    **Retour :**
-   - Aucune valeur n'est retournée directement. Les éléments du tableau sont ordonnés et actualisés à leur position respective sur la pile.</div>
+   - Aucune valeur n'est retournée directement. Les éléments du tableau sont ordonnés et actualisés à leur position respective sur la pile.
 
+</div>
 ---
 
 <div align="justify">
@@ -526,7 +535,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_cible` : La valeur recherchée dans le tableau.
    
    **Retour :**
-   - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.</div>
+   - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
+
+</div>
 
 ## 7. Resultats attendus: <a name="resultat"></a>
 
