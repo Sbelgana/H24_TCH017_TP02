@@ -419,22 +419,24 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 </div>
 
 
-<div align="justify">
-  
+ <div align="justify">
+   
 ### Chargement des tableaux: A_LECTUR (16 Points) 
-    Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.
+
+   Cette fonction charge un tableau de caractères ASCII, les convertit en valeurs décimales, et place les éléments convertis dans l'emplacement approprié dans la pile.
      
-   **Paramètres :**
+  **Paramètres :**
    - `a_tab`  : Adresse du début du tableau ASCII en mémoire.
    - `a_tai`  : Taille du tableau, indiquant le nombre de caractères ASCII à convertir.
    - `a_ad_t` : Adresse dans la pile où les éléments convertis en décimale doivent être placés.
+
    
    **Retour :**
    - Aucune valeur retournée directement. Les éléments convertis en décimale sont positionnés à l'adresse spécifiée dans la pile.
 
 </div>
 
----
+
 
  <div align="justify">
    
@@ -453,11 +455,12 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 ---
 
-<div align="justify">
-  
-### Valeur minimale d'un tableau: A_MINIM (7 Points) 
+
+ <div align="justify">
    
-    Fonction dédiée à la recherche de la valeur minimale au sein d'un tableau.
+### Valeur minimale d'un tableau: A_MINIM (7 Points) 
+
+   Fonction dédiée à la recherche de la valeur minimale au sein d'un tableau.
      
    **Paramètres :**
    - `a_ad_t`: Adresse dans la pile du premier élément du tableau à examiner.
@@ -470,31 +473,33 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
 
 ---
 
-<div align="justify">
-  
-### Valeur maximale d'un tableau: A_MAXIM (7 Points) 
+ <div align="justify">
    
-    Fonction pour identifier la valeur maximale dans un tableau.
+### Valeur maximale d'un tableau: A_MINIM (7 Points) 
+
+   Fonction dédiée à la recherche de la valeur maximale au sein d'un tableau.
      
    **Paramètres :**
    - `a_ad_t`: Adresse dans la pile du premier élément du tableau à examiner.
-   - `a_tai` : Taille du tableau, spécifiant le nombre d'éléments à considérer.
+   - `a_tai` : Taille du tableau, déterminant le nombre d'éléments à analyser.
    
    **Retour :**
-   - `a_max` : Enregistre la valeur maximale trouvée dans le tableau.
+   - `a_max` : Contient la valeur maximale identifiée dans le tableau.
 
 </div>
+
+
+
+
+
 ---
 
 
  <div align="justify">
    
 ### Fréquence des éléments d'un tableau: A_HISTO (20 Points) 
-   
-  
-     
-     Fonction permettant de calculer la fréquence des éléments d'un tableau et de réorganiser ces derniers à l'aide d'un `histogramme`.
-   
+
+   Fonction permettant de calculer la fréquence des éléments d'un tableau et de réorganiser ces derniers à l'aide d'un `histogramme`.
      
    **Paramètres :**
    - `a_ad_t`  : Adresse dans la pile du premier élément du tableau à analyser.
@@ -505,7 +510,7 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
     - Aucune valeur retournée directement. Le tableau est restructuré selon l'`histogramme` et les éléments sont repositionnés à l'adresse indiquée dans la pile.
 
 </div>
-     
+
 
 ## 6.2. Procédures de Tri et Recherche :
 <div align="justify">Une fois les sous-tâches de base réalisées, il est nécessaire d'implémenter les procédures de tri et de recherche suivantes :</div>
@@ -525,13 +530,15 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - Aucune valeur n'est retournée directement. Les éléments du tableau sont ordonnés et actualisés à leur position respective sur la pile.
 
 </div>
+
+
 ---
 
 <div align="justify">
   
 ### Algorithme de recherche dichotomique: A_RECHDI (20 Points) 
 
-    Procédure conçue pour réaliser une recherche dichotomique, visant à identifier une valeur spécifique au sein d'un tableau déjà trié.
+   Procédure conçue pour réaliser une recherche dichotomique, visant à identifier une valeur spécifique au sein d'un tableau déjà trié.   
      
    **Paramètres :**
    - `a_ad_t`  : Adresse dans la pile du premier élément du tableau trié.
@@ -542,6 +549,9 @@ Il est recommandé de commencer par les sous-tâches simples qui permettent la l
    - `a_indice` : Indique la position de l'élément recherché dans le tableau, si celui-ci est trouvé.
 
 </div>
+
+
+
 
 ## 7. Resultats attendus: <a name="resultat"></a>
 
