@@ -702,4 +702,4 @@ Cette sous-section détaille les différentes instances de recherche dichotomiqu
 |A_TRICOM | 20 |
 |A_RECHDI | 20 |
 
-Bon travaille! :blush:
+Bon travail! :blush:
