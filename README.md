@@ -730,6 +730,11 @@ Cette sous-section détaille les différents scénarios de recherche dichotomiqu
 <div align="justify">Après avoir réussi l'implémentation et les tests de toutes les fonctions, il est essentiel de sauvegarder soigneusement votre projet. Les fichiers de programme doivent être compilés dans une archive zip nommée selon le format suivant : equipe_xx.zip, où xx désigne le numéro de votre équipe.<br><br></div>
 
 # 9. Barème /100 <a name="bareme"></a>
+
+<div align="justify">
+  
+La répartition des points pour l'évaluation de ce projet est détaillée ci-dessous, 
+
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
 |A_LECTUR | 16 |
@@ -742,7 +747,7 @@ Cette sous-section détaille les différents scénarios de recherche dichotomiqu
 
 
 La grille de correction suivante sera utilisée pour la correction de chacune des fonctions implémentées.
-<div align="justify">
+
 
 | Élément de correction                  | Explication                                                                                              | Pondération |
 |----------------------------------------|----------------------------------------------------------------------------------------------------------|-------------|
